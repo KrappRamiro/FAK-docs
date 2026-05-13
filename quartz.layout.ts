@@ -1,5 +1,43 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import { FileTrieNode } from "./quartz/util/fileTrie"
+
+// Para cambiar el orden de las carpetas en el sidebar, editá este array.
+// Las carpetas que no estén acá aparecen al final, en orden alfabético.
+const FOLDER_ORDER = [
+  "empezar-aca",
+  "hardware",
+  "electronica",
+  "sensores",
+  "conectividad",
+  "construccion-nodos",
+  "herramientas",
+  "seguridad-iot",
+  "investigacion",
+]
+
+function customExplorerSort(a: FileTrieNode, b: FileTrieNode): number {
+  // El array tiene que estar adentro de la función porque Quartz convierte
+  // esta función a string y la ejecuta en el browser. Si el array estuviera
+  // afuera, el browser no lo vería y el sort no funcionaría.
+  const order = [
+    "empezar-aca",
+    "hardware",
+    "electronica",
+    "sensores",
+    "conectividad",
+    "construccion-nodos",
+    "herramientas",
+    "seguridad-iot",
+    "investigacion",
+  ]
+  const aIdx = order.indexOf(a.slugSegment)
+  const bIdx = order.indexOf(b.slugSegment)
+  if (aIdx !== -1 && bIdx !== -1) return aIdx - bIdx
+  if (aIdx !== -1) return -1
+  if (bIdx !== -1) return 1
+  return a.displayName.localeCompare(b.displayName)
+}
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -38,7 +76,7 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({ sortFn: customExplorerSort }),
   ],
   right: [
     Component.Graph(),
@@ -62,7 +100,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({ sortFn: customExplorerSort }),
   ],
   right: [],
 }
