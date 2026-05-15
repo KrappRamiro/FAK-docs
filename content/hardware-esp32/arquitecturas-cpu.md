@@ -23,7 +23,7 @@ Todos los [ESP32](socs/index.md) caen en una de dos ISAs. Como desarrollador de 
 
 | Situación | Recomendación |
 |---|---|
-| Usando [ESP-IDF](frameworks/esp-idf.md) o Arduino | No notás la diferencia - la misma fuente C compila en ambos |
+| Usando [ESP-IDF](frameworks/esp-idf.md) o Arduino | No notás la diferencia porque el compila en ambos |
 | Cámara o frame buffer grande en PSRAM | [ESP32-S3](socs/esp32-s3.md) (LX7) - única con MIPI camera + 8 MB PSRAM en módulo único |
 | Budget de energía ajustado | RISC-V siempre - toda la serie H existe por esto |
 | Debug a bajo nivel | RISC-V - crash dumps, stack traces y disassembly mucho más legibles |

@@ -9,7 +9,7 @@ Docs oficiales: [Seeed XIAO ESP32-C3 wiki](https://wiki.seeedstudio.com/XIAO_ESP
 | Spec | Valor |
 |---|---|
 | SoC | [ESP32-C3](../../socs/esp32-c3.md) |
-| Flash/PSRAM | 4 MB / - |
+| Flash/RAM | 400KB SRAM & 4MB Flash |
 | USB | USB-C |
 | Form factor | [XIAO](../../form-factors.md) 21x17.5 mm |
 | LiPo | ✅ |

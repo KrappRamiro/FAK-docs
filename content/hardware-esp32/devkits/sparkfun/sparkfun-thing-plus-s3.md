@@ -13,7 +13,7 @@ Docs oficiales: [SparkFun Thing Plus ESP32-S3](https://www.sparkfun.com/sparkfun
 | USB | USB-C OTG nativo |
 | Form factor | [Feather](../../form-factors.md)-compatible |
 | LiPo | ✅ |
-| Qwiic | ✅ ([STEMMA QT](../../conectores.md) compatible) |
+| Qwiic | ✅ ([STEMMA QT](../../../electronica/conectores.md) compatible) |
 | Wireless | WiFi 4 + BLE |
 ## Cuándo elegirlo
 

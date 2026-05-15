@@ -1,3 +1,7 @@
+---
+title: Investigación
+---
+
 # Investigación / Paper
 
 Lo que necesitás documentar para que tu sistema pase peer review.

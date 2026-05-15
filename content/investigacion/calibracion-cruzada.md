@@ -14,59 +14,18 @@ graph TD
     F --> G{R² > 0.95?}
     G -->|Sí| H[Aceptable para paper]
     G -->|No| I[Investigar o aplicar corrección]
-```
 
----
-
-## Protocolo paso a paso
-
-### 1. Setup
-
-- Instalar **sensor de referencia** y **sensor de control** lo más cerca posible
-- Misma altura, mismo entorno (sombra/exposición), mismo sustrato si es suelo
-- Sincronizar relojes de ambos nodos (SNTP, mismo NTP server)
-- Verificar que ambos publican al broker con timestamps consistentes
-
-### 2. Duración mínima
-
-| Variable                                   | Ventana mínima                                       | Por qué                                                           |
-| ------------------------------------------ | ---------------------------------------------------- | ----------------------------------------------------------------- |
-| Temp + HR aire                             | 2 semanas                                            | Captura ciclos día/noche y variabilidad diaria                    |
-| CO2                                        | 4 semanas                                            | CO2 cambia lento, muchos puntos son necesarios para significancia |
-| [PAR](../sensores/luz/conceptos-par.md) | 2 semanas con días soleados Y nublados               | Variabilidad de espectro                                          |
-| [VWC](../sensores/humedad-suelo/vwc.md) | 2-4 semanas con al menos 2 ciclos de riego completos | Ciclos seco $\rightarrow$ saturado $\rightarrow$ drenaje          |
-| pH                                         | 4 semanas                                            | pH del suelo cambia lento                                         |
-
-### 3. Recolección
-
-Almacenar en [InfluxDB](../conectividad/mqtt-stack.md):
-
-```
 greenhouse/zone-A/sht40/data ← control
 greenhouse/reference/sht45/data ← referencia
-```
-
-Query típica:
-
-```sql
+sql
 SELECT mean("temp_c")
 FROM "sht40"
 WHERE time > now - 14d
 GROUP BY time(1m)
-```
-
-Exportar a CSV vía CLI:
-
-```bash
+bash
 influx query 'from(bucket: "sensors") |> range(start: -14d) ...' \
  --raw > control_temp.csv
-```
-
-### 4. Análisis estadístico
-
-En Python:
-
-```python
+python
 import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
@@ -93,68 +52,7 @@ r2 = r2_score(y, y_pred)
 print(f"R² = {r2:.4f}")
 print(f"Slope = {model.coef_[0]:.4f}")
 print(f"Intercept = {model.intercept_:.4f}")
-```
-
-### 5. Criterios de aceptación
-
-| $R^2$ obtenido | Decisión                                                                                                                                   |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| > 0.95         | Validación aceptada - usar lecturas del control directamente                                                                               |
-| 0.85 - 0.95    | Aplicar corrección lineal: $\text{valor\_corregido} = \text{slope} \cdot \text{valor\_control} + \text{intercept}$. Reportar en metodología. |
-| 0.75 - 0.85    | Investigar: sensor mal posicionado, sustrato diferente, electrodo dañado. Repetir setup.                                                   |
-| < 0.75         | Sensor no apto. Reemplazar o cambiar de tecnología.                                                                                        |
-
-> **Nota sobre los umbrales:** Los valores 0.95, 0.85 y 0.75 son una decisión arbitraria, y hay que verificar si nos sirve, tambien hay que ver el nivel de precisión requerida.
-> 
-> Lo que significa cambiar el umbral superior: bajar el mínimo de 0.95 a, por ejemplo, 0.90, implica aceptar sensores donde el 10% de la varianza observada no está explicada por el sensor de referencia, lo que puede ser razonable para monitoreo de tendencias pero no para datos que van a compararse contra estándares publicados. Para trabajo de paper en invernadero, 0.95 seria un nivel aceptable.
-
-### 6. Reporte en paper
-
-Para cada par sensor-control / sensor-referencia, reportar:
-
-- Número de mediciones paralelas (n)
-- Período de comparación (dd/mm/yyyy a dd/mm/yyyy)
-- $R^2$ obtenido
-- Slope e intercept de la regresión lineal
-- RMSE en unidades físicas
-
-Ejemplo:
-
-> "Air temperature: [SHT40](../sensores/temperatura-humedad/sht40.md) vs [SHT45](../sensores/temperatura-humedad/sht45.md) paired deployment, n=20,160 (2 weeks at 1-min intervals), $R^2 = 0.987$, slope = 0.998, intercept = 0.14 $^\circ$C, RMSE = 0.21 $^\circ$C."
-
----
-
-## Rotación del TEROS 11
-
-Como el [TEROS 11](../sensores/humedad-suelo/teros-11.md) es la pieza más cara, no hay uno por nodo. **Se rota** entre zonas:
-
-| Semana | [TEROS 11](../sensores/humedad-suelo/teros-11.md) ubicado en | Capacitivo validado |
-| ------ | --------------------------------------------------------------- | ------------------- |
-| 1-2    | Zona A                                                          | Capacitivo A        |
-| 3-4    | Zona B                                                          | Capacitivo B        |
-| 5-6    | Zona C                                                          | Capacitivo C        |
-| 7-8    | Zona D                                                          | Capacitivo D        |
-
-Cada rotación genera un par de series temporales paralelas. Al final del experimento tenés $R^2$ por zona.
-
----
-
-## Outliers y cómo manejarlos
-
-Lecturas anómalas pueden venir de:
-
-- **Falla transitoria del sensor** (algun rayo cosmico)
-- **Evento real extremo** (riego no programado, planta caída sobre el sensor)
-- **Falla del nodo** (boot reset, falla I2C)
-
-Protocolo:
-
-1. **Detección automática**: lecturas que se desvían > 3σ del promedio móvil de 1h
-2. **Marcar pero no eliminar** automáticamente - guardar como flag, no como missing
-3. **Revisión manual** semanal del log de outliers contra eventos del log de intervenciones
-4. **Reportar en el paper** cuántos outliers se excluyeron y por qué
-
-```python
+python
 df["rolling_mean"] = df["value"].rolling(window=60).mean()
 df["rolling_std"] = df["value"].rolling(window=60).std()
 df["outlier"] = abs(df["value"] - df["rolling_mean"]) > 3 * df["rolling_std"]

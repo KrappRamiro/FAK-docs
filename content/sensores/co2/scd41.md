@@ -31,12 +31,13 @@ Páginas del fabricante: [Sensirion SCD41](https://sensirion.com/products/catalo
 
 ## Implementación esquemática
 
-```
-ESP32 ──── SDA ──── SCD41 SDA
-ESP32 ──── SCL ──── SCD41 SCL
-3.3V ──── pull-ups 10kΩ ──── 3.3V
-GND ──── SCD41 GND
-3.3V o 5V ── SCD41 Vin
+```mermaid
+graph LR
+    E["ESP32"] -->|SDA| S["SCD41"]
+    E -->|SCL| S
+    V33["3.3V"] -->|"pull-ups 10 kΩ\nSDA y SCL"| E
+    GND["GND"] -->|GND| S
+    Vin["3.3V / 5V"] -->|Vin| S
 ```
 
 Driver: usar la librería oficial de Sensirion para ESP-IDF o Arduino. El SCD41 tiene comandos I2C estándar para iniciar mediciones periódicas (cada 5s) o single-shot.

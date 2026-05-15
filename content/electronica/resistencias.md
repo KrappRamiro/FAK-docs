@@ -43,22 +43,9 @@ Una resistencia 4 bandas `marrón-negro-naranja-dorado` = $10 \cdot 1\,\text{k} 
 
 Para evitar el código de colores: usar **multímetro** o las que tienen el valor impreso (1% metal film).
 
-## Kit del proyecto
-
-3120 piezas, 156 valores, $1\,\Omega$ a $10\,\text{M}\Omega$, 1/4W, $\pm 1\%$ metal film.
-
-> **1/4W** significa que disipa máximo 0.25W: $P = \frac{V^2}{R} = I^2 R$. Para cargas más altas (driver de LED de potencia, divisor de tensión con corriente alta) elegir 1W o 5W.
-
 ## Pull-up / pull-down
 
 Cuando un GPIO está como entrada (botón, switch), necesita una resistencia fija a VCC (pull-up) o a GND (pull-down) para no quedar flotante leyendo ruido.
 
-```
-3.3V ──┬── [10kΩ] ──┬── GPIO ← pull-up
- │
- [BTN]
- │
- GND
-```
 
-El [ESP32](../hardware/socs/index.md) tiene pull-up/pull-down internos configurables por firmware (API ESP-IDF: `gpio_pullup_en()` / `gpio_pulldown_en()`). Para nodos definitivos en el invernadero, mejor pull externo de $10\,\text{k}\Omega$ - más resistente a ruido eléctrico.
+El [ESP32](../hardware-esp32/socs/index.md) tiene pull-up/pull-down internos configurables por firmware (API ESP-IDF: `gpio_pullup_en()` / `gpio_pulldown_en()`).

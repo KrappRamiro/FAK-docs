@@ -8,7 +8,7 @@ Página del fabricante: [Sensirion SHT45](https://sensirion.com/products/catalog
 
 | Spec | Valor |
 |---|---|
-| Precisión temperatura | **$\pm 0.1\,^\circ\text{C}$** típica |
+| Precisión temperatura | **$\pm 0.1^\circ\text{C}$** típica |
 | Precisión HR | **$\pm 1\%$ RH** típica |
 | Drift temperatura | **< 0.03 $^\circ$C / año** (datasheet §2.2) - relevante para publicación |
 | Drift HR | **< 0.2 %RH / año** (datasheet §2.1) |
@@ -31,7 +31,7 @@ Fuentes de calor a evitar en un nodo de invernadero:
 - **Bombas, relays, MOSFETs de potencia** que conmutan cargas grandes
 - **Luz solar directa sobre el gabinete** (efecto invernadero dentro de la caja)
 
-Para nodos ambientales donde la T del aire es la variable principal, lo recomendado es **separar físicamente el sensor del nodo** vía un cable de ~30-50 cm, con el sensor en un radiation shield ventilado y la electrónica en otra caja a la sombra. Ver receta en [`nodo-ambiental.md`](../../construccion-nodos/nodo-ambiental.md).
+Para nodos ambientales donde la T del aire es la variable principal, lo recomendado es **separar físicamente el sensor del nodo** vía un cable de ~30-50 cm, con el sensor en un radiation shield ventilado y la electrónica en otra caja a la sombra.
 
 ## Variantes - atención al sufijo
 
@@ -52,37 +52,15 @@ El filtro PTFE es una membrana microporosa que deja pasar vapor de agua pero blo
 
 ## Implementación I2C (esquema)
 
-```
-ESP32 ──── SDA ──── SHT45 SDA
-ESP32 ──── SCL ──── SHT45 SCL
-3.3V ──── pull-ups 10kΩ a SDA y SCL ──── 3.3V
-GND ────────────── SHT45 GND
-3.3V ────────────── SHT45 VDD
+```mermaid
+graph LR
+    E["ESP32"] -->|SDA| S["SHT45"]
+    E -->|SCL| S
+    V33["3.3V"] -->|"pull-ups 10 kΩ\nSDA y SCL"| E
+    GND["GND"] -->|GND| S
+    Vin["3.3V"] -->|VDD| S
 ```
 
 ### Driver mínimo en ESP-IDF
-
-```c
-#include "driver/i2c.h"
-
-#define SHT45_ADDR 0x44
-
-esp_err_t sht45_read(float *temp_c, float *humidity_pct) {
- uint8_t cmd[] = {0xFD}; // Measurement command - high precision
- uint8_t data[6];
-
- i2c_master_write_to_device(I2C_NUM_0, SHT45_ADDR, cmd, 1, pdMS_TO_TICKS(100));
- vTaskDelay(pdMS_TO_TICKS(10)); // 8.2 ms typical conversion time
- i2c_master_read_from_device(I2C_NUM_0, SHT45_ADDR, data, 6, pdMS_TO_TICKS(100));
-
- uint16_t raw_t = (data[0] << 8) | data[1];
- uint16_t raw_h = (data[3] << 8) | data[4];
-
- *temp_c = -45.0f + 175.0f * raw_t / 65535.0f;
- *humidity_pct = -6.0f + 125.0f * raw_h / 65535.0f;
-
- return ESP_OK;
-}
-```
 
 > Validar CRC de los bytes `data[2]` y `data[5]` antes de confiar en la medición - Sensirion documenta el polinomio CRC-8 en el datasheet.

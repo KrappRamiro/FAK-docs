@@ -8,7 +8,7 @@ Página del fabricante: [Sensirion SHT31-DIS-B](https://sensirion.com/products/c
 
 | Spec | Valor |
 |---|---|
-| Precisión temperatura | $\pm 0.2\,^\circ\text{C}$ típica @ 0-90 $^\circ$C (degrada a ~$\pm 0.5\,^\circ\text{C}$ en extremos) |
+| Precisión temperatura | $\pm 0.2^\circ$C típica @ 0-90 $^\circ$C (degrada a ~$\pm 0.5^\circ$C en extremos) |
 | Precisión HR | $\pm 2\%$ RH típica |
 | Rango operativo | -40 a +125 $^\circ$C, 0-100 %RH (datasheet Tables 1 y 2) |
 | Heater | Integrado, **on/off único** (single-stage). 3.6-33 mW según VDD. No es selectable por niveles - eso es del SHT4x |

@@ -27,7 +27,7 @@ Vulnerabilidad de fault injection en el **ESP32 clásico (Xtensa LX6)** descubie
 
 ## Implicancias para diseños nuevos
 
-Para chips modernos (la línea RISC-V: [C3](../hardware/socs/esp32-c3.md), [C6](../hardware/socs/esp32-c6.md), [H2](../hardware/socs/esp32-h2.md), [C5](../hardware/socs/esp32-c5.md), [P4](../hardware/socs/esp32-p4.md) y los Xtensa LX7: [S2](../hardware/socs/esp32-s2.md), [S3](../hardware/socs/esp32-s3.md)), la cadena específica de Fatal Fury (eFuse read-protection + bootROM del ESP32 clásico) **no aplica tal cual**. Estos chips:
+Para chips modernos (la línea RISC-V: [C3](../hardware-esp32/socs/esp32-c3.md), [C6](../hardware-esp32/socs/esp32-c6.md), [H2](../hardware-esp32/socs/esp32-h2.md), [C5](../hardware-esp32/socs/esp32-c5.md), [P4](../hardware-esp32/socs/esp32-p4.md) y los Xtensa LX7: [S2](../hardware-esp32/socs/esp32-s2.md), [S3](../hardware-esp32/socs/esp32-s3.md)), la cadena específica de Fatal Fury (eFuse read-protection + bootROM del ESP32 clásico) **no aplica tal cual**. Estos chips:
 
 - Usan [Secure Boot V2](./ota-firmado.md) con firma RSA-3072 desde diseño (algunas líneas también soportan ECDSA P-256)
 - Tienen Flash Encryption con XTS-AES-128/256

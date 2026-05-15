@@ -68,62 +68,17 @@ Ningún ESP32 tiene pinout compatible con el ESP8266, así que si tenés PCBs he
 
 La mayoría son búsqueda y reemplazo de includes. Las APIs de WiFi, servidor web, mDNS y filesystem son idénticas en funcionalidad.
 
-```cpp
-// Antes (ESP8266)             -->   Ahora (ESP32)
-#include <ESP8266WiFi.h>       -->   #include <WiFi.h>
-#include <ESP8266WebServer.h>  -->   #include <WebServer.h>
-#include <ESP8266mDNS.h>       -->   #include <ESPmDNS.h>
-ICACHE_RAM_ATTR void isr()     -->   IRAM_ATTR void isr()
-analogRead(A0)  // 0-1023      -->   analogRead(PIN)  // 0-4095, PIN = número GPIO
-```
-
 ## Pitfalls comunes
 
 ### `delay()` y el scheduler WiFi
 
 En el 8266 funcionaba porque el scheduler era cooperativo y simple. En ESP32 (que corre FreeRTOS) un `delay()` largo puede starvar el task de WiFi y generar desconexiones:
 
-```cpp
-// Puede causar desconexiones en ESP32:
-void loop() {
-    delay(5000);
-}
-
-// Correcto con FreeRTOS:
-vTaskDelay(pdMS_TO_TICKS(5000));
-
-// O con millis() si seguís en loop():
-unsigned long last = 0;
-void loop() {
-    if (millis() - last >= 5000) {
-        last = millis();
-        doSomething();
-    }
-}
-```
-
 ### SPIFFS está deprecado — migrar a LittleFS
-
-```cpp
-// Viejo:
-SPIFFS.begin();
-File f = SPIFFS.open("/config.json", "r");
-
-// Correcto:
-#include <LittleFS.h>
-LittleFS.begin();
-File f = LittleFS.open("/config.json", "r"); // misma API, distinto include
-```
 
 ### `IRAM_ATTR` en ISRs (chips Xtensa)
 
 En chips con arquitectura Xtensa (S3), el código en flash se cachea. Una ISR puede ejecutarse cuando la caché no está disponible, y sin `IRAM_ATTR` crashea de forma no determinística.
-
-```cpp
-IRAM_ATTR void miISR() {
-    // código de interrupción
-}
-```
 
 En chips RISC-V (C3, C6) el modelo de memoria es más simple y no tiene este problema, pero mantenerlo como hábito no hace daño.
 

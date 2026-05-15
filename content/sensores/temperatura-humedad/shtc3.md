@@ -8,7 +8,7 @@ Página del fabricante: [Sensirion SHTC3](https://sensirion.com/products/catalog
 
 | Spec | Valor |
 |---|---|
-| Precisión temperatura | $\pm 0.2\,^\circ\text{C}$ típica |
+| Precisión temperatura | $\pm 0.2^\circ$C típica |
 | Precisión HR | $\pm 2\%$ RH típica (20-80% RH) |
 | Rango operativo | -40 a +125 $^\circ$C (datasheet §2.2 Table 4) |
 | Heater | No integrado |
@@ -21,5 +21,5 @@ Página del fabricante: [Sensirion SHTC3](https://sensirion.com/products/catalog
 ## Notas
 
 - **Más chico que SHT4x** - pensado para wearables y dispositivos donde el espacio manda.
-- Integrado de fábrica en boards como el [ESP32-C3-DevKit-RUST-1](../../hardware/devkits/espressif/esp32-c3-devkit-rust-1.md).
+- Integrado de fábrica en boards como el [ESP32-C3-DevKit-RUST-1](../../hardware-esp32/devkits/espressif/esp32-c3-devkit-rust-1.md).
 - Precisión un escalón abajo del SHT4x - para uso preciso en publicación, preferir [SHT45](sht45.md).

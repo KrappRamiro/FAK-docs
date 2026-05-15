@@ -6,8 +6,8 @@ Lista de hardware que tenemos disponibles.
 
 | Cantidad | Modelo                                                                          | Specs                   |
 | -------- | ------------------------------------------------------------------------------- | ----------------------- |
-| 3        | [ESP32-S3-DevKitC-1 N16R8](../hardware/devkits/espressif/esp32-s3-devkitc-1.md) | 16 MB flash, 8 MB PSRAM |
-| 2        | [ESP32-C3-DevKitC-02](../hardware/devkits/espressif/esp32-c3-devkitc-02.md)     | 4 MB flash, sin PSRAM   |
+| 3        | [ESP32-S3-DevKitC-1 N16R8](../hardware-esp32/devkits/espressif/esp32-s3-devkitc-1.md) | 16 MB flash, 8 MB PSRAM |
+| 2        | [ESP32-C3-DevKitC-02](../hardware-esp32/devkits/espressif/esp32-c3-devkitc-02.md)     | 4 MB flash, sin PSRAM   |
 
 ## Componentes básicos
 

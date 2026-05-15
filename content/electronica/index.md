@@ -20,6 +20,6 @@ Componentes pasivos y módulos de potencia que vas a usar antes de cualquier sen
 
 1. **GPIO del ESP32 entrega típicamente ~20mA (default drive strength), 40mA absolute max** ([ESP32 datasheet Tabla 5-3](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)). Para cargas mayores: transistor o módulo con optoacoplador. (Ojo: el viejo "12mA" que aparece en muchos tutoriales era del ESP8266, no aplica al ESP32.)
 2. **Toda carga inductiva (relay, motor, solenoide, electroválvula) lleva diodo flyback** en antiparalelo con la bobina.
-3. **El [ESP32](../hardware/socs/index.md) trabaja a 3.3V.** Señales de 5V que entren a un GPIO dañan el chip. Verificar voltaje antes de conectar shields Arduino y módulos [Grove](../hardware/conectores.md) de 5V.
+3. **El [ESP32](../hardware-esp32/socs/index.md) trabaja a 3.3V.** Señales de 5V que entren a un GPIO dañan el chip. Verificar voltaje antes de conectar shields Arduino y módulos [Grove](conectores.md) de 5V.
 4. **100nF cerámico** entre VCC y GND de cada IC, lo más cerca posible del pin de alimentación.
 5. **Resistor en serie** con todo LED. Sin excepciones.

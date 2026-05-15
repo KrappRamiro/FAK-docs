@@ -2,26 +2,15 @@
 
 Componente unidireccional - la corriente pasa en un solo sentido.
 
-```
-ánodo ──►├── cátodo ← banda blanca/plateada del cuerpo
-```
-
-Cuando hay tensión positiva ánodo $\rightarrow$ cátodo, el diodo conduce con una caída de tensión. La regla "0.7V silicio / 0.3V Schottky" es válida solo a corrientes bajas. **A la corriente nominal del diodo el Vf real es bastante más alto**: ~1 V para un silicio rectificador @ 1 A, ~0.5 V para un Schottky @ corriente nominal. Verificar siempre el datasheet específico cuando el margen de tensión importa.
-
-## Regla de flyback - la más importante
-
-> **Todo componente inductivo (relay, motor DC, solenoide, electroválvula) lleva un [1N4007](./1n4007.md) en antiparalelo con la bobina.**
-
-Cuando cortás la corriente en una bobina, el campo magnético colapsa y genera un pico de tensión inversa que **destruye el transistor o el GPIO del ESP32**.
-
-```
- ─►├─
- ┌─ 1N4007 ─┐ ← cátodo (banda) hacia +V
- (+V) (−)
- │ │
- [bobina del relay]
- │ │
- +12V Transistor / GPIO
+```mermaid
+graph LR
+    A["ánodo"] -->|"──►├──"| C["cátodo\nbanda blanca / plateada"]
+mermaid
+graph TD
+    V["+12V"] -->|corriente normal| L["bobina del relay"]
+    V -.-|"cátodo (banda) ↑"| D["1N4007"]
+    L --> T["Transistor / GPIO"]
+    D -.-|"ánodo — pico inverso"| T
 ```
 
 El diodo deja pasar el pico inverso de vuelta a la bobina, disipándolo internamente. Sin esto, el circuito muere a las pocas conmutaciones.

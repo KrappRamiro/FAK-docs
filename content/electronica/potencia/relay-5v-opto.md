@@ -13,16 +13,25 @@ Módulo genérico común en kits - sin fabricante único. Disponibles en AliExpr
 
 ## Diagrama típico
 
-```
-┌─────────────────────────────┐
-│ IN ─── GPIO ESP32 │ Lado señal (3.3V)
-│ VCC ─── 5V │ ↕ aislamiento óptico
-│ GND ─── GND │ Lado potencia
-│ │
-│ COM ─── 12V de la carga │
-│ NO ─── + carga (normalmente abierto, cierra al activar) │
-│ NC ─── + carga (normalmente cerrado, abre al activar) │
-└─────────────────────────────┘
+```mermaid
+graph LR
+    GPIO["GPIO ESP32"] -->|IN| RL["Relay\nopto-aislado"]
+    V5["5V"] -->|VCC| RL
+    GND1["GND"] -->|GND| RL
+    RL -->|COM| C["12V carga"]
+    RL -->|NO| LNO["＋ carga\nnorm. abierto"]
+    RL -->|NC| LNC["＋ carga\nnorm. cerrado"]
+
+    subgraph s["Lado señal (3.3V)"]
+        GPIO
+        V5
+        GND1
+    end
+    subgraph p["Lado potencia (aislado)"]
+        C
+        LNO
+        LNC
+    end
 ```
 
 ## Por qué optoacoplador
@@ -35,11 +44,6 @@ Un LED + fototransistor adentro del módulo transmite la señal de control **óp
 ## Trigger HIGH vs LOW
 
 Algunos módulos chinos activan con LOW (lógica invertida). Verificar el silkscreen o probar con un LED en el GPIO:
-
-```c
-gpio_set_level(RELAY_GPIO, 0); // ¿se activa el relay? → es Low Trigger
-gpio_set_level(RELAY_GPIO, 1); // ¿se activa el relay? → es High Trigger
-```
 
 ## Trampa con cargas inductivas
 

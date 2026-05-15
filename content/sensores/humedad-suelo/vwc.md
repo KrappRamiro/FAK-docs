@@ -83,21 +83,6 @@ Un $R^2 > 0.95$-0.98 es esperable con sensores capacitivos de buena calidad post
 
 Una vez obtenida la ecuación, hardcodear coeficientes:
 
-```c
-// Coeficientes obtenidos de la regresión polinomial
-float adc_to_vwc(int adc_raw) {
- const float a = -0.0000003f;
- const float b = 0.0012f;
- const float c = -0.85f;
- float vwc = a * adc_raw * adc_raw + b * adc_raw + c;
-
- // Clamp entre 0 y 1
- if (vwc < 0.0f) vwc = 0.0f;
- if (vwc > 1.0f) vwc = 1.0f;
- return vwc * 100.0f; // retorna en %
-}
-```
-
 Si tenés varios sensores y cada uno requiere su propio set de coeficientes, guardarlos en [NVS](../../seguridad-iot/secrets-en-firmware.md) (Non-Volatile Storage) indexados por ID de sensor - así no tenés que recompilar el firmware al recalibrar.
 
 ---
@@ -131,7 +116,7 @@ Instalar un **[METER TEROS 11](teros-11.md)** en el mismo punto que uno de los s
 
 ### Para control / automatización
 - **Sensor capacitivo genérico v2.0** (AliExpress/Temu) - el del kit
-- Salida analógica $\rightarrow$ ADC del [ESP32](../../hardware/socs/index.md)
+- Salida analógica $\rightarrow$ ADC del [ESP32](../../hardware-esp32/socs/index.md)
 - Requiere calibración por sustrato
 - **No usar sensores resistivos** - se corroen en semanas
 

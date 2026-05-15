@@ -14,7 +14,7 @@ Docs oficiales: [T-Deck repo en GitHub](https://github.com/Xinyuan-LilyGO/T-Deck
 | LiPo | ✅ |
 | Display | 2.8" IPS touch 320x240 |
 | Input | QWERTY keyboard + trackball |
-| Extras | SD card slot, opcional [LoRa](../../../conectividad/lora.md) |
+| Extras | SD card slot, opcional [LoRa](../../../red/lora.md) |
 ## Cuándo elegirlo
 
 - Dispositivos portátiles tipo "comunicador" (Meshtastic + LoRa, walkie-talkie digital)

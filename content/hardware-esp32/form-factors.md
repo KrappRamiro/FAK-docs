@@ -4,8 +4,8 @@
 
 - **Tamaño:** 50.8x22.9 mm
 - **LiPo charging + JST connector** en todos los boards
-- **[STEMMA QT](conectores.md)** en todos los boards modernos
-- **FeatherWings disponibles:** motor driver, [LoRa](../conectividad/lora.md), OLED, eInk, relay, GPS, SD, servo, audio, etc.
+- **[STEMMA QT](../electronica/conectores.md)** en todos los boards modernos
+- **FeatherWings disponibles:** motor driver, [LoRa](../red/lora.md), OLED, eInk, relay, GPS, SD, servo, audio, etc.
 - Cualquier FeatherWing funciona con cualquier Feather board - completamente cross-compatible
 
 ## D1 Mini + Shields (Wemos / LOLIN)
@@ -26,8 +26,8 @@
 
 - Unidades encapsuladas que se apilan con conectores magnéticos de pogo pins
 - No orientado a breadboard - prototipado sin cables
-- **Expansión:** Modules (stack interno), Units ([Grove](conectores.md) externo), Hats (para Stick)
-- Todos los boards tienen puertos [Grove](conectores.md)
+- **Expansión:** Modules (stack interno), Units ([Grove](../electronica/conectores.md) externo), Hats (para Stick)
+- Todos los boards tienen puertos [Grove](../electronica/conectores.md)
 
 ## Arduino Shields
 

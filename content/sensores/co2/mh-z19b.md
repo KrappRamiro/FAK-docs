@@ -26,37 +26,18 @@ Con ABC desactivado el MH-Z19B sigue siendo metodológicamente válido; varios p
 
 ### Comando UART para desactivar ABC
 
-```
-Bytes: 0xFF 0x01 0x79 0x00 0x00 0x00 0x00 0x00 0x86
-```
-
-```python
-import serial
-ser = serial.Serial('/dev/ttyUSB0', 9600)
-ser.write(b'\xff\x01\x79\x00\x00\x00\x00\x00\x86')
-```
-
-```c
-const uint8_t disable_abc[] = {0xFF, 0x01, 0x79, 0x00, 0x00, 0x00, 0x00, 0x00, 0x86};
-uart_write_bytes(UART_NUM_1, disable_abc, sizeof(disable_abc));
-```
-
 **Hacerlo una sola vez antes de instalar el sensor**, el setting se guarda en flash interno.
 
 ### Comando para leer CO2
 
-```
-Petición: 0xFF 0x01 0x86 0x00 0x00 0x00 0x00 0x00 0x79
-Respuesta: 9 bytes - CO2 = (byte[2] << 8) | byte[3] ppm
-```
-
 ## Implementación en ESP32
 
-```
-ESP32 GPIO TX ──── MH-Z19B RX
-ESP32 GPIO RX ──── MH-Z19B TX
-5V (de fuente externa, no del DevKit) ──── MH-Z19B Vin
-GND ──── MH-Z19B GND
+```mermaid
+graph LR
+    TX["ESP32 TX"] -->|RX| S["MH-Z19B"]
+    S -->|TX| RX["ESP32 RX"]
+    V5["5V externo"] -->|Vin| S
+    GND["GND"] -->|GND| S
 ```
 
 > El MH-Z19B consume hasta **150 mA en pico** durante el calentamiento del filamento IR. El regulador del DevKit puede no aguantar - alimentar desde un [LM2596S](../../electronica/potencia/lm2596s.md) directamente, no desde el 5V del DevKit.

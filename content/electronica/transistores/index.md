@@ -35,13 +35,11 @@ Conmutadores/amplificadores para manejar cargas que superan los **~20 mA** del G
 
 ## Circuito típico NPN para manejar relay desde ESP32
 
-```
-ESP32 GPIO ──[1kΩ]── Base (B)
- │
- │ Transistor NPN (ej. 2N2222)
- │
-GND ────────────── Emisor (E)
-Relay (+) ──────── Colector (C)
+```mermaid
+graph TD
+    GPIO["ESP32 GPIO"] -->|"1 kΩ → Base (B)"| T(["NPN\n(ej. 2N2222)"])
+    V["Relay (＋) / Carga"] -->|"Colector (C)"| T
+    T -->|"Emisor (E)"| GND["GND"]
 ```
 
 > ⚠️ **Siempre agregar diodo flyback [1N4007](../diodos/1n4007.md)** en paralelo con la bobina del relay.

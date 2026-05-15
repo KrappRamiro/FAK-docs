@@ -26,24 +26,6 @@ Cada sustrato necesita su **curva de calibración** (gravimétrica). Procedimien
 
 ## Lectura desde ESP32
 
-```c
-#include "esp_adc/adc_oneshot.h"
-
-adc_oneshot_unit_handle_t adc_handle;
-adc_oneshot_unit_init_cfg_t init_cfg = {.unit_id = ADC_UNIT_1};
-adc_oneshot_new_unit(&init_cfg, &adc_handle);
-
-adc_oneshot_chan_cfg_t chan_cfg = {
- .bitwidth = ADC_BITWIDTH_DEFAULT,
- .atten = ADC_ATTEN_DB_12, // 0-3.3V rango completo
-};
-adc_oneshot_config_channel(adc_handle, ADC_CHANNEL_3, &chan_cfg);
-
-int raw;
-adc_oneshot_read(adc_handle, ADC_CHANNEL_3, &raw);
-// raw va a estar entre ~1200 (saturado) y ~3100 (seco)
-```
-
 ## Factores de deriva a declarar en metodología
 
 | Factor | Efecto | Mitigación |

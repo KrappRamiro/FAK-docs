@@ -58,9 +58,9 @@ En cada paso puede haber pérdida o transformación. Documentar:
 |---|---|
 | Driver de sensor | Versión del firmware, fórmula de conversión usada, ej. $T = -45 + 175 \cdot \frac{\text{raw}}{65535}$ |
 | Buffer local | Política si broker está caído, max tamaño, política FIFO/LIFO |
-| Broker | Versión [Mosquitto](../conectividad/mqtt-stack.md), config relevante (persistencia, retención) |
-| [Telegraf](../conectividad/mqtt-stack.md) | Versión, config de parseo, transformaciones aplicadas |
-| [InfluxDB](../conectividad/mqtt-stack.md) | Versión, bucket retention policy, downsampling si lo hay |
+| Broker | Versión Mosquitto, config relevante (persistencia, retención) |
+| Telegraf | Versión, config de parseo, transformaciones aplicadas |
+| InfluxDB | Versión, bucket retention policy, downsampling si lo hay |
 | Análisis | Scripts versionados en git, commit hash citado en el paper |
 
 ---
@@ -69,7 +69,7 @@ En cada paso puede haber pérdida o transformación. Documentar:
 
 Para que otro grupo pueda repetir tu experimento, **publicar como suplemento**:
 
-1. **Lista exacta de hardware** con part numbers (no "[ESP32](../hardware/socs/index.md)" sino "[ESP32-S3-WROOM-1-N16R8](../hardware/modulos/wroom.md) + [ESP32-S3-DevKitC-1](../hardware/devkits/espressif/esp32-s3-devkitc-1.md)")
+1. **Lista exacta de hardware** con part numbers (no "[ESP32](../hardware-esp32/socs/index.md)" sino "[ESP32-S3-WROOM-1-N16R8](../hardware-esp32/modulos/wroom.md) + [ESP32-S3-DevKitC-1](../hardware-esp32/devkits/espressif/esp32-s3-devkitc-1.md)")
 2. **Firmware open source** en un repositorio (GitHub, Zenodo con DOI permanente)
 3. **Scripts de calibración** y procesamiento de datos
 4. **Datos raw publicados** (Zenodo, Figshare) - no solo los datos limpios
@@ -84,9 +84,9 @@ Para que otro grupo pueda repetir tu experimento, **publicar como suplemento**:
 | Firmware sin versionado | No sabés qué versión recolectó cada dato | Incluir version string en el heartbeat: `fw_version: "0.3.1+a1b2c3"` |
 | Cambios de hardware no documentados | "Cambié el sensor en la zona A pero olvidé anotar cuándo" | Log de intervenciones obligatorio, fecha + ID del nodo |
 | Reloj del nodo no sincronizado | Timestamps inconsistentes entre nodos | SNTP a NTP confiable, validar drift en heartbeat |
-| Datos manuales mezclados con sensorizados | No se sabe si una lectura es del sensor o "anotada a ojo" | Tag explícito en [InfluxDB](../conectividad/mqtt-stack.md): `source = "auto" / "manual"` |
+| Datos manuales mezclados con sensorizados | No se sabe si una lectura es del sensor o "anotada a ojo" | Tag explícito en InfluxDB: `source = "auto" / "manual"` |
 | Recalibraciones no registradas | Cambio de comportamiento del sensor sin explicación | Tag en log de intervenciones, ID del sensor + slope antes/después |
-| Backup de [InfluxDB](../conectividad/mqtt-stack.md) perdido o no verificado | Datos del paper se pierden por crash de disco | Backup diario + verificación de restauración mensual |
+| Backup de InfluxDB perdido o no verificado | Datos del paper se pierden por crash de disco | Backup diario + verificación de restauración mensual |
 
 ---
 
@@ -99,7 +99,7 @@ Antes de submit del paper, verificar:
 - [ ] Procedimiento de calibración descrito para cada sensor barato
 - [ ] $R^2$ de validación cruzada reportado con n, ventana de tiempo, RMSE
 - [ ] Versión del firmware y disponibilidad del código
-- [ ] Versión del stack ([Mosquitto](../conectividad/mqtt-stack.md), [InfluxDB](../conectividad/mqtt-stack.md), [Telegraf](../conectividad/mqtt-stack.md), [Grafana](../conectividad/mqtt-stack.md))
+- [ ] Versión del stack (Mosquitto, InfluxDB, Telegraf, Grafana)
 - [ ] Período del experimento con timestamps absolutos
 - [ ] Eventos atípicos documentados (cortes de luz, intervenciones)
 - [ ] Lista de outliers y criterio de exclusión

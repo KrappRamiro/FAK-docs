@@ -12,7 +12,7 @@ Docs oficiales: [FireBeetle 2 ESP32-S3 wiki](https://wiki.dfrobot.com/SKU_DFR097
 | Flash/PSRAM | 16 MB / 8 MB |
 | USB | USB-C OTG nativo |
 | LiPo | ✅ ETA6003 |
-| Extras | Conector GDI para display, header de cámara (incluye módulo OV2640 2MP), ecosistema [Gravity](../../conectores.md) |
+| Extras | Conector GDI para display, header de cámara (incluye módulo OV2640 2MP), ecosistema [Gravity](../../../electronica/conectores.md) |
 ## Cuándo elegirlo
 
 - Integración con sensores Gravity de DFRobot

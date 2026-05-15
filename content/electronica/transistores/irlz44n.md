@@ -22,10 +22,11 @@ Datasheet: [Infineon IRLZ44N (PDF)](https://www.infineon.com/dgdl/Infineon-IRLZ4
 
 ## Circuito típico
 
-```
-ESP32 GPIO ──── Gate
- Source ── GND
- Drain ── carga ── +Vcc
+```mermaid
+graph LR
+    GPIO["ESP32 GPIO"] -->|Gate| M(["IRLZ44N"])
+    V["+Vcc"] --> L["Carga"] --> M
+    M -->|Source| GND["GND"]
 ```
 
 > Para gate de alta velocidad (PWM > 10 kHz), agregar resistor $100\,\Omega$ en serie al gate + pull-down $10\,\text{k}\Omega$. Para cargas inductivas, diodo flyback (Schottky tipo [1N5822](../diodos/1n5822.md)) en antiparalelo con la carga.

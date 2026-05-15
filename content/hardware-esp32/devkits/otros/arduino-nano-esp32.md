@@ -2,7 +2,7 @@
 
 Pinout Nano clásico con [ESP32-S3](../../socs/esp32-s3.md) adentro.
 
-Docs oficiales: [Arduino Nano ESP32 store](https://store.arduino.cc/products/nano-esp32), [Arduino Nano ESP32 docs](https://docs.arduino.cc/hardware/nano-esp32/)
+Docs oficiales: [Arduino Nano ESP32 store](https://store.arduino.cc/products/nano-esp32), [Arduino Nano ESP32 docs](https://docs.arduino.cc/hardware-esp32/nano-esp32/)
 
 ## Specs
 

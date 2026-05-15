@@ -20,13 +20,6 @@ Catálogo de opciones para programar un ESP32 en Rust. Es una alternativa a [ESP
 
 [`espup`](https://github.com/esp-rs/espup) es el gestor oficial , instala el toolchain Xtensa, GCC para linking y herramientas auxiliares (`espflash`, `cargo-espflash`):
 
-```bash
-cargo install espup
-espup install
-# Activar las variables de entorno (espup genera un archivo con los exports)
-. ~/export-esp.sh
-```
-
 Después de eso, `cargo build --target xtensa-esp32s3-espidf` funciona normal.
 
 Para chips RISC-V puro (sin Xtensa), no se necesita `espup` - basta con `rustup target add riscv32imac-unknown-none-elf`.

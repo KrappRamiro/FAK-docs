@@ -10,12 +10,10 @@ Almacenan carga eléctrica. Capacidad en Farads (F), típicamente en pF, nF o $\
 - Voltaje de trabajo debe ser mayor al del circuito (margen x1.5 mínimo)
 - Ejemplo: $100\,\mu\text{F}$ en paralelo con la fuente para absorber picos
 
-```
- │ ── (+)
- │
- [Electrolítico]
- │
- │ ── (−) ← banda blanca en el cuerpo marca este lado
+```mermaid
+graph TD
+    P["(＋)"] --- C["Electrolítico"]
+    C --- N["(－) ← banda blanca en el cuerpo"]
 ```
 
 ## Cerámicos
@@ -24,7 +22,7 @@ Almacenan carga eléctrica. Capacidad en Farads (F), típicamente en pF, nF o $\
 - Valores pequeños: 1 pF - 100 nF
 - Para **desacople de alta frecuencia** cerca de cada chip
 - [**Regla estándar: 100nF cerámico entre VCC y GND de cada IC**, lo más cerca posible del pin de alimentación](https://www.reddit.com/r/electronics/comments/q8piq/why_do_many_boards_have_capacitors_tied_between/)
-- Ejemplo: 100nF entre 3.3V y GND del [ESP32](../hardware/socs/index.md) para filtrar ruido de RF
+- Ejemplo: 100nF entre 3.3V y GND del [ESP32](../hardware-esp32/socs/index.md) para filtrar ruido de RF
 
 ## Regla rápida
 
