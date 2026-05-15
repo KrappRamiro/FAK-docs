@@ -12,7 +12,7 @@ Docs oficiales: [ESP32-P4-Function-EV-Board user guide](https://docs.espressif.c
 |---|---|
 | SoC | [ESP32-P4](../../socs/esp32-p4.md) + [ESP32-C6](../../socs/esp32-c6.md) (módulo C6-MINI-1) para wireless |
 | Flash/PSRAM | 16 MB / 32 MB PSRAM |
-| USB | USB-C $\times 3$ (Serial/JTAG + Full-speed + OTG High-Speed) + USB-A $\times 1$ |
+| USB | USB-C x3 (Serial/JTAG + Full-speed + OTG High-Speed) + USB-A x1 |
 | Extras | MIPI DSI + MIPI CSI, Ethernet 10/100, 40 GPIO header, H.264 hw codec |
 ## Cuándo elegirlo
 

@@ -10,7 +10,7 @@ Docs oficiales: [ESP32-S2-Kaluga-1 user guide](https://docs.espressif.com/projec
 |---|---|
 | SoC | [ESP32-S2](../../socs/esp32-s2.md) |
 | Flash/PSRAM | 4 MB / 2 MB PSRAM |
-| USB | Micro-B $\times 2$ (USB-UART/JTAG + ESP32-S2 USB OTG nativo) |
+| USB | Micro-B x2 (USB-UART/JTAG + ESP32-S2 USB OTG nativo) |
 | Extras | Codec audio ES8311, cámara DVP, LCD, touch daughterboard |
 ## Cuándo elegirlo
 

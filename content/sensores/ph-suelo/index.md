@@ -18,7 +18,7 @@ Resumido de la discusión [r/diyelectronics - soil pH sensors](https://www.reddi
 | **Tiras pH (papel indicador)** | Spot, colorimétrico | Cuando se necesite | por 100 tiras | Baja - no para paper |
 | **pHmetro portátil de bolsillo** (Hanna, Apera) | Spot, electrodo | Semanal / quincenal | | Media - con calibración documentada |
 | **[Atlas EZO-pH](./ezo-ph.md) + electrodo de laboratorio** | Spot, electrodo industrial | Semanal / quincenal | | **Alta** - apto para paper con calibración 3-puntos NIST-traceable cada 4 semanas |
-| Sensores baratos de dos puntas AliExpress | "Continuous in-situ" | - | | **Ninguna - no usar** |
+| Sensores baratos de dos puntas AliExpress | "Continuous in-situ" | ❌ | | **Ninguna - no usar** |
 
 ## Protocolo estándar de muestreo (ASTM D4972 / USDA NRCS)
 

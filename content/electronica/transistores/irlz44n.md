@@ -9,7 +9,7 @@ Datasheet: [Infineon IRLZ44N (PDF)](https://www.infineon.com/dgdl/Infineon-IRLZ4
 | Spec | Valor |
 |---|---|
 | Tipo | MOSFET N-channel |
-| Corriente max (I_D) | 47 A continuos @ TC=$25\,°\text{C}$ (33 A @ TC=$100\,°\text{C}$) |
+| Corriente max (I_D) | 47 A continuos @ TC=$25\,^\circ\text{C}$ (33 A @ TC=$100\,^\circ\text{C}$) |
 | Tensión máx Vds | 55V |
 | Vgs(th) | 1.0-2.0V (logic-level - se satura con 3.3V o 5V) |
 | Rds(on) | $22\,\text{m}\Omega$ máx @ Vgs=10V ($25\,\text{m}\Omega$ @ Vgs=5V) |

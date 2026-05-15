@@ -103,7 +103,7 @@ void app_main(void) {
 
 - A **1.5-2 m del suelo** (zona de copa de planta media)
 - **Sensor de temp/HR afuera del gabinete**, con cable de 30 cm+ - el gabinete cerrado se calienta, lecturas reales se hacen al aire ventilado
-- **Sombreado** del sol directo (la caja al sol mete +5-$10\,°\text{C}$; usar radiation shield si vas en serio)
+- **Sombreado** del sol directo (la caja al sol mete +5-10 $^\circ$C; usar radiation shield si vas en serio)
 - **Lejos de motores, ventiladores y bombas** (ruido eléctrico)
 - **Gabinete IP54** mínimo, ventilado pero protegido de salpicaduras
 - Cable de alimentación 12V con conduit hasta el gabinete
@@ -119,7 +119,7 @@ void app_main(void) {
 
 | Problema | Causa | Fix |
 |---|---|---|
-| Temp lee 5-$10\,°\text{C}$ más alta que la real | Caja al sol, sensor mal posicionado | Radiation shield + sensor en cable fuera del gabinete |
+| Temp lee 5-10 $^\circ$C más alta que la real | Caja al sol, sensor mal posicionado | Radiation shield + sensor en cable fuera del gabinete |
 | HR siempre 100% | Condensación sobre el sensor | Usar SHT4x con filtro PTFE ([SHT45-AD1F-R2](../sensores/temperatura-humedad/sht45.md)) |
 | CO2 deriva en semanas | ABC del [MH-Z19B](../sensores/co2/mh-z19b.md) activado | Comando UART para desactivar (ver doc CO2) |
 | [PAR](../sensores/luz/conceptos-par.md) no correlaciona con luz aparente | Usás [BH1750](../sensores/luz/bh1750.md) con LEDs de cultivo | Migrar a [AS7341](../sensores/luz/as7341.md) (ver doc [PAR](../sensores/luz/conceptos-par.md)) |

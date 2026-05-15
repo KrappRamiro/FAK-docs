@@ -12,6 +12,6 @@ Docs oficiales: [Adafruit #5323](https://www.adafruit.com/product/5323)
 | Flash/PSRAM | 8 MB / - |
 | USB | USB-C OTG nativo |
 | Form factor | [Feather](../../form-factors.md) |
-| LiPo | ✓ MAX17048 |
-| STEMMA QT | ✓ |
+| LiPo | ✅ MAX17048 |
+| STEMMA QT | ✅ |
 > **Trampa Adafruit:** El ESP32-S3 Feather tiene al menos 4 SKUs distintos con configuraciones de memoria diferentes. Verificar el SKU exacto antes de comprar.

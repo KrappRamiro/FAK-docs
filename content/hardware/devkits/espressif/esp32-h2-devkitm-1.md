@@ -9,7 +9,7 @@ Docs oficiales: [ESP32-H2-DevKitM-1 user guide](https://docs.espressif.com/proje
 | Spec | Valor |
 |---|---|
 | SoC | [ESP32-H2](../../socs/esp32-h2.md) |
-| USB | USB-C $\times 2$ (Serial/JTAG nativo + bridge UART) - única vía de acceso, sin WiFi |
+| USB | USB-C x2 (Serial/JTAG nativo + bridge UART) - única vía de acceso, sin WiFi |
 | Módulo interno | [MINI-1](../../modulos/mini.md) / MINI-1U |
 | Extras | Antena 802.15.4, RGB LED |
 ## Cuándo elegirlo

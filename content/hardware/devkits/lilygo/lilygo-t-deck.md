@@ -11,8 +11,8 @@ Docs oficiales: [T-Deck repo en GitHub](https://github.com/Xinyuan-LilyGO/T-Deck
 | SoC | [ESP32-S3](../../socs/esp32-s3.md) |
 | Flash/PSRAM | 16 MB / 8 MB |
 | USB | USB-C OTG nativo |
-| LiPo | ✓ |
-| Display | 2.8" IPS touch $320 \times 240$ |
+| LiPo | ✅ |
+| Display | 2.8" IPS touch 320x240 |
 | Input | QWERTY keyboard + trackball |
 | Extras | SD card slot, opcional [LoRa](../../../conectividad/lora.md) |
 ## Cuándo elegirlo

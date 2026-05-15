@@ -11,7 +11,7 @@ Captura fotos del cultivo para timelapse, [NDVI](../sensores/luz/conceptos-par.m
 | Interface | Header DVP o MIPI CSI según cámara |
 | Alimentación 5V estable | Sensor de imagen es sensible al ruido |
 
-> Alternativa todo-en-uno: el [XIAO ESP32-S3 Sense](../hardware/devkits/seeed-xiao/xiao-esp32-s3-sense.md) incluye OV2640 + mic PDM + slot de SD card en formato $21 \times 17.5\,\text{mm}$. Ideal para deployment final discreto.
+> Alternativa todo-en-uno: el [XIAO ESP32-S3 Sense](../hardware/devkits/seeed-xiao/xiao-esp32-s3-sense.md) incluye OV2640 + mic PDM + slot de SD card en formato 21x17.5 mm. Ideal para deployment final discreto.
 
 ## Por qué ESP32-S3 y no S2 o C3
 

@@ -2,7 +2,7 @@
 
 ## Feather + FeatherWings (Adafruit)
 
-- **Tamaño:** $50.8 \times 22.9\,\text{mm}$
+- **Tamaño:** 50.8x22.9 mm
 - **LiPo charging + JST connector** en todos los boards
 - **[STEMMA QT](conectores.md)** en todos los boards modernos
 - **FeatherWings disponibles:** motor driver, [LoRa](../conectividad/lora.md), OLED, eInk, relay, GPS, SD, servo, audio, etc.
@@ -10,14 +10,14 @@
 
 ## D1 Mini + Shields (Wemos / LOLIN)
 
-- **Tamaño:** $32 \times 26\,\text{mm}$
+- **Tamaño:** 32x26 mm
 - **Shields:** OLED 0.66", relay, motor, DHT, LED matrix, batería, SD, protoboard
 - Shields del [ESP8266](migracion-esp8266.md) D1 Mini son compatibles con boards en el mismo footprint (ej. [LOLIN S2 Mini](devkits/wemos-lolin/lolin-s2-mini.md))
 - Muchos clones de calidad variable
 
 ## XIAO (Seeed Studio)
 
-- **Tamaño:** $21 \times 17.5\,\text{mm}$ - el más pequeño con LiPo charging
+- **Tamaño:** 21x17.5 mm - el más pequeño con LiPo charging
 - LiPo charging en todos los boards modernos
 - Pocos shields oficiales - principalmente para breadboard o PCB embebido
 - **[XIAO ESP32-S3 Sense](devkits/seeed-xiao/xiao-esp32-s3-sense.md)** agrega cámara OV2640 + micrófono PDM como módulo snap-on

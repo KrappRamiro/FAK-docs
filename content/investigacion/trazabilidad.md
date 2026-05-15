@@ -110,7 +110,7 @@ Antes de submit del paper, verificar:
 ## Lo que NO sirve como argumento de trazabilidad
 
 - "Lo medí con un sensor caro" $\rightarrow$ ¿cuál? ¿calibrado contra qué?
-- "El fabricante dice $\pm 0.2\,°\text{C}$" $\rightarrow$ ¿precisión = exactitud? ¿en qué rango? ¿después de cuánto tiempo de uso?
+- "El fabricante dice $\pm 0.2\,^\circ\text{C}$" $\rightarrow$ ¿precisión = exactitud? ¿en qué rango? ¿después de cuánto tiempo de uso?
 - "Comparé con otro sensor barato" $\rightarrow$ no es referencia, ambos pueden estar mal en la misma dirección
 - "Tomé el promedio de muchas mediciones" $\rightarrow$ reduce ruido aleatorio, no error sistemático
 - "Funcionó en mi tesis de maestría" $\rightarrow$ cada experimento requiere su propia validación de la cadena

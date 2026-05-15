@@ -1,24 +1,24 @@
 # Rust en ESP32
 
-Catálogo de opciones para programar un ESP32 en Rust. Es una alternativa madura a [ESP-IDF en C](index.md) con buen tooling oficial de Espressif.
+Catálogo de opciones para programar un ESP32 en Rust. Es una alternativa a [ESP-IDF en C](index.md) con buen tooling oficial de Espressif.
 
 ## Fuentes oficiales
 
-- [The Rust on ESP Book (esp-rs)](https://docs.esp-rs.org/book/) - guía de referencia mantenida por la organización esp-rs
-- [Espressif - The Rust on ESP Book (mirror oficial)](https://docs.espressif.com/projects/rust/book/) - mismo contenido publicado desde docs.espressif.com
-- [esp-rs/rust en GitHub](https://github.com/esp-rs/rust) - fork de Rust para soportar Xtensa
-- [esp-rs en GitHub (org completa)](https://github.com/esp-rs) - todos los crates oficiales
+- [The Rust on ESP Book (esp-rs)](https://docs.esp-rs.org/book/) : guía de referencia mantenida por la organización esp-rs
+- [Espressif - The Rust on ESP Book (mirror oficial)](https://docs.espressif.com/projects/rust/book/) : mismo contenido publicado desde docs.espressif.com
+- [esp-rs/rust en GitHub](https://github.com/esp-rs/rust) : fork de Rust para soportar Xtensa
+- [esp-rs en GitHub (org completa)](https://github.com/esp-rs) : todos los crates oficiales
 
 ## Toolchain - Xtensa vs RISC-V
 
 | Chip | Toolchain | Por qué |
 |---|---|---|
 | Xtensa: [ESP32](../socs/index.md) clásico, [S2](../socs/esp32-s2.md), [S3](../socs/esp32-s3.md), [ESP8266](../migracion-esp8266.md) | Rust **fork de Espressif** ([esp-rs/rust](https://github.com/esp-rs/rust)) con LLVM fork para Xtensa | El backend Xtensa no está aún en LLVM upstream; necesita la versión patcheada de Espressif |
-| RISC-V: [C2](../socs/esp32-c2.md), [C3](../socs/esp32-c3.md), [C5](../socs/esp32-c5.md), [C6](../socs/esp32-c6.md), [H2](../socs/esp32-h2.md), [P4](../socs/esp32-p4.md) | **Rust upstream estable** | RISC-V32 es target soportado por stock Rust desde hace tiempo |
+| RISC-V: [C2](../socs/esp32-c2.md), [C3](../socs/esp32-c3.md), [C5](../socs/esp32-c5.md), [C6](../socs/esp32-c6.md), [H2](../socs/esp32-h2.md), [P4](../socs/esp32-p4.md) | **Rust upstream estable** | RISC-V32 es un target soportado por Rust |
 
 ### Instalación con `espup`
 
-[`espup`](https://github.com/esp-rs/espup) es el gestor oficial - instala el toolchain Xtensa, GCC para linking y herramientas auxiliares (`espflash`, `cargo-espflash`) en una sola operación:
+[`espup`](https://github.com/esp-rs/espup) es el gestor oficial , instala el toolchain Xtensa, GCC para linking y herramientas auxiliares (`espflash`, `cargo-espflash`):
 
 ```bash
 cargo install espup

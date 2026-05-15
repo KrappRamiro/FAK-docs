@@ -105,7 +105,7 @@ El broker [MQTT](mqtt-stack.md) local garantiza funcionamiento sin internet, alg
 | Problema | Mitigación |
 |---|---|
 | Humedad sobre PCB | Gabinete IP54+, conformal coating en zonas críticas |
-| Temperatura > $50\,°\text{C}$ en techo | Ubicar nodos a 1-1.5 m del suelo, no en el techo |
+| Temperatura > 50 $^\circ$C en techo | Ubicar nodos a 1-1.5 m del suelo, no en el techo |
 | Electrólisis por humedad + corriente DC en suelo | Sensores capacitivos (no resistivos), aislamiento galvánico en electrónica de potencia |
 | Estática por roce con plantas | Pull-down de GPIOs no usados, varistor en la línea de 12V |
 | Roedores comiendo cables | Conduit metálico para las líneas principales |

@@ -7,7 +7,7 @@ Almacenan carga eléctrica. Capacidad en Farads (F), típicamente en pF, nF o $\
 - **Polarizados** - tienen polo positivo y negativo. **Conectar al revés los destruye** (pueden explotar).
 - Valores grandes: $1 - 1000\,\mu\text{F}$
 - Para **filtrado de alimentación** y **desacople de baja frecuencia**
-- Voltaje de trabajo debe ser mayor al del circuito (margen $\times 1.5$ mínimo)
+- Voltaje de trabajo debe ser mayor al del circuito (margen x1.5 mínimo)
 - Ejemplo: $100\,\mu\text{F}$ en paralelo con la fuente para absorber picos
 
 ```

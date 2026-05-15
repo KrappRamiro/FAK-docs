@@ -1,7 +1,6 @@
 # Estacion de Soldado - Guia de Compra
 
-Basado en: r/soldering - "Soldering Station Buying Mega Guide" (bigrealaccount, 2024)
-Link original: https://www.reddit.com/r/soldering/comments/1n1f2hi/soldering_station_buying_mega_guide/
+Lee: [r/soldering - "Soldering Station Buying Mega Guide" (bigrealaccount, 2024)](https://www.reddit.com/r/soldering/comments/1n1f2hi/soldering_station_buying_mega_guide/)
 
 ---
 
@@ -179,19 +178,6 @@ Los accesorios genericos (soporte, esponja, lana de bronce, estaño) se pueden c
 
 ---
 
-## Recomendacion para el proyecto invernadero
-
-Para prototipado con [ESP32](../hardware/socs/index.md), soldadura de conectores, headers y componentes through-hole en protoboard:
-
-**Primera opcion: GEEBOON TC22**
-Razon: compatible con puntas JBC C245 genuinas - cuando las puntas clone se gasten, se reemplazan con genuinas sin cambiar la estacion. Escala bien.
-
-**Si el presupuesto es ajustado: OSS-T12-X PLUS**
-Razon: suficiente para todo el trabajo de prototipado, puntas T12 baratas y abundantes.
-
-En ambos casos: verificar grounding al recibir el equipo antes de usarlo.
-
----
 
 ## Notas finales de la guia original
 

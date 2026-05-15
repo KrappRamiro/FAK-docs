@@ -8,9 +8,9 @@ Página del fabricante: [Sensirion SHT45](https://sensirion.com/products/catalog
 
 | Spec | Valor |
 |---|---|
-| Precisión temperatura | **$\pm 0.1\,°\text{C}$** típica |
+| Precisión temperatura | **$\pm 0.1\,^\circ\text{C}$** típica |
 | Precisión HR | **$\pm 1\%$ RH** típica |
-| Drift temperatura | **< 0.03°C / año** (datasheet §2.2) - relevante para publicación |
+| Drift temperatura | **< 0.03 $^\circ$C / año** (datasheet §2.2) - relevante para publicación |
 | Drift HR | **< 0.2 %RH / año** (datasheet §2.1) |
 | Heater | 3 niveles (20 / 110 / 200 mW) |
 | Voltaje | 1.08-3.6V |
@@ -27,7 +27,7 @@ Cita textual del [datasheet SHT4x](https://sensirion.com/media/documents/33FD695
 Fuentes de calor a evitar en un nodo de invernadero:
 
 - **Reguladores lineales** (LDOs como AMS1117, LM1117) - disipan el exceso de voltaje como calor. Preferir [LM2596S](../../electronica/potencia/lm2596s.md) switching que se mantiene a temperatura ambiente. Ver explicación detallada en [`potencia/lm2596s.md`](../../electronica/potencia/lm2596s.md)
-- **El propio ESP32** durante TX intensivo de WiFi/BLE (puede subir 10-15°C el chip)
+- **El propio ESP32** durante TX intensivo de WiFi/BLE (puede subir 10-15 $^\circ$C el chip)
 - **Bombas, relays, MOSFETs de potencia** que conmutan cargas grandes
 - **Luz solar directa sobre el gabinete** (efecto invernadero dentro de la caja)
 

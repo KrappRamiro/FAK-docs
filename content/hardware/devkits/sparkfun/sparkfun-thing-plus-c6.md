@@ -12,6 +12,6 @@ Docs oficiales: [SparkFun Thing Plus ESP32-C6](https://www.sparkfun.com/sparkfun
 | Flash/PSRAM | 16 MB / - |
 | USB | USB-C |
 | Form factor | [Feather](../../form-factors.md)-compatible |
-| LiPo | ✓ |
-| Qwiic | ✓ |
+| LiPo | ✅ |
+| Qwiic | ✅ |
 | Wireless | WiFi 6 + 802.15.4 |

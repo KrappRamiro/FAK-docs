@@ -6,13 +6,12 @@
 
 | Sufijo       | Significa                                                                                                                               |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `DevKitC`    | Módulo de footprint estándar (mayor). En la práctica: [WROOM](modulos/wroom.md) en S3/C3/C5/C6/H2, **SOLO** en S2. Más GPIO accesibles. |
-| `DevKitM`    | Módulo MINI (footprint reducido, menos pines). Consistente en toda la línea.                                                            |
-| `-1`, `-02`  | Número de revisión de la placa - no del módulo                                                                                          |
+| `DevKitC`    | Módulo de footprint estándar (mayor). Usa módulo [WROOM](modulos/wroom.md) en S3/C3/C5/C6/H2, o módulo [SOLO](modulos/solo.md) en S2. Más GPIO accesibles. |
+| `DevKitM`    | Módulo MINI (footprint reducido, menos pines).                                                            |
+| `-1`, `-02`  | Número de revisión de la placa, no del módulo                                                                                          |
 | `Native USB` | USB directo al periférico USB del SoC. Placa puede ser HID, CDC, OTG.                                                                   |
 | `Bridge USB` | Chip USB-to-UART (CP2102, CH340, FTDI). Solo flashear y monitor serie.                                                                  |
 
-> **Trampa:** la `C` en DevKitC es histórica (de los primeros boards en 2016, antes que existieran los MINI) - no es estricto "WROOM only". El **ESP32-S2-DevKitC-1** trae módulos [SOLO](modulos/solo.md), no WROOM, porque el S2 es single-core sin BT y Espressif les dio nombre propio. Para los chips modernos (S3, C3, C5, C6, H2) sí se cumple DevKitC $\rightarrow$ WROOM.
 
 ---
 
@@ -51,4 +50,4 @@ Recomendaciones por caso de uso. La decisión final depende del proyecto.
 - **AI Thinker ESP32-CAM**: no tiene USB, requiere adaptador FTDI externo. La cámara más barata del mercado, pero asume que ya tenés un adaptador.
 - **ESP-WROVER-KIT V4**: DevKit basado en el ESP32 clásico (no documentado, ver [Fatal Fury](../seguridad-iot/fatal-fury-esp32.md)). En diseños nuevos, [ESP32-S3](socs/esp32-s3.md) con USB Serial/JTAG nativo cubre el mismo caso de uso sin hardware extra.
 - **Adafruit S3 [Feather](form-factors.md)**: tiene 4+ SKUs distintos con configuraciones de memoria diferentes. Verificar el SKU exacto antes de comprar.
-- **[STEMMA QT](conectores.md) ≠ STEMMA**: dos estándares de Adafruit con nombres similares. [STEMMA QT](conectores.md) es Qwiic-compatible (JST SH 1.0mm). STEMMA grande es JST PH 2.0mm. No son intercambiables.
+- **[STEMMA QT](conectores.md) $\neq$ STEMMA**: son dos estándares de Adafruit con nombres similares. [STEMMA QT](conectores.md) es Qwiic-compatible (JST SH 1.0mm). STEMMA grande es JST PH 2.0mm. No son intercambiables.

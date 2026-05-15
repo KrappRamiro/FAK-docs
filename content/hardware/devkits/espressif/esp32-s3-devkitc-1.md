@@ -10,7 +10,7 @@ Docs oficiales: [ESP32-S3-DevKitC-1 user guide](https://docs.espressif.com/proje
 |---|---|
 | SoC | [ESP32-S3](../../socs/esp32-s3.md) |
 | Flash/PSRAM | 8 MB / 2 MB (variante **N16R8**: 16 MB / 8 MB) |
-| USB | Micro-B $\times 2$ (OTG nativo + bridge) |
+| USB | Micro-B x2 (OTG nativo + bridge) |
 | Módulo interno | [WROOM-1](../../modulos/wroom.md) / WROOM-1U / WROOM-2 |
 | GPIO | 45 |
 | Extras | RGB LED onboard |
@@ -18,7 +18,7 @@ Docs oficiales: [ESP32-S3-DevKitC-1 user guide](https://docs.espressif.com/proje
 
 | Part number | Flash | PSRAM | Antena |
 |---|---|---|---|
-| `ESP32-S3-WROOM-1-N8` | 8 MB | - | PCB |
+| `ESP32-S3-WROOM-1-N8` | 8 MB | ❌ | PCB |
 | `ESP32-S3-WROOM-1-N8R2` | 8 MB | 2 MB | PCB |
 | `ESP32-S3-WROOM-1-N16R8` | 16 MB | 8 MB | PCB |
 | `ESP32-S3-WROOM-1U-N16R8` | 16 MB | 8 MB | U.FL (externa) |

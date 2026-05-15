@@ -70,7 +70,7 @@ Más laborioso (cablear SPI), pero flexible.
 
 | Caso | LoRa? |
 |---|---|
-| Invernadero único de $50 \times 30$ m | No - WiFi + mesh alcanza |
+| Invernadero único de 50x30 m | No - WiFi + mesh alcanza |
 | 2 invernaderos separados por 200 m con campo entre medio | **Sí** - LoRa o WiFi long-range |
 | Estaciones meteorológicas remotas en el predio (500 m+) | **Sí** - LoRa |
 | Nodo de telemetría en otra ubicación (silo, depósito de agua) | **Sí** - LoRa |

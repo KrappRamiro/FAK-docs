@@ -26,18 +26,18 @@ Cuando calculás $R = 130\,\Omega$, redondeás al estándar más cercano.
 
 | Color    | Dígito | Multiplicador | Tolerancia |
 | -------- | ------ | ------------- | ---------- |
-| Negro    | 0      | $\times 1$            | -          |
-| Marrón   | 1      | $\times 10$           | $\pm 1\%$        |
-| Rojo     | 2      | $\times 100$          | $\pm 2\%$        |
-| Naranja  | 3      | $\times 1\text{k}$           | -          |
-| Amarillo | 4      | $\times 10\text{k}$          | -          |
-| Verde    | 5      | $\times 100\text{k}$         | $\pm 0.5\%$      |
-| Azul     | 6      | $\times 1\text{M}$           | $\pm 0.25\%$     |
-| Violeta  | 7      | $\times 10\text{M}$          | $\pm 0.1\%$      |
+| Negro    | 0      | x1            | -          |
+| Marrón   | 1      | x10           | $\pm 1\%$        |
+| Rojo     | 2      | x100          | $\pm 2\%$        |
+| Naranja  | 3      | x1k           | -          |
+| Amarillo | 4      | x10k          | -          |
+| Verde    | 5      | x100k         | $\pm 0.5\%$      |
+| Azul     | 6      | x1M           | $\pm 0.25\%$     |
+| Violeta  | 7      | x10M          | $\pm 0.1\%$      |
 | Gris     | 8      | -             | $\pm 0.01\%$     |
 | Blanco   | 9      | -             | -          |
-| Dorado   | -      | $\times 0.1$          | $\pm 5\%$        |
-| Plateado | -      | $\times 0.01$         | $\pm 10\%$       |
+| Dorado   | -      | x0.1          | $\pm 5\%$        |
+| Plateado | -      | x0.01         | $\pm 10\%$       |
 
 Una resistencia 4 bandas `marrón-negro-naranja-dorado` = $10 \cdot 1\,\text{k} = 10\,\text{k}\Omega \pm 5\%$.
 

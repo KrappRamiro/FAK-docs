@@ -13,7 +13,7 @@ Generadores de sonido. Útiles para alarmas locales en el nodo.
 
 ## Kit del proyecto
 
-**$10\times$ buzzers pasivos 12mm** $\rightarrow$ se controlan con PWM desde GPIO del [ESP32](../hardware/socs/index.md).
+**10x buzzers pasivos 12mm** $\rightarrow$ se controlan con PWM desde GPIO del [ESP32](../hardware/socs/index.md).
 
 ## Circuito típico (buzzer pasivo)
 

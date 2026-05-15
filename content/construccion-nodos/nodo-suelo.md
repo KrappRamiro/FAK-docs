@@ -30,7 +30,7 @@ ESP32-C3 GPIO0 (power gate) ── GATE de MOSFET ── VCC sensor #1
 GND ──────────────────── GND todos los sensores
 ```
 
-> **Power gating opcional pero recomendado:** alimentar el sensor capacitivo solo durante la lectura. Reduce corrosión galvánica del electrodo en suelo húmedo (extiende vida útil $\times 3$-5).
+> **Power gating opcional pero recomendado:** alimentar el sensor capacitivo solo durante la lectura. Reduce corrosión galvánica del electrodo en suelo húmedo (extiende vida útil 3-5x).
 
 ```c
 gpio_set_level(SOIL_POWER_GPIO, 1);
@@ -116,7 +116,7 @@ Las calibraciones se guardan en [NVS](../seguridad-iot/secrets-en-firmware.md) -
 
 Para cada sensor capacitivo:
 
-1. Secar el sustrato a $105\,°\text{C}$ durante 24h
+1. Secar el sustrato a 105 $^\circ$C durante 24h
 2. Pesar recipiente vacío, recipiente lleno $\rightarrow$ calcular volumen
 3. Insertar sensor en sustrato seco $\rightarrow$ ADC_seco
 4. Agregar agua en incrementos de 10 ml, registrar ADC en cada paso

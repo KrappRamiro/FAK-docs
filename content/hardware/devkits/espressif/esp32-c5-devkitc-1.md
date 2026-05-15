@@ -9,7 +9,7 @@ Docs oficiales: [ESP32-C5-DevKitC-1 user guide](https://docs.espressif.com/proje
 | Spec | Valor |
 |---|---|
 | SoC | [ESP32-C5](../../socs/esp32-c5.md) |
-| USB | USB-C $\times 2$ (Serial/JTAG nativo + bridge UART) |
+| USB | USB-C x2 (Serial/JTAG nativo + bridge UART) |
 | Antena | Layout dual-band 2.4 + 5 GHz |
 ## Cuándo elegirlo
 

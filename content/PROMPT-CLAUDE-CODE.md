@@ -31,13 +31,13 @@ Cada carpeta tiene su propio `README.md` con índice + árbol de decisión.
 ## Hardware disponible (resumen)
 
 ### Boards
-- $3\times$ [ESP32-S3-DevKitC-1 N16R8](hardware/devkits/espressif/esp32-s3-devkitc-1.md) (16 MB flash, 8 MB PSRAM)
-- $2\times$ [ESP32-C3-DevKitC-02](hardware/devkits/espressif/esp32-c3-devkitc-02.md)
+- 3x [ESP32-S3-DevKitC-1 N16R8](hardware/devkits/espressif/esp32-s3-devkitc-1.md) (16 MB flash, 8 MB PSRAM)
+- 2x [ESP32-C3-DevKitC-02](hardware/devkits/espressif/esp32-c3-devkitc-02.md)
 
 ### Componentes
 - Kits completos de resistencias, capacitores cerámicos + electrolíticos, transistores TO-92, diodos
-- $10\times$ relay 5V optoacoplado, $5\times$ [LM2596S](electronica/potencia/lm2596s.md) step-down, $5\times$ [MB102](electronica/potencia/mb102.md) power supply
-- $10\times$ sensor capacitivo de suelo v2.0 (para prototipado y nodos de control)
+- 10x relay 5V optoacoplado, 5x [LM2596S](electronica/potencia/lm2596s.md) step-down, 5x [MB102](electronica/potencia/mb102.md) power supply
+- 10x sensor capacitivo de suelo v2.0 (para prototipado y nodos de control)
 - Breadboards 830 + 400, cable 24 [AWG](electronica/cables-awg.md) señal + 18-22 [AWG](electronica/cables-awg.md) potencia
 
 ## Decisiones de diseño ya tomadas

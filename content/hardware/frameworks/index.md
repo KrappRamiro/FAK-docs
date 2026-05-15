@@ -23,11 +23,3 @@ Catálogo de opciones para programar un ESP32. Cada framework tiene su propia p�
 | **[Rust (no_std)](./rust.md)** | Devs Rust + footprint/control crítico | Idiomático Rust, async con Embassy, binario chico | Stack más manual (sin batteries de ESP-IDF) |
 | **[ESPHome](./esphome.md)** | Usuarios Home Assistant | Zero código, OTA | Sólo dentro de HA |
 
-## Decisión rápida por perfil
-
-| Perfil | Framework típico |
-|---|---|
-| Dev de sistemas / backend que conoce C | **[ESP-IDF](./esp-idf.md) + [PlatformIO](./platformio.md)** |
-| Maker / prototipado rápido | **[Arduino](./arduino.md)** (Arduino IDE o PlatformIO) |
-| Dev Rust con experiencia previa | **[Rust](./rust.md) std + esp-idf-svc** para arrancar; pasar a no_std + [Embassy](https://github.com/embassy-rs/embassy) si querés async embedded |
-| Usuario Home Assistant | **[ESPHome](./esphome.md)** |

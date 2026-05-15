@@ -10,7 +10,7 @@ Docs oficiales: [ESP32-S2-DevKitC-1 user guide](https://docs.espressif.com/proje
 |---|---|
 | SoC | [ESP32-S2](../../socs/esp32-s2.md) |
 | Flash/PSRAM | 4 MB / - |
-| USB | Micro-B $\times 2$ (OTG nativo + bridge) |
+| USB | Micro-B x2 (OTG nativo + bridge) |
 | Módulo interno | **[SOLO](../../modulos/solo.md)** / SOLO-2 / SOLO-U / SOLO-2U (no WROOM - ver [modulos/solo.md](../../modulos/solo.md)) |
 ## Trampa importante
 

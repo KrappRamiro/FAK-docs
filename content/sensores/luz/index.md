@@ -10,8 +10,8 @@ Sensores para medir luz visible, radiación PAR (fotosíntesis), y espectro comp
 | ----------------------------------- | ---------- | ------------------------------------------------- | ---------------------------------------- | ------------ | ------------------------------------------------------- |
 | [BH1750](./bh1750.md)               | Rohm       | Lux                                               | 2.4-3.6V                                 | I2C          | Con limitaciones declaradas                             |
 | [TSL2591](./tsl2591.md)             | ams-OSRAM  | Lux dinámico                                      | 2.7-3.6V                                 | I2C          | Idem BH1750, rango mayor                                |
-| [AS7341](./as7341.md)               | ams-OSRAM  | Espectro 11 canales (PAR + NIR + Clear + Flicker) | 1.8V (level shifter)                     | I2C          | ✓ con calibración contra Apogee                         |
-| [Apogee SQ-500](./apogee-sq-500.md) | Apogee     | PAR $\mu\text{mol}/\text{m}^2/\text{s}$ directo   | Self-powered (thermopile 0-40 mV output) | Analógico mV | ✓ gold standard, trazable a NIST vía transfer standards |
+| [AS7341](./as7341.md)               | ams-OSRAM  | Espectro 11 canales (PAR + NIR + Clear + Flicker) | 1.8V (level shifter)                     | I2C          | ✅ con calibración contra Apogee                         |
+| [Apogee SQ-500](./apogee-sq-500.md) | Apogee     | PAR $\mu\text{mol}/\text{m}^2/\text{s}$ directo   | Self-powered (thermopile 0-40 mV output) | Analógico mV | ✅ gold standard, trazable a NIST vía transfer standards |
 
 ## Estrategia típica para investigación con PAR
 

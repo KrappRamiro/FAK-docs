@@ -27,7 +27,7 @@ Un LED de cultivo emite principalmente en rojo (~660 nm) y azul (~450 nm) - exac
 
 > Factores ilustrativos derivados de comparaciones de Apogee y Waveform Lighting; no hay una única fuente canónica para LEDs específicos. Para datos exactos en un LED particular, hay que medir contra un quantum sensor como el [Apogee SQ-500](apogee-sq-500.md).
 
-Usar el factor 54 con LEDs de cultivo puede **subestimar el PPFD real entre $2\times$ y $3\times$**, invalidando análisis de correlación entre radiación y crecimiento vegetal.
+Usar el factor 54 con LEDs de cultivo puede **subestimar el PPFD real entre 2x y 3x**, invalidando análisis de correlación entre radiación y crecimiento vegetal.
 
 ## NDVI (Normalized Difference Vegetation Index)
 

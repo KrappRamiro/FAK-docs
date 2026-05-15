@@ -10,7 +10,7 @@ Docs oficiales: [M5Stack Tab5 shop](https://shop.m5stack.com/products/m5stack-ta
 |---|---|
 | SoC | [ESP32-P4](../../socs/esp32-p4.md) + [ESP32-C6](../../socs/esp32-c6.md) |
 | Flash/PSRAM | 16 MB / 32 MB PSRAM |
-| Display | 5.0" IPS touch $1280 \times 720$ |
+| Display | 5.0" IPS touch 1280x720 |
 | Cámara | SC2356 2 MP (MIPI-CSI) |
 | Wireless | WiFi 6 + 802.15.4 (vía C6) |
 ## Cuándo elegirlo

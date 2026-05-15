@@ -12,9 +12,9 @@ Docs oficiales: [Adafruit #5691](https://www.adafruit.com/product/5691)
 | Flash/PSRAM | 4 MB / 2 MB |
 | USB | USB-C OTG nativo |
 | Form factor | [Feather](../../form-factors.md) |
-| LiPo | ✓ |
+| LiPo | ✅ |
 | Display | 1.14" IPS reverse (orientación invertida) |
-| STEMMA QT | ✓ |
+| STEMMA QT | ✅ |
 ## Por qué "reverse"
 
 El display queda del mismo lado que los headers / breadboard, no del lado opuesto. Útil para wearables o cuando el display debe quedar arriba en una caja con USB hacia abajo.

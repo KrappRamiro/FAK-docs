@@ -8,7 +8,7 @@ Página del fabricante: [Sensirion SHT41](https://sensirion.com/products/catalog
 
 | Spec | Valor |
 |---|---|
-| Precisión temperatura | $\pm 0.2\,°\text{C}$ |
+| Precisión temperatura | $\pm 0.2\,^\circ\text{C}$ |
 | Precisión HR | $\pm 1.8\%$ RH |
 | Heater | 3 niveles (20 / 110 / 200 mW) |
 | Voltaje | 1.08-3.6V |

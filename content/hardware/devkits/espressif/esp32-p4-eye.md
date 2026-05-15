@@ -10,10 +10,10 @@ Docs oficiales: [ESP32-P4-EYE user guide](https://docs.espressif.com/projects/es
 |---|---|
 | SoC | [ESP32-P4](../../socs/esp32-p4.md) + módulo ESP32-C6-MINI-1U (wireless, 4 MB flash) |
 | Flash/PSRAM | 16 MB / 32 MB PSRAM in-package |
-| Display | 1.54" LCD $240 \times 240$ (ST7789, SPI) |
+| Display | 1.54" LCD 240x240 (ST7789, SPI) |
 | Cámara | 2 MP (OV2710) con foco ajustable manual, interfaz MIPI CSI |
 | Batería | Conector Li-ion (1.25 mm pitch) |
-| USB | USB-C $\times 2$ (USB 2.0 HS Device + USB Serial/JTAG) |
+| USB | USB-C x2 (USB 2.0 HS Device + USB Serial/JTAG) |
 ## Cuándo elegirlo
 
 - Visión AI todo-en-uno (cámara + display + cómputo en una sola unidad)

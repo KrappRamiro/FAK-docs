@@ -1,190 +1,152 @@
-# Migración ESP8266 $\rightarrow$ ESP32
+# Migración ESP8266 → ESP32
 
 Página oficial del ESP8266 (legacy): [Espressif ESP8266](https://www.espressif.com/en/products/socs/esp8266)
 
-## Perfil del ESP8266 (origen)
+El SDK del ESP8266 está básicamente abandonado desde 2022. Si todo funciona y no tocás el proyecto, no es urgente. Pero si estás arrancando algo nuevo con experiencia en el 8266, o querés darle mantenimiento a un proyecto existente, conviene pasarse. La buena noticia es que la migración es bastante mecánica: WiFi, I2C, UART y SPI tienen APIs prácticamente idénticas del lado ESP32. Los problemas reales son unos pocos gotchas de hardware y algunos includes que cambian.
 
-- Tensilica L106 single-core 80/160 MHz
-- ~80 KB RAM utilizable (de 160 KB, el SO come la mitad)
-- WiFi 802.11 b/g/n, sin Bluetooth
-- ~11 GPIO usables en práctica (varios reservados para boot/flash)
-- 1 canal ADC de 10-bit a 1.0V máximo
-- Sin DAC, sin USB nativo
-- SDK propietario en modo mantenimiento mínimo desde 2022
+## Qué chip elegir
 
-## Los tres candidatos para migrar
+No hay una respuesta única, pero el punto de partida para la mayoría de los proyectos ESP8266 es el **ESP32-C3**:
 
-### ESP32 Clásico
-- Xtensa LX6 dual-core 240 MHz, 520 KB SRAM, WiFi 4 + BT Classic 4.2 + BLE 4.2
-- 34 GPIO, ADC 18ch 12-bit, DAC 2ch, 10 touch
-- USB: sólo bridge CP2102 en DevKit
-- Deep sleep ~$10\,\mu\text{A}$
-- **Migrar acá si necesitás:** BT Classic, DAC, touch capacitivo, Ethernet MAC
+- Perfil similar al 8266: single-core, bajo consumo, WiFi 4
+- 400 KB SRAM vs ~80 KB útiles del 8266
+- ADC que funciona con WiFi activo (el problema clásico del 8266 no existe acá)
+- USB Serial/JTAG nativo — no necesitás adaptador FTDI para flashear
+- Arquitectura RISC-V, toolchain estándar y limpio
 
-### ESP32-C3 (target habitual)
-- RISC-V single-core 160 MHz, 400 KB SRAM, WiFi 4 + BLE 5.0
-- 22 GPIO, ADC 6ch 12-bit
-- USB Serial/JTAG nativo - sin adaptador externo para flashear
-- Deep sleep ~$5\,\mu\text{A}$
-- **Sin restricción de ADC con WiFi activo**
-- RISC-V estándar - toolchain limpio
+Si el C3 se queda corto, los siguientes candidatos son:
 
-### ESP32-C2 (sólo para producción en volumen)
-- RISC-V single-core 120 MHz, 272 KB SRAM
-- 14 GPIO - **menos que el ESP8266**
-- Sin USB nativo
-- No recomendado para desarrollo o hobby
+- **ESP32-C6**: mismo presupuesto, agrega WiFi 6 y 802.15.4 (Thread/Zigbee). Vale la pena si la infraestructura de red lo justifica.
+- **ESP32-S3**: dual-core 240 MHz, 512 KB SRAM, hasta 45 GPIO, USB OTG. Para proyectos que estaban sufriendo los límites del 8266 en serio.
 
----
+El resto de la línea moderna está en [SoCs ESP32 - Catálogo](./socs/index.md).
 
-## Tabla de migración directa
+## Tabla comparativa rápida
 
-| Feature | ESP8266 | ESP32 Clásico | ESP32-C3 |
-|---|---|---|---|
-| SRAM | ~80 KB | 520 KB (+550%) | 400 KB (+400%) |
-| GPIO | ~11 | 34 | 22 |
-| ADC | 1ch 10-bit 1V max | 18ch 12-bit 3.3V | 6ch 12-bit 3.3V |
-| ADC con WiFi | Sí (1 canal) | **ADC2 no funciona** | Sí, sin restricción |
-| Bluetooth | No | Classic + BLE 4.2 | BLE 5.0 |
-| USB para flashear | FTDI externo | CP2102 incluido | USB nativo directo |
-| DAC | No | 2ch 8-bit | No |
-| Touch | No | 10 canales | No |
-| ISA | Tensilica L106 | Xtensa LX6 | **RISC-V estándar** |
-| Deep sleep | ~$20\,\mu\text{A}$ | ~$10\,\mu\text{A}$ | ~$5\,\mu\text{A}$ |
-| Precio DevKit | | | |
+| Feature             | ESP8266            | ESP32-C3          | ESP32-C6          | ESP32-S3          |
+| ------------------- | ------------------ | ----------------- | ----------------- | ----------------- |
+| Cores / MHz         | 1 / 80-160         | 1 / 160           | 1 / 160           | 2 / 240           |
+| SRAM útil           | ~80 KB             | 400 KB            | 512 KB            | 512 KB            |
+| GPIO                | ~11                | 22                | 30                | 45                |
+| ADC                 | 1ch 10-bit 1V max  | 6ch 12-bit 3.3V   | 7ch 12-bit 3.3V   | 20ch 12-bit 3.3V  |
+| ADC con WiFi activo | ❌                 | ✅                | ✅                | ✅                |
+| BLE                 | ❌                 | BLE 5.0           | BLE 5.0           | BLE 5.0           |
+| 802.15.4            | ❌                 | ❌                | ✅                | ❌                |
+| USB para flashear   | FTDI externo       | USB nativo        | USB nativo        | USB nativo        |
+| Deep sleep          | ~$20\,\mu\text{A}$ | ~$5\,\mu\text{A}$ | ~$7\,\mu\text{A}$ | ~$7\,\mu\text{A}$ |
 
----
+## Frameworks disponibles
 
-## Cambios de pinout
+Ninguno de los chips nuevos obliga a cambiar de framework. Podés seguir con lo que ya usabas o aprovechar el cambio para migrar:
 
-Ningún ESP32 tiene pinout compatible con ESP8266. Lo que se porta sin esfuerzo es la lógica del firmware, porque WiFi API, I2C, SPI y UART son las mismas abstracciones en [ESP-IDF](frameworks/esp-idf.md) y arduino-esp32.
+- **[Arduino](./frameworks/arduino.md)**: el port arduino-esp32 mantiene Espressif, tiene soporte completo para toda la línea nueva. El cambio desde arduino-esp8266 es mínimo.
+- **[ESP-IDF](./frameworks/esp-idf.md)**: el SDK oficial en C. Más control, mejor para producción. No hay equivalente para el 8266, así que acá sí hay curva de aprendizaje si venías de Arduino.
+- **[PlatformIO](./frameworks/platformio.md)**: soporta tanto arduino-esp32 como ESP-IDF como backend. Si ya usabas PlatformIO con el 8266, el salto es cambiar el `board` en `platformio.ini`.
+- **[Rust](./frameworks/rust.md)**: si querés aprovechar el cambio para saltar a Rust, el ESP32-C3 es el mejor punto de entrada por su arquitectura RISC-V.
 
-### Pines problemáticos del ESP8266 que desaparecen
+## Pinout
 
-| Pin ESP8266 | Problema | En ESP32-C3 |
-|---|---|---|
-| GPIO0 | Boot mode: HIGH boot, LOW flash | GPIO9 (BOOT button) - misma lógica |
-| GPIO2 | HIGH en boot - LED acá rompe el boot | Sin equivalente problemático |
-| GPIO15 | LOW en boot - pull-down requerido | No existe el requisito |
-| GPIO16 | Sólo wake desde deep sleep, sin PWM/IRQ | Deep sleep wake normal en cualquier RTC GPIO |
-| ADC A0 | Sólo 0-1.0V, con divisor para leer 3.3V | ADC 0-3.3V directo, sin divisor |
-| TX/RX | Compartidos con UART0 debug | USB CDC nativo - Serial.print por USB |
+Ningún ESP32 tiene pinout compatible con el ESP8266, así que si tenés PCBs hechas para el 8266 hay que rediseñar. Lo que sí se porta sin esfuerzo es la lógica del firmware, porque las abstracciones de periféricos son equivalentes.
+
+### Pines del ESP8266 que tienen comportamiento distinto
+
+| Pin ESP8266 | Comportamiento                                        | Equivalente en ESP32                       |
+| ----------- | ----------------------------------------------------- | ------------------------------------------ |
+| GPIO0       | HIGH = boot normal, LOW = modo flash                  | GPIO9 en C3 (botón BOOT) — misma lógica    |
+| GPIO2       | Tiene que estar HIGH en boot                          | No hay restricción equivalente en C3       |
+| GPIO15      | Tiene que estar LOW en boot — pull-down requerido     | No existe el requisito                     |
+| GPIO16      | Solo para wake de deep sleep, sin PWM ni IRQ          | Cualquier RTC GPIO sirve para wake         |
+| ADC A0      | 0-1.0V máximo, con divisor externo para llegar a 3.3V | ADC directo 0-3.3V, sin divisor            |
+| TX/RX       | Compartidos con UART0 debug                           | USB CDC nativo — `Serial.print` va por USB |
 
 ### GPIO reservados en ESP32-C3
 
-- **GPIO0-4:** conectados internamente a la flash SPI - no disponibles
-- **GPIO18/19:** USB Serial/JTAG nativo - no usar como GPIO si usás USB
+- **GPIO0-4**: conectados internamente a la flash SPI — no disponibles como GPIO de usuario
+- **GPIO18/19**: USB Serial/JTAG — no usar como GPIO si usás el USB
 
----
+## Cambios de código
 
-## Cambios mínimos de código
+La mayoría son búsqueda y reemplazo de includes. Las APIs de WiFi, servidor web, mDNS y filesystem son idénticas en funcionalidad.
 
 ```cpp
-// ESP8266 ESP32 (clásico o C3)
-#include <ESP8266WiFi.h> → #include <WiFi.h>
-#include <ESP8266WebServer.h> → #include <WebServer.h>
-#include <ESP8266mDNS.h> → #include <ESPmDNS.h>
-ICACHE_RAM_ATTR void isr → IRAM_ATTR void isr
-analogRead(A0) // 0-1023 → analogRead(PIN) // 0-4095, pin = GPIO
+// Antes (ESP8266)             -->   Ahora (ESP32)
+#include <ESP8266WiFi.h>       -->   #include <WiFi.h>
+#include <ESP8266WebServer.h>  -->   #include <WebServer.h>
+#include <ESP8266mDNS.h>       -->   #include <ESPmDNS.h>
+ICACHE_RAM_ATTR void isr()     -->   IRAM_ATTR void isr()
+analogRead(A0)  // 0-1023      -->   analogRead(PIN)  // 0-4095, PIN = número GPIO
 ```
 
----
+## Pitfalls comunes
 
-## Trampas frecuentes
+### `delay()` y el scheduler WiFi
 
-### 1. ADC2 del ESP32 clásico con WiFi
-
-```cpp
-// FALLA SILENCIOSAMENTE con WiFi activo en ESP32 clásico:
-int val = analogRead(27); // GPIO27 = ADC2_CH7 → devuelve basura
-
-// CORRECTO: usar sólo pines ADC1 (GPIO32-39)
-int val = analogRead(34); // GPIO34 = ADC1_CH6 → funciona siempre
-```
-
-En el C3 todos los 6 canales son ADC1 - no existe el problema.
-
-### 2. `delay()` y el stack WiFi
+En el 8266 funcionaba porque el scheduler era cooperativo y simple. En ESP32 (que corre FreeRTOS) un `delay()` largo puede starvar el task de WiFi y generar desconexiones:
 
 ```cpp
-// En ESP8266 funcionaba (scheduler cooperativo simple)
-// En ESP32 puede starvar el task WiFi y causar desconexiones:
+// Puede causar desconexiones en ESP32:
 void loop() {
- delay(5000); // bloquea el FreeRTOS scheduler
+    delay(5000);
 }
 
-// Correcto en ESP32:
-vTaskDelay(pdMS_TO_TICKS(5000)); // cede el scheduler
+// Correcto con FreeRTOS:
+vTaskDelay(pdMS_TO_TICKS(5000));
 
-// O con millis:
+// O con millis() si seguís en loop():
 unsigned long last = 0;
 void loop() {
- if (millis - last >= 5000) {
- last = millis;
- doSomething;
- }
+    if (millis() - last >= 5000) {
+        last = millis();
+        doSomething();
+    }
 }
 ```
 
-### 3. SPIFFS deprecated $\rightarrow$ migrar a LittleFS
+### SPIFFS está deprecado — migrar a LittleFS
 
 ```cpp
 // Viejo:
-SPIFFS.begin;
+SPIFFS.begin();
 File f = SPIFFS.open("/config.json", "r");
 
-// Correcto en ESP32 moderno:
+// Correcto:
 #include <LittleFS.h>
-LittleFS.begin;
-File f = LittleFS.open("/config.json", "r"); // misma API
+LittleFS.begin();
+File f = LittleFS.open("/config.json", "r"); // misma API, distinto include
 ```
 
-### 4. `IRAM_ATTR` obligatorio en ISRs (Xtensa)
+### `IRAM_ATTR` en ISRs (chips Xtensa)
 
-En Xtensa (ESP32 clásico y S3), el código en flash se cachea. Una ISR puede ejecutarse cuando la cache no está disponible. Sin `IRAM_ATTR` la ISR crashea de forma no determinística.
+En chips con arquitectura Xtensa (S3), el código en flash se cachea. Una ISR puede ejecutarse cuando la caché no está disponible, y sin `IRAM_ATTR` crashea de forma no determinística.
 
 ```cpp
-IRAM_ATTR void miISR {
- // codigo de interrupcion
+IRAM_ATTR void miISR() {
+    // código de interrupción
 }
 ```
 
-En RISC-V (C3, C6) el modelo de memoria es más simple, pero mantenerlo como buena práctica.
+En chips RISC-V (C3, C6) el modelo de memoria es más simple y no tiene este problema, pero mantenerlo como hábito no hace daño.
+
+### El ADC mejoró
+
+El 8266 tenía un solo canal ADC de 10-bit que llegaba hasta 1.0V y dejaba de funcionar correctamente bajo carga WiFi.
+
+En los ESP32 modernos los canales ADC son todos 12-bit, llegan a 3.3V, y funcionan con WiFi activo sin restricciones.
+
+**El único cambio necesario es leer con el número de GPIO en vez del pin `A0`.**
 
 ---
 
-## Toolchain side-by-side
+## Por qué dejar el ESP8266
 
-| Aspecto | ESP8266 | ESP32 Clásico | ESP32-C3 |
-|---|---|---|---|
-| Compilador | xtensa-lx106-elf-gcc | xtensa-esp32-elf-gcc | riscv32-esp-elf-gcc |
-| Board manager (Arduino) | arduino.esp8266.com | espressif.github.io/arduino-esp32 | mismo |
-| Selección de board | ESP8266 Boards | ESP32 Dev Module | ESP32C3 Dev Module |
-| Baud rate de flash | 115200 | 921600 soportado | 921600 soportado |
-| Debugger | Serial.print | JTAG via FTDI externo | **JTAG nativo por USB** |
-| esptool.py | v2.x | v4.x (nueva sintaxis) | v4.x |
+**El SDK no recibe features desde 2019.** El Non-OS SDK cerró el desarrollo de nuevas funcionalidades en diciembre de 2019. El RTOS SDK tiene actividad esporádica pero no hay desarrollo activo. Seguir en ESP8266 es apostar a que las librerías de la comunidad (arduino-esp8266) aguanten indefinidamente sin soporte oficial de Espressif.
 
----
+**No tiene Bluetooth.** Sin BLE no podés hacer commissioning por app, no podés hacer Bluetooth Mesh, no podés hacer nada que involucre un teléfono cerca del dispositivo sin WiFi de por medio.
 
-## Cuándo elegir cada candidato
+**Sin WPA3.** La mayoría de los routers modernos pueden configurarse con WPA3 o WPA2/WPA3 mixto. El ESP8266 en la práctica no lo soporta, y la implementación existe solamente en la version con FreeRTOS.
 
-### ESP32-C3 (por defecto para la mayoría)
-- Reemplazás WiFi + BLE básico
-- Querés toolchain RISC-V limpio
-- Querés flashear sin adaptador externo
-- Usás ADC con WiFi activo
-- No necesitás BT Classic, DAC, ni touch
+**Sin hardware de aceleración criptográfica para TLS.** El ESP8266 puede hacer TLS 1.2 pero lo corre todo en software, y se nota: handshakes lentos y mucha más presión sobre los ~80 KB de RAM útil. Los ESP32 modernos tienen hardware AES, SHA y RSA integrado.
 
-### ESP32 Clásico
-- Necesitás Bluetooth Classic (A2DP audio, SPP)
-- Necesitás DAC analógico sin chip externo
-- Necesitás touch capacitivo nativo
-- Necesitás Ethernet MAC sin chip externo
-- Necesitás máximo número de GPIO (34)
-- Necesitás dos cores físicos para tasks simultáneas
+**Sin cifrado de flash.** Firma de firmware: sí, existe. Pero cifrado de flash, que nadie pueda leer los secrets del dispositivo extrayendo la flash, no está disponible. En un ESP32 moderno ambas cosas están integradas.
 
-### No elegir ESP32-C2 para desarrollo
-- 14 GPIO < ESP8266
-- Sin USB nativo
-- DevKits escasos
-- Sólo tiene sentido para producción en volumen con firmware ya validado
+**Es hardware viejo,** tiene solo UN canal ADC de 10-bit a 1V, ~80 KB de RAM útil y sin USB nativo.

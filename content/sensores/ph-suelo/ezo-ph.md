@@ -61,7 +61,7 @@ Los sensores de pH de AliExpress / Temu - incluidos los de "dos puntas" que se e
 | Comando | Acción |
 |---|---|
 | `R` | Read - devuelve pH actual |
-| `T,25.0` | Set temperature compensation a $25\,°\text{C}$ |
+| `T,25.0` | Set temperature compensation a 25 $^\circ$C |
 | `Cal,mid,7` | Calibrate midpoint con pH 7 buffer |
 | `Cal,low,4` | Calibrate low con pH 4 buffer |
 | `Cal,high,10` | Calibrate high con pH 10 buffer |
@@ -99,7 +99,7 @@ El EZO-pH **no se entierra**. Se usa como pHmetro de laboratorio para procesar m
 5. **Registrar** valor + temperatura + slope del electrodo
 6. **Enjuagar y guardar** electrodo en solución KCl 3M
 
-Frecuencia razonable: **$1\times$ semana o quincenal**. El pH del suelo cambia lento, no tiene sentido medir más seguido.
+Frecuencia razonable: **1x semana o quincenal**. El pH del suelo cambia lento, no tiene sentido medir más seguido.
 
 Protocolo formal: [ASTM D4972](https://www.astm.org/d4972-19.html) o el [USDA NRCS Soil Survey Methods Manual](https://www.nrcs.usda.gov/sites/default/files/2022-09/SSIR_51_Soil_Survey_Field_and_Laboratory_Methods_Manual.pdf) capítulo 4.
 

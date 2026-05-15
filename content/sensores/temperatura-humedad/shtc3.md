@@ -8,15 +8,15 @@ Página del fabricante: [Sensirion SHTC3](https://sensirion.com/products/catalog
 
 | Spec | Valor |
 |---|---|
-| Precisión temperatura | $\pm 0.2\,°\text{C}$ típica |
+| Precisión temperatura | $\pm 0.2\,^\circ\text{C}$ típica |
 | Precisión HR | $\pm 2\%$ RH típica (20-80% RH) |
-| Rango operativo | -40 a +125°C (datasheet §2.2 Table 4) |
+| Rango operativo | -40 a +125 $^\circ$C (datasheet §2.2 Table 4) |
 | Heater | No integrado |
 | Modos de bajo consumo | Normal / Low-Power / Sleep (datasheet §2.1 Table 3) |
 | Voltaje | 1.62-3.6V (típ 3.3V) |
 | Interface | I2C @ 0x70 |
 | Integridad de datos | CRC-8 (polinomio 0x31, init 0xFF) - datasheet §5.9 |
-| Footprint | DFN $2 \times 2 \times 0.75$ mm |
+| Footprint | DFN 2x2x0.75 mm |
 
 ## Notas
 

@@ -10,7 +10,7 @@ Docs oficiales: [ESP32-C6-DevKitC-1 user guide](https://docs.espressif.com/proje
 |---|---|
 | SoC | [ESP32-C6](../../socs/esp32-c6.md) |
 | Flash/PSRAM | 8 MB / - |
-| USB | USB-C $\times 2$ (Serial/JTAG nativo + bridge UART) |
+| USB | USB-C x2 (Serial/JTAG nativo + bridge UART) |
 | Módulo interno | [WROOM-1](../../modulos/wroom.md) / WROOM-1U |
 | Extras | WiFi 6 + 802.15.4, RGB LED |
 ## Cuándo elegirlo

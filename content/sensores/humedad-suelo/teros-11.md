@@ -13,7 +13,7 @@ Ver <https://metergroup.com/products/teros-11/#specifications>
 | Mide                   | [VWC](vwc.md) + temperatura de suelo (EC sólo en TEROS 12)                                                            |
 | Rango VWC              | 0.00-0.70 $\text{m}^3$/$\text{m}^3$ (mineral), 0.0-1.0 $\text{m}^3$/$\text{m}^3$ (sustrato sin tierra)                |
 | Precisión VWC          | $\pm 0.03$ $\text{m}^3$/$\text{m}^3$ (calibración genérica, EC <8 dS/m); $\pm 0.01$-0.02 con calibración específica   |
-| Rango temperatura      | −40 a +$60\,°\text{C}$; precisión $\pm 0.5\,°\text{C}$ (0-$60\,°\text{C}$), $\pm 1\,°\text{C}$ (−40 a $0\,°\text{C}$) |
+| Rango temperatura      | -40 a +60 $^\circ$C; precisión $\pm 0.5\,^\circ\text{C}$ (0-60 $^\circ$C), $\pm 1\,^\circ\text{C}$ (-40 a 0 $^\circ$C) |
 | Frecuencia dieléctrica | 70 MHz                                                                                                                |
 | Interface              | DDI serial o SDI-12                                                                                                   |
 | Calibración            | Factory-calibrated con ecuaciones por sustrato (mineral / soilless) preloaded                                         |

@@ -11,6 +11,6 @@ Docs oficiales: [Adafruit #5405](https://www.adafruit.com/product/5405)
 | SoC | [ESP32-C3](../../socs/esp32-c3.md) |
 | Flash/PSRAM | 4 MB / - |
 | USB | USB-C Serial/JTAG nativo |
-| Form factor | QT Py (~$22 \times 18\,\text{mm}$) |
-| LiPo | - |
-| STEMMA QT | ✓ |
+| Form factor | QT Py (~22x18 mm) |
+| LiPo | ❌ |
+| STEMMA QT | ✅ |

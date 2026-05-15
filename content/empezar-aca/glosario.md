@@ -69,8 +69,8 @@ ESP32-S3-WROOM-1-N16R8
 
 | Código | Significa |
 |---|---|
-| N4 / N8 / N16 | Flash en MB, temp. normal (-40 a +$85\,°\text{C}$) |
-| H4 / H8 | Flash en MB, temp. alta (-40 a +$105\,°\text{C}$) |
+| N4 / N8 / N16 | Flash en MB, temp. normal (-40 a +85 $^\circ$C) |
+| H4 / H8 | Flash en MB, temp. alta (-40 a +105 $^\circ$C) |
 | R2 / R8 | PSRAM en MB |
 | `…U-N8` | La `U` antes del código de memoria = conector U.FL para antena externa |
 | MINI | Módulo compacto (menos GPIO) en vez de [WROOM](../hardware/modulos/wroom.md) |

@@ -10,7 +10,7 @@ Docs oficiales: [ESP32-S3-DevKitM-1 user guide](https://docs.espressif.com/proje
 |---|---|
 | SoC | [ESP32-S3](../../socs/esp32-s3.md) |
 | Flash/PSRAM | 8 MB / - (variante **N4R2**: 4 MB / 2 MB) |
-| USB | Micro-B $\times 2$ (OTG nativo + bridge) |
+| USB | Micro-B x2 (OTG nativo + bridge) |
 | Módulo interno | [MINI-1](../../modulos/mini.md) / MINI-1U |
 | GPIO | 36 (todos los GPIO del chip ESP32-S3FN8 ruteados a headers excepto los del SPI flash interno) |
 | Extras | RGB LED onboard (GPIO48), footprint reducido vs DevKitC-1 |

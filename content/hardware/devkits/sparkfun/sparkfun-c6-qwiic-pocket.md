@@ -11,6 +11,6 @@ Docs oficiales: [SparkFun ESP32-C6 Qwiic Pocket](https://www.sparkfun.com/sparkf
 | SoC | [ESP32-C6](../../socs/esp32-c6.md) |
 | Flash/PSRAM | 4 MB / - |
 | USB | USB-C |
-| LiPo | ✓ MCP73831 (JST de 2 pines) |
-| Qwiic | ✓ |
+| LiPo | ✅ MCP73831 (JST de 2 pines) |
+| Qwiic | ✅ |
 | Wireless | WiFi 6 + 802.15.4 |

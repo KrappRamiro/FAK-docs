@@ -13,7 +13,7 @@ Sensores para medir humedad volumétrica del sustrato.
 | Sensor | Tecnología | Mide | Salida | Para publicación |
 | --- | --- | --- | --- | --- |
 | [Capacitivo v2.0](./capacitivo-soil-v2.md) | Capacitivo | Humedad relativa al sustrato | Analógico (ADC) | Con [calibración gravimétrica](./vwc.md) documentada |
-| [METER TEROS 11](./teros-11.md) | Capacitivo (70 MHz) | VWC + temperatura | SDI-12 / DDI | ✓ referencia académica, factory-calibrated |
+| [METER TEROS 11](./teros-11.md) | Capacitivo (70 MHz) | VWC + temperatura | SDI-12 / DDI | ✅ referencia académica, factory-calibrated |
 
 ## Por qué NO usar sensores resistivos
 

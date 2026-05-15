@@ -202,7 +202,7 @@ Si querés integrar con Apple Home / Google Home / Alexa:
 - HA corre en el mismo servidor que Mosquitto
 - Configurar MQTT integration apuntando al broker local
 - Auto-discovery via topics `homeassistant/sensor/<id>/config`
-- HA puede ejecutar automatizaciones complejas (ej. "si [VWC](../sensores/humedad-suelo/vwc.md) < 15% y temp > $28\,°\text{C}$, activar bomba zona A por 30 s")
+- HA puede ejecutar automatizaciones complejas (ej. "si [VWC](../sensores/humedad-suelo/vwc.md) < 15% y temp > 28 $^\circ$C, activar bomba zona A por 30 s")
 
 > ⚠️ Si conectás HA a HomeKit/Google/Alexa, esos servicios consultan tu HA por internet. Eso significa **abrir una conexión saliente segura** (Nabu Casa o tu propio túnel) - nunca abrir un puerto entrante para HA. Detalle en [`../seguridad-iot/exposicion-externa.md`](../seguridad-iot/exposicion-externa.md).
 

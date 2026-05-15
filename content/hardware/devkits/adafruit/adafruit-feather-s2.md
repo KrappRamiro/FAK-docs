@@ -12,5 +12,5 @@ Docs oficiales: [Adafruit #5000](https://www.adafruit.com/product/5000), [Learn 
 | Flash/PSRAM | 4 MB / 2 MB |
 | USB | USB-C OTG nativo |
 | Form factor | [Feather](../../form-factors.md) |
-| LiPo | ✓ MAX17048 |
-| STEMMA QT | ✓ |
+| LiPo | ✅ MAX17048 |
+| STEMMA QT | ✅ |

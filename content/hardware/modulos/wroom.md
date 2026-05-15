@@ -10,7 +10,9 @@ Módulo estándar para chips dual-core o multi-radio. Es el formato más común 
 - [ESP32-C5](../socs/esp32-c5.md) $\rightarrow$ ESP32-C5-WROOM-1 / 1U
 - [ESP32-C6](../socs/esp32-c6.md) $\rightarrow$ ESP32-C6-WROOM-1 / 1U
 
-> El ESP32 clásico también tenía módulos WROOM (WROOM-32E, WROOM-32UE) pero queda fuera de scope. El [ESP32-S2](../socs/esp32-s2.md) tiene tanto WROOM/WROOM-I como [SOLO](./solo.md) y [WROVER](./wrover.md).
+> El ESP32 clásico también tenía módulos WROOM (WROOM-32E, WROOM-32UE) pero queda fuera de scope porque **ya esta viejo y no lo vamos a usar.**
+
+> El [ESP32-S2](../socs/esp32-s2.md) tiene tanto WROOM/WROOM-I como [SOLO](./solo.md) y [WROVER](./wrover.md).
 
 ## Datasheets oficiales
 
@@ -29,8 +31,8 @@ Los chips modernos incluyen flash y opcionalmente PSRAM en el mismo módulo vía
 
 | Sufijo | Significado |
 |---|---|
-| `N4` / `N8` / `N16` / `N32` | Flash en MB, temperatura normal (-40 a +$85\,°\text{C}$) |
-| `H4` / `H8` | Flash en MB, temperatura alta (-40 a +$105\,°\text{C}$) |
+| `N4` / `N8` / `N16` / `N32` | Flash en MB, temperatura normal (-40 a +85 $^\circ$C) |
+| `H4` / `H8` | Flash en MB, temperatura alta (-40 a +105 $^\circ$C) |
 | `R2` / `R8` | PSRAM en MB |
 
 Ejemplo: `ESP32-S3-WROOM-1-N16R8` = 16 MB flash + 8 MB PSRAM.

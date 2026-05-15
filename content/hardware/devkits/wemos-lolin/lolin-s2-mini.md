@@ -12,4 +12,4 @@ Docs oficiales: [LOLIN S2 Mini](https://www.wemos.cc/en/latest/s2/s2_mini.html)
 | Flash/PSRAM | 4 MB / 2 MB |
 | USB | USB-C OTG nativo |
 | Form factor | [D1 Mini](../../form-factors.md) (compatible con shields D1 Mini) |
-| LiPo | - |
+| LiPo | ❌ |

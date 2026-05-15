@@ -7,7 +7,7 @@ Página oficial: [ESPHome](https://esphome.io/)
 ## Specs
 
 - **Lenguaje:** YAML declarativo
-- Zero código - configuración de sensores y actuadores por archivo
+- Zero código, configuración de sensores y actuadores por archivo
 - OTA updates integrado
 - Integración nativa con Home Assistant (auto-discovery via API)
 - Builder oficial: [ESPHome Builder](https://esphome.io/guides/getting_started_command_line) o el add-on de Home Assistant
@@ -21,8 +21,5 @@ Página oficial: [ESPHome](https://esphome.io/)
 
 ## Limitación
 
-Sólo útil dentro del ecosistema Home Assistant. No para uso general - no es para construir un sistema IoT independiente con tu propio broker MQTT custom (aunque podés exponer MQTT, perdés gran parte del valor de ESPHome).
+Sólo útil dentro del ecosistema Home Assistant. No para uso general, no es para construir un sistema IoT independiente con tu propio broker MQTT custom (aunque podés exponer MQTT, perdés gran parte del valor de ESPHome).
 
-## Para quién
-
-Usuarios de Home Assistant que quieren un dispositivo IoT custom sin escribir C/C++. Excelente para automatización doméstica donde HA ya es el cerebro.

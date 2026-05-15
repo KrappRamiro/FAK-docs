@@ -12,7 +12,7 @@ Sensor sin fabricante único - múltiples vendors chinos en AliExpress/Temu. Var
 | Salida | Analógica (~3100 ADC seco $\rightarrow$ ~1200 ADC saturado en 12-bit) |
 | Voltaje | 3.3V o 5V (la mayoría son 3.3-5.5V) |
 | Interface | ADC |
-| Resistencia a corrosión | ✓ (sin contactos metálicos expuestos) |
+| Resistencia a corrosión | ✅ (sin contactos metálicos expuestos) |
 > ⚠️ No usar sensores resistivos: se corroen en semanas en suelo húmedo y dan lecturas no reproducibles.
 
 ## Sin calibración no da [VWC](vwc.md) absoluto
@@ -48,7 +48,7 @@ adc_oneshot_read(adc_handle, ADC_CHANNEL_3, &raw);
 
 | Factor | Efecto | Mitigación |
 |---|---|---|
-| Temperatura del suelo | $\pm 0.1\%$ VWC por $°\text{C}$ | Compensar con lectura simultánea de temp. suelo |
+| Temperatura del suelo | $\pm 0.1\%$ VWC por $^\circ$C | Compensar con lectura simultánea de temp. suelo |
 | Salinidad (EC alto) | Sobreestima VWC | Calibrar con sustrato + fertilizante a EC típico |
 | Variabilidad entre unidades | Hasta $\pm 5\%$ entre sensores del mismo lote | Calibrar cada sensor individualmente |
 | Deriva temporal | ~1-2% VWC por año | Recalibrar cada temporada |

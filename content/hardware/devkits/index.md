@@ -56,7 +56,7 @@ Cada DevKit tiene su propia página con specs, link a doc oficial y casos de uso
 - [Adafruit QT Py ESP32-C3](./adafruit/adafruit-qt-py-c3.md)
 - [Adafruit QT Py ESP32-S3](./adafruit/adafruit-qt-py-s3.md)
 
-## Seeed Studio - XIAO ($21 \times 17.5\,\text{mm}$)
+## Seeed Studio - XIAO (21x17.5 mm)
 
 - [XIAO ESP32-C3](./seeed-xiao/xiao-esp32-c3.md)
 - [XIAO ESP32-S3](./seeed-xiao/xiao-esp32-s3.md)

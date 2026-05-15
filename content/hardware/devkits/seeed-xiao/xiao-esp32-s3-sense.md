@@ -11,8 +11,8 @@ Docs oficiales: [Seeed XIAO ESP32-S3 wiki](https://wiki.seeedstudio.com/xiao_esp
 | SoC | [ESP32-S3](../../socs/esp32-s3.md) |
 | Flash/PSRAM | 8 MB / 8 MB |
 | USB | USB-C OTG |
-| Form factor | [XIAO](../../form-factors.md) $21 \times 17.5\,\text{mm}$ con módulo cámara snap-on |
-| LiPo | ✓ |
+| Form factor | [XIAO](../../form-factors.md) 21x17.5 mm con módulo cámara snap-on |
+| LiPo | ✅ |
 | Cámara | OV2640 2MP (variantes recientes envían OV3660 3MP) |
 | Audio | Mic PDM integrado |
 | Extras | SD card slot |

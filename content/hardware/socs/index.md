@@ -17,27 +17,27 @@ Cada chip de la línea ESP32 tiene su propia página con specs, casos de uso y l
 | ESP32-H2 | RISC-V | 1 | **Sin WiFi**, BLE 5.0 + 802.15.4 | [esp32-h2.md](./esp32-h2.md) |
 | ESP32-P4 | RISC-V | 2 + LP | **Sin wireless** | [esp32-p4.md](./esp32-p4.md) |
 
-## Tabla maestra de specs
+## Specs
 
 Valores tomados de los datasheets oficiales de Espressif. Deep-sleep = RTC/LP timer + memoria (sin ULP); en algunos chips se puede bajar más con configs específicas.
 
 | Chip | MHz | SRAM | WiFi | BT | 802.15.4 | USB | GPIO | DAC | Touch | Sleep $\mu\text{A}$ |
 |---|---|---|---|---|---|---|---|---|---|---|
-| ESP32-S2 | 240 | 320 KB | 4 | - | - | OTG FS (USB 2.0) | 43 | 2ch | 14 | ~20 |
-| ESP32-S3 | 240 | 512 KB | 4 | BLE 5.0 | - | OTG FS + Serial/JTAG | 45 | - | 14 | ~7 |
-| ESP32-C2 | 120 | 272 KB | 4 | BLE 5.0 | - | - (solo JTAG) | 14 | - | - | ~5 |
-| ESP32-C3 | 160 | 400 KB | 4 | BLE 5.0 | - | Serial/JTAG | 22 | - | - | ~5 |
-| ESP32-C5 | 240 | 384 KB | **6 dual** | BLE 5.0 | ✓ | Serial/JTAG | 29 | - | - | ~12 |
-| ESP32-C6 | 160 | 512 KB | **6** | BLE 5.0 | ✓ | Serial/JTAG | 30 / 22 | - | - | ~7 |
-| ESP32-H2 | 96 | 320 KB | - | BLE 5.0 | ✓ | Serial/JTAG | 19 | - | - | ~7 |
-| ESP32-P4 | **400** | 768 KB | - | - | - | OTG HS + FS + Serial/JTAG | **55** | - | ✓ | ~12 |
+| ESP32-S2 | 240 | 320 KB | 4 | ❌ | - | OTG FS (USB 2.0) | 43 | 2ch | 14 | ~20 |
+| ESP32-S3 | 240 | 512 KB | 4 | BLE 5.0 | ❌ | OTG FS + Serial/JTAG | 45 | ❌ | 14 | ~7 |
+| ESP32-C2 | 120 | 272 KB | 4 | BLE 5.0 | ❌ | - (solo JTAG) | 14 | ❌ | - | ~5 |
+| ESP32-C3 | 160 | 400 KB | 4 | BLE 5.0 | ❌ | Serial/JTAG | 22 | ❌ | - | ~5 |
+| ESP32-C5 | 240 | 384 KB | **6 dual** | BLE 5.0 | ✅ | Serial/JTAG | 29 | ❌ | - | ~12 |
+| ESP32-C6 | 160 | 512 KB | **6** | BLE 5.0 | ✅ | Serial/JTAG | 30 / 22 | ❌ | - | ~7 |
+| ESP32-H2 | 96 | 320 KB | ❌ | BLE 5.0 | ✅ | Serial/JTAG | 19 | ❌ | - | ~7 |
+| ESP32-P4 | **400** | 768 KB | ❌ | - | ❌ | OTG HS + FS + Serial/JTAG | **55** | ❌ | ✅ | ~12 |
 
-## Observaciones clave
+## Observaciones importantes
 
 - DAC solo en el S2 dentro de los chips modernos (en el clásico también, pero está deprecated).
 - Touch en S2, S3 y P4. No existe en la familia C ni en el H2.
 - Solo el P4 tiene **Ethernet MAC** integrado entre los modernos.
-- El P4 no tiene wireless por diseño - se combina con un [C6](./esp32-c6.md) en diseños de dos chips.
+- El P4 no tiene wireless por diseño, si se necesita, se combina con un [C6](./esp32-c6.md) en diseños de dos chips.
 - Tres chips integran 802.15.4 (Thread/Zigbee): C5, C6 y H2. El C5 además es el único con WiFi 5 GHz.
-- Todos los chips RISC-V (C2, C3, C5, C6, H2, P4) tienen interrupciones estándar y debug predecible - ver [arquitecturas-cpu.md](../arquitecturas-cpu.md).
+- Todos los chips RISC-V (C2, C3, C5, C6, H2, P4) tienen interrupciones estándar y mejor experiencia de debuggeo por usar RISC-V, ver [arquitecturas-cpu.md](../arquitecturas-cpu.md).
 - "ESP32S" sin número es marketing inventado por vendedores chinos, típicamente significa el chip clásico genérico.

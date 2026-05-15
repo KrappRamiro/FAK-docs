@@ -11,5 +11,5 @@ Docs oficiales: [T-Display-S3 repo en GitHub](https://github.com/Xinyuan-LilyGO/
 | SoC | [ESP32-S3](../../socs/esp32-s3.md) |
 | Flash/PSRAM | 16 MB / 8 MB |
 | USB | USB-C OTG nativo |
-| LiPo | ✓ |
-| Display | 1.9" IPS $170 \times 320$ |
+| LiPo | ✅ |
+| Display | 1.9" IPS 170x320 |

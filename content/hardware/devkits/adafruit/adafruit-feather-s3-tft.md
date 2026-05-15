@@ -12,6 +12,6 @@ Docs oficiales: [Adafruit #5483](https://www.adafruit.com/product/5483)
 | Flash/PSRAM | 4 MB / 2 MB |
 | USB | USB-C OTG nativo |
 | Form factor | [Feather](../../form-factors.md) |
-| LiPo | ✓ |
-| Display | 1.14" IPS $240 \times 135$ |
-| STEMMA QT | ✓ |
+| LiPo | ✅ |
+| Display | 1.14" IPS 240x135 |
+| STEMMA QT | ✅ |

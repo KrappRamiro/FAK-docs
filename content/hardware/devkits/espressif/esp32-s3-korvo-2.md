@@ -13,7 +13,7 @@ Docs oficiales: [ESP32-S3-Korvo-2 V3.1 user guide (ESP-ADF)](https://docs.espres
 | Módulo interno | [WROOM-1](../../modulos/wroom.md) |
 | Audio | **2 micrófonos en línea** (near/far-field), codec ES8311, ADC ES7210 (4-channel), amp NS4150 |
 | Batería | Li-ion 3.7V (single-cell, opcional) |
-| USB | Micro-B $\times 2$ (UART vía CP2102N + alimentación) |
+| USB | Micro-B x2 (UART vía CP2102N + alimentación) |
 ## Cuándo elegirlo
 
 - Asistente de voz / wake-word detection

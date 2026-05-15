@@ -21,9 +21,6 @@ PlatformIO no compila código por sí mismo; delega en [Arduino](./arduino.md) o
 3. Llamar al toolchain correcto
 4. Manejar el binario final + flasheo
 
-## Para quién
-
-Desarrolladores que quieren tooling profesional (gestión de dependencias, builds reproducibles, multi-target) sin abandonar Arduino o ESP-IDF como motor.
 
 ## Integraciones
 
