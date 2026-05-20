@@ -7,11 +7,11 @@
 - Un dispositivo en LAN se compromete (cámara china, foco "smart" sin updates)
 - Escanea la red, encuentra tus nodos [ESP32](../hardware-esp32/socs/index.md)
 - Si exponés HTTP OTA simple: descarga firmware malicioso a cada nodo
-- Si no firmás: el ESP32 acepta cualquier binario válido (válido = pasa CRC), corre con permisos completos
+- Si no firmás: el ESP32 acepta cualquier binario válido, corre con permisos completos
 
 Costo de defensa: **bajo**. [ESP-IDF](../hardware-esp32/frameworks/esp-idf.md) tiene soporte nativo. Vale la pena habilitarlo desde el día 0.
 
-## Lo que tenés que lograr
+## Lo que hay que lograr
 
 ### Secure Boot V2 + firma de firmware
 

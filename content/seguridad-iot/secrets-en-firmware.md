@@ -1,12 +1,9 @@
 # Secrets en el Firmware
 
-> Regla: **cero credenciales en el código fuente que va a git.**
-
 ## Lo que NO hacer
 
 - Hardcodear WiFi password, MQTT password, u OTA keys en el código
-- Commitear `secrets.h` sin `.gitignore` — quedan en el historial **para siempre**, incluso después de "borrarlos"
-- Las creds hardcodeadas quedan en el `.bin` final → cualquiera que extraiga el firmware vía `esptool` puede leerlos en plano
+- Las creds hardcodeadas quedan en el `.bin` final, cualquiera que extraiga el firmware vía `esptool` puede leerlos en plano
 - Rotar credenciales con creds hardcodeadas requiere reflashear cada nodo individualmente
 
 ## Opciones, de menos a más segura
@@ -74,6 +71,3 @@ Si las creds se filtran (commit accidental, `.bin` compartido, etc.):
 
 Tener un script para reprogramar NVS de cada nodo facilita rotaciones — sin script, cada rotación requiere ir físicamente a cada nodo del invernadero.
 
-## Logging - qué no logguear
-
-**Nunca incluir credenciales, tokens, ni datos personales en logs**, independientemente de su destino (monitor serial, LittleFS, servidor remoto).

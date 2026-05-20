@@ -35,22 +35,12 @@ Para chips modernos (la línea RISC-V: [C3](../hardware-esp32/socs/esp32-c3.md),
 
 Aclaración: que esta clase específica no aplique no significa "inmunidad total". El advisory [AR2023-005](https://www.espressif.com/sites/default/files/advisory_downloads/AR2023-005%20Security%20Advisory%20Concerning%20Bypassing%20Secure%20Boot%20and%20Flash%20Encryption%20Using%20EMFI%20EN.pdf) describe un bypass por EMFI (electromagnetic fault injection) que sí afectó algunas variantes modernas. El umbral de costo/skill subió, pero el modelo de "atacante con acceso físico sostenido" sigue requiriendo defensa en profundidad.
 
-## Razones para no usar ESP32 clásico en diseños nuevos
-
-1. **Fatal Fury** - chips pre-ECO V3 vulnerables a glitching (los chips en stock viejo en AliExpress podrían ser pre-ECO V3).
-2. **ADC2 conflicto con WiFi** - limitación funcional histórica que no existe en chips modernos.
-3. **Xtensa LX6 con register windows complejas** - debug menos predecible que RISC-V o LX7.
-4. **Roadmap** - Espressif ya no agrega features al clásico; toda la inversión va a chips nuevos.
-
-Por estas razones, este repo **no documenta el ESP32 clásico** ni los DevKits basados en él (HUZZAH32, TTGO T-Display original, T-Beam v1.2, Thing Plus ESP32, D1 Mini ESP32, DOIT DevKit V1, AI Thinker ESP-CAM, FireBeetle 2 ESP32-E, ESP32-DevKitC V4, ESP-WROVER-KIT V4).
-
 ## Si tenés que usar ESP32 clásico de todos modos
 
 Pasos para mitigar Fatal Fury en chips pre-ECO V3:
 
 1. **Verificar la revisión de silicio**: leer eFuse `WAFER_VERSION` con `esptool.py`. Versión 3 o superior tiene las contramedidas. Versiones 0-2 son vulnerables.
-2. **Asumir compromiso físico:** si el dispositivo cae en manos hostiles por > 1 día, considerarlo potencialmente comprometido.
-3. **Usar Flash Encryption + Secure Boot V1 al máximo**: no garantiza inmunidad pero eleva el costo del ataque.
-4. **Detección de tampering**: tornillos con sello, switches anti-apertura, geolocalización del dispositivo.
+2. **Usar Flash Encryption + Secure Boot V1 al máximo**: no garantiza inmunidad pero eleva el costo del ataque.
+3. **Detección de tampering**: tornillos con sello, switches anti-apertura, geolocalización del dispositivo.
 
 Estos pasos son trabajosos comparados con simplemente **usar un chip moderno**, que es la razón por la que este repo no los detalla más.

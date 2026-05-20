@@ -18,20 +18,12 @@ El broker tiene que escuchar **solo en 8883 con TLS**, nunca en 1883 plano. Requ
 - Certificado de servidor firmado por esa CA
 - Cada cliente (ESP32, Telegraf, Grafana) valida el certificado del servidor con la `ca.crt`
 
-La `ca.crt` no es secreto — va en el firmware de cada nodo. La `ca.key` nunca sale del servidor.
-
 Documentación: [Mosquitto TLS](https://mosquitto.org/man/mosquitto-tls-7.html), [ESP-IDF MQTT con TLS](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/api-reference/protocols/mqtt.html)
 
 ### Un usuario por tipo de cliente
 
 No compartir credenciales entre nodos. La razón: si las creds de un nodo se filtran, podés revocar solo ese usuario sin afectar el resto.
 
-Estructura típica:
-- `greenhouse_node_zone_A` — nodo de medición zona A
-- `greenhouse_node_zone_B` — nodo de medición zona B
-- `telegraf` — solo lectura para ingesta de datos
-- `grafana` — solo lectura para dashboards
-- `actuator_zone_A` — nodo actuador zona A
 
 ### ACL (Access Control List)
 
@@ -40,7 +32,6 @@ Limitar qué puede hacer cada usuario en qué topics. El objetivo: que un nodo d
 Esquema típico:
 - Nodos de medición: solo pueden publicar a sus propios topics de datos
 - Actuadores: solo pueden subscribirse a sus propios topics de comandos y publicar confirmaciones
-- Telegraf: solo subscribe a `greenhouse/#`
 - Ningún nodo puede publicar a topics de otros nodos
 
 Documentación: [Mosquitto ACL](https://mosquitto.org/man/mosquitto-conf-5.html) (sección `acl_file`)
@@ -51,7 +42,7 @@ Documentación: [Mosquitto ACL](https://mosquitto.org/man/mosquitto-conf-5.html)
 - [ ] Puerto 8883 abierto y requiere TLS (`openssl s_client -connect <ip-broker>:8883`)
 - [ ] `mosquitto_sub` sin credenciales falla con "Connection Refused"
 - [ ] Un usuario con ACL restringida no puede publicar/subscribirse fuera de sus topics
-- [ ] Logs muestran rechazos de auth — registro auditable de intentos
+- [ ] Verificar que los logs muestren rechazos de auth luego de hacer un tests de auths fallidas
 - [ ] Backup de `/etc/mosquitto/passwd`, `/etc/mosquitto/acl`, y certificados fuera del servidor
 
 ## Si las creds de un nodo se comprometen
