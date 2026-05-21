@@ -1,6 +1,10 @@
 
 ---
 title: Empezar acá
+description: "Punto de entrada al proyecto: glosario, inventario de hardware y orden de lectura recomendado."
+tags:
+  - conceptos
+  - indice
 ---
 
 # Empezar Acá

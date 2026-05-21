@@ -1,3 +1,11 @@
+---
+title: "Form Factors (Feather, XIAO, D1 Mini, M5Stack, Arduino)"
+description: "Comparativa de form factors populares para ESP32: Feather, XIAO, D1 Mini, M5Stack y shields Arduino."
+tags:
+  - hardware-esp32
+  - referencia
+---
+
 # Form Factors (Feather, XIAO, D1 Mini, M5Stack, Arduino)
 
 ## Feather + FeatherWings (Adafruit)

@@ -1,3 +1,11 @@
+---
+title: "Diodos"
+description: "Índice de diodos disponibles en el kit: rectificadores, Schottky, señal y fast recovery, con tabla de uso por corriente."
+tags:
+  - electronica
+  - indice
+---
+
 # Diodos
 
 Componente unidireccional - la corriente pasa en un solo sentido.

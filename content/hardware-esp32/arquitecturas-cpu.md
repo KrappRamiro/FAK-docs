@@ -1,3 +1,11 @@
+---
+title: "Arquitecturas de CPU: Xtensa vs RISC-V"
+description: "Comparación práctica entre las ISAs Xtensa LX6/LX7 y RISC-V usadas en la línea ESP32, con impacto en toolchain y debug."
+tags:
+  - hardware-esp32
+  - referencia
+---
+
 # Arquitecturas de CPU: Xtensa vs RISC-V
 
 Todos los [ESP32](socs/index.md) caen en una de dos ISAs. Como desarrollador de sistemas, esto es lo que cambia:

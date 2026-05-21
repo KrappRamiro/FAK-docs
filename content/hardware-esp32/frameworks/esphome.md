@@ -1,3 +1,12 @@
+---
+title: "ESPHome"
+description: "Ficha de ESPHome: framework declarativo en YAML para ESP32 con integración nativa a Home Assistant y OTA incluido."
+tags:
+  - hardware-esp32
+  - framework
+  - esphome
+---
+
 # ESPHome
 
 Framework declarativo en YAML para crear dispositivos IoT compatibles con Home Assistant.

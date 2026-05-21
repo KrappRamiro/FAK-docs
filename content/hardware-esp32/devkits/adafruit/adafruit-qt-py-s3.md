@@ -1,3 +1,13 @@
+---
+title: "Adafruit QT Py ESP32-S3"
+description: "Mini board Adafruit QT Py con ESP32-S3, 8 MB flash, USB-C OTG, STEMMA QT, sin LiPo, 22x18 mm."
+tags:
+  - hardware-esp32
+  - devkit
+  - adafruit
+  - esp32-s3
+---
+
 # Adafruit QT Py ESP32-S3
 
 Versión QT Py (mini, sin LiPo) con [ESP32-S3](../../socs/esp32-s3.md).

@@ -1,6 +1,8 @@
 ---
 title: Documentacion de invernadero FAK
 description: Documentacion para el proyecto FAK
+tags:
+  - indice
 ---
 
 # Proyecto Invernadero ESP32 - Base de Conocimiento
@@ -18,7 +20,7 @@ Sistema de automatización de invernaderos con ESP32
 | [`sensores/`](./sensores/) | Los distintos sensores para cada medicion |
 | [`red/`](./red/) | WiFi, [LoRa](red/lora.md), MQTT. |
 | [`herramientas/`](./herramientas/) | Las herramientas a usar e investigaciones hechas |
-| [`seguridad-iot/`](./seguridad-iot/) | Secrets, MQTT TLS, [OTA](seguridad-iot/ota-firmado.md) firmado. Antes de poner esto en producción. |
+| [`seguridad-iot/`](./seguridad-iot/) | Secrets, MQTT TLS, [OTA](seguridad-iot/ota.md) firmado. Antes de poner esto en producción. |
 | [`investigacion/`](./investigacion/) | El dia que tengamos que publicar información academica, todo el tema de metodología, [calibración cruzada](investigacion/calibracion-cruzada.md), qué pide un reviewer. |
 
 

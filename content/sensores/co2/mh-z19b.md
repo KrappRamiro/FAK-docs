@@ -1,3 +1,12 @@
+---
+title: "MH-Z19B (Winsen)"
+description: "Sensor NDIR de CO2 económico con interfaz UART, ampliamente usado en invernaderos con ABC desactivado."
+tags:
+  - sensores
+  - componente
+  - esp32
+---
+
 # MH-Z19B (Winsen)
 
 Sensor NDIR de CO2 económico, ampliamente usado en proyectos de invernadero.

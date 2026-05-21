@@ -1,3 +1,12 @@
+---
+title: "ESP32-S3"
+description: "Ficha del ESP32-S3: Xtensa LX7 dual-core con WiFi 4, BLE 5.0, USB OTG e interfaz de cámara MIPI integrada."
+tags:
+  - hardware-esp32
+  - soc
+  - esp32-s3
+---
+
 # ESP32-S3
 
 Xtensa LX7, dual-core.

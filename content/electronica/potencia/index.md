@@ -1,3 +1,12 @@
+---
+title: "Módulos de Potencia"
+description: "Índice de módulos para controlar cargas de alta corriente desde el ESP32: relays, drivers de motor, reguladores y fuentes."
+tags:
+  - electronica
+  - indice
+  - esp32
+---
+
 # Módulos de Potencia
 
 Para controlar cargas de 5V+ (bombas, electroválvulas, ventiladores, lámparas, calefactores) desde un ESP32.

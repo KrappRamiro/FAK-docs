@@ -1,3 +1,11 @@
+---
+title: "Catálogo de DevKits"
+description: "Índice de todas las placas de desarrollo ESP32 documentadas, organizadas por fabricante y chip."
+tags:
+  - hardware-esp32
+  - indice
+---
+
 # Catálogo de DevKits
 
 Cada DevKit tiene su propia página con specs, link a doc oficial y casos de uso.

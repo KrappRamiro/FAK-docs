@@ -1,3 +1,11 @@
+---
+title: "Electrónica Básica"
+description: "Índice de componentes pasivos y módulos de potencia necesarios antes de conectar cualquier sensor al ESP32."
+tags:
+  - electronica
+  - indice
+---
+
 # Electrónica Básica
 
 Componentes pasivos y módulos de potencia que vas a usar antes de cualquier sensor.

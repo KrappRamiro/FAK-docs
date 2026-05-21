@@ -1,3 +1,13 @@
+---
+title: "XIAO ESP32-C5"
+description: "Mini board Seeed XIAO con ESP32-C5, WiFi 6 dual-band 2.4/5 GHz, 8 MB flash, 8 MB PSRAM y LiPo."
+tags:
+  - hardware-esp32
+  - devkit
+  - seeed-xiao
+  - esp32-c5
+---
+
 # XIAO ESP32-C5
 
 Footprint 21x17.5 mm con [ESP32-C5](../../socs/esp32-c5.md) - WiFi 6 dual-band.

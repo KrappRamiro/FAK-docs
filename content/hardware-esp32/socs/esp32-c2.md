@@ -1,3 +1,12 @@
+---
+title: "ESP32-C2 (a.k.a. ESP8684)"
+description: "Ficha del ESP32-C2: el SoC RISC-V más pequeño y barato del lineup, orientado a producción en volumen."
+tags:
+  - hardware-esp32
+  - soc
+  - esp32-c2
+---
+
 # ESP32-C2 (a.k.a. ESP8684)
 
 RISC-V, single-core.

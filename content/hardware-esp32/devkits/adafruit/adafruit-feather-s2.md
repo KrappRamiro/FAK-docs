@@ -1,3 +1,13 @@
+---
+title: "Adafruit ESP32-S2 Feather"
+description: "DevKit Adafruit en formato Feather con ESP32-S2, 4 MB flash, 2 MB PSRAM, USB-C OTG, LiPo y STEMMA QT."
+tags:
+  - hardware-esp32
+  - devkit
+  - adafruit
+  - esp32-s2
+---
+
 # Adafruit ESP32-S2 Feather
 
 Feather con [ESP32-S2](../../socs/esp32-s2.md), LiPo charging + STEMMA QT integrados.

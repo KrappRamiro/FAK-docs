@@ -1,3 +1,13 @@
+---
+title: "ESP32-C6-DevKitC-1"
+description: "DevKit oficial Espressif para ESP32-C6 con WiFi 6, 802.15.4, 8 MB flash y dos puertos USB-C."
+tags:
+  - hardware-esp32
+  - devkit
+  - espressif
+  - esp32-c6
+---
+
 # ESP32-C6-DevKitC-1
 
 DevKit oficial para [ESP32-C6](../../socs/esp32-c6.md). Único DevKit con WiFi 6 + 802.15.4 (Thread/Zigbee/Matter) en un chip.

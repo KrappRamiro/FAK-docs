@@ -1,3 +1,12 @@
+---
+title: "Humedad de Suelo"
+description: "Comparativa de sensores capacitivos de humedad de sustrato y estrategia de validación con TEROS 11."
+tags:
+  - sensores
+  - indice
+  - investigacion
+---
+
 # Humedad de Suelo
 
 Sensores para medir humedad volumétrica del sustrato.

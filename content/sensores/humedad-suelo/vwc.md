@@ -1,3 +1,12 @@
+---
+title: "Volumetric Water Content (VWC)"
+description: "Definición de VWC, procedimiento de calibración gravimétrica y consideraciones para publicación académica."
+tags:
+  - sensores
+  - referencia
+  - investigacion
+---
+
 # Volumetric Water Content (VWC)
 
 ## Qué es
@@ -37,9 +46,9 @@ La capacitancia depende de la **composición mineral, porosidad y densidad apare
 ### Procedimiento
 
 **1. Secado completo**
-Secar el sustrato en horno a **105 $^\circ$C por 24h** (per ASTM D2216). Garantiza VWC = 0% como punto de partida.
+Secar el sustrato en horno a **105 $^\circ\text{C}$ por 24h** (per ASTM D2216). Garantiza VWC = 0% como punto de partida.
 
-> ⚠️ **Excepción para sustratos con alto contenido orgánico** (coco coir, peat moss, turba, mezclas con > 30% materia orgánica): [Cobos & Chambers (2010)](https://www.onsetcomp.com/sites/default/files/resources-documents/15922-C%20Calibrating%20ECH2O%20Soil%20Moisture%20Sensors.pdf) recomienda **60-70 $^\circ$C por al menos 48h** en lugar de 105 $^\circ$C, porque a temperaturas altas se pierden compuestos orgánicos volátiles y la masa "seca" queda subestimada (= VWC sobreestimado). Cita textual: *"soils with high organic matter content may lose significant volatile organics if dried at 105 C ... We recommend drying these soils at 60 – 70 C for at least 48 hours."*
+> ⚠️ **Excepción para sustratos con alto contenido orgánico** (coco coir, peat moss, turba, mezclas con > 30% materia orgánica): [Cobos & Chambers (2010)](https://www.onsetcomp.com/sites/default/files/resources-documents/15922-C%20Calibrating%20ECH2O%20Soil%20Moisture%20Sensors.pdf) recomienda **60-70 $^\circ\text{C}$ por al menos 48h** en lugar de 105 $^\circ\text{C}$, porque a temperaturas altas se pierden compuestos orgánicos volátiles y la masa "seca" queda subestimada (= VWC sobreestimado). Cita textual: *"soils with high organic matter content may lose significant volatile organics if dried at 105 C ... We recommend drying these soils at 60 – 70 C for at least 48 hours."*
 
 **2. Medición en seco**
 Insertar el sensor en el sustrato seco, registrar valor ADC. Punto `(ADC_seco, VWC = 0%)`.
@@ -97,7 +106,7 @@ Si tenés varios sensores y cada uno requiere su propio set de coeficientes, gua
 
 | Factor | Efecto | Mitigación |
 |---|---|---|
-| Temperatura del suelo | $\pm 0.1\%$ VWC por $^\circ$C | Compensar con lectura simultánea de temp. suelo |
+| Temperatura del suelo | $\pm 0.1\%$ VWC por $^\circ\text{C}$ | Compensar con lectura simultánea de temp. suelo |
 | Salinidad (EC alto) | Sobreestima VWC | Calibrar con sustrato + fertilizante a EC típico |
 | Variabilidad entre unidades | Hasta $\pm 5\%$ entre sensores del mismo lote | Calibrar cada sensor individualmente |
 | Deriva temporal | ~1-2% VWC por año | Recalibrar cada temporada |

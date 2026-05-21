@@ -1,3 +1,13 @@
+---
+title: "Adafruit ESP32-S3 Feather (8 MB Flash)"
+description: "Feather Adafruit con ESP32-S3, 8 MB flash sin PSRAM, USB-C OTG, LiPo MAX17048 y STEMMA QT."
+tags:
+  - hardware-esp32
+  - devkit
+  - adafruit
+  - esp32-s3
+---
+
 # Adafruit ESP32-S3 Feather (8 MB Flash)
 
 Feather con [ESP32-S3](../../socs/esp32-s3.md), 8 MB flash sin PSRAM.

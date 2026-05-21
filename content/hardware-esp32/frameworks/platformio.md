@@ -1,3 +1,12 @@
+---
+title: "PlatformIO"
+description: "Ficha de PlatformIO: capa de tooling sobre Arduino o ESP-IDF con dependency management, unit testing y soporte multi-board."
+tags:
+  - hardware-esp32
+  - framework
+  - platformio
+---
+
 # PlatformIO
 
 Capa de tooling sobre [Arduino](./arduino.md) o [ESP-IDF](./esp-idf.md). No es un framework en sí mismo.

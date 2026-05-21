@@ -1,3 +1,11 @@
+---
+title: "Glosario"
+description: "Definición de términos clave del proyecto: Brain, Box, Board, ISA, DevKit y siglas frecuentes."
+tags:
+  - conceptos
+  - glosario
+---
+
 # Glosario
 
 ## Las 3 capas: Brain, Box, Board
@@ -28,7 +36,7 @@ Cuando alguien dice "estoy usando un [ESP32](../hardware-esp32/socs/index.md)" c
 | SPI | Serial Peripheral Interface | Bus serie más rápido que I2C (displays, SD) |
 | PWM | Pulse Width Modulation | Controlar intensidad de LED, velocidad de motor, buzzer pasivo |
 | PSRAM | Pseudo-Static RAM | RAM externa adicional al SRAM del chip. Sufijo `R8` en módulos. |
-| [OTA](../seguridad-iot/ota-firmado.md) | Over-The-Air | Actualización de firmware por WiFi |
+| [OTA](../seguridad-iot/ota.md) | Over-The-Air | Actualización de firmware por WiFi |
 | [NVS](../seguridad-iot/secrets-en-firmware.md) | Non-Volatile Storage | Partición clave-valor en flash, sobrevive reboot |
 | ULP / LP | Ultra/Low-Power co-processor | Núcleo aux que lee sensores sin despertar el core principal |
 | MQTT | Message Queuing Telemetry Transport | Protocolo pub/sub del proyecto |
@@ -59,8 +67,8 @@ Detalle completo en [`../hardware-esp32/arquitecturas-cpu.md`](../hardware-esp32
 
 | Código | Significa |
 |---|---|
-| N4 / N8 / N16 | Flash en MB, temp. normal (-40 a +85 $^\circ$C) |
-| H4 / H8 | Flash en MB, temp. alta (-40 a +105 $^\circ$C) |
+| N4 / N8 / N16 | Flash en MB, temp. normal (-40 a +85 $^\circ\text{C}$) |
+| H4 / H8 | Flash en MB, temp. alta (-40 a +105 $^\circ\text{C}$) |
 | R2 / R8 | PSRAM en MB |
 | `…U-N8` | La `U` antes del código de memoria = conector U.FL para antena externa |
 | MINI | Módulo compacto (menos GPIO) en vez de [WROOM](../hardware-esp32/modulos/wroom.md) |

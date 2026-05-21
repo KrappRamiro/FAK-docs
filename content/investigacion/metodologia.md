@@ -1,3 +1,11 @@
+---
+title: "Metodología"
+description: "Arquitectura de dos capas de sensores y qué reportar en la sección M&M del paper."
+tags:
+  - investigacion
+  - guia
+---
+
 # Metodología
 
 ## Arquitectura de dos capas

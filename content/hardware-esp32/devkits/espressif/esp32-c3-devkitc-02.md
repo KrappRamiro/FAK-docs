@@ -1,3 +1,13 @@
+---
+title: "ESP32-C3-DevKitC-02"
+description: "DevKit oficial de referencia Espressif para ESP32-C3 con 22 GPIO, módulo WROOM-02 y microUSB."
+tags:
+  - hardware-esp32
+  - devkit
+  - espressif
+  - esp32-c3
+---
+
 # ESP32-C3-DevKitC-02
 
 DevKit oficial de entrada para [ESP32-C3](../../socs/esp32-c3.md).

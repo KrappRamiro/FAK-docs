@@ -1,3 +1,12 @@
+---
+title: "Conceptos: Lux, PAR, PPFD, NDVI"
+description: "Marco teórico sobre magnitudes de luz para plantas: diferencias entre lux, PAR, PPFD y el índice NDVI."
+tags:
+  - sensores
+  - referencia
+  - investigacion
+---
+
 # Conceptos: Lux, PAR, PPFD, NDVI
 
 Marco teórico para entender qué miden los distintos sensores de luz / radiación.

@@ -1,3 +1,11 @@
+---
+title: "Trazabilidad - Qué Pide un Reviewer"
+description: "Qué documentación exige un reviewer para verificar la veracidad de las lecturas del sistema."
+tags:
+  - investigacion
+  - referencia
+---
+
 # Trazabilidad - Qué Pide un Reviewer
 
 ## La pregunta de fondo

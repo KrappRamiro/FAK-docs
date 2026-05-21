@@ -1,3 +1,12 @@
+---
+title: "WiFi en el Invernadero"
+description: "Por qué el alcance WiFi se degrada en el invernadero y cómo compensarlo."
+tags:
+  - red
+  - guia
+  - wifi
+---
+
 # WiFi en el Invernadero
 
 ## Por qué el alcance baja brutalmente

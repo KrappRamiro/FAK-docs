@@ -1,3 +1,12 @@
+---
+title: "Temperatura + Humedad Ambiental"
+description: "Comparativa de la familia SHT de Sensirion para temperatura y humedad relativa en aplicaciones de invernadero."
+tags:
+  - sensores
+  - indice
+  - i2c
+---
+
 # Temperatura + Humedad Ambiental
 
 Familia SHT de Sensirion - sensores digitales I2C para temperatura del aire y humedad relativa.
@@ -19,5 +28,5 @@ Página del fabricante: [Sensirion Humidity & Temperature Sensors](https://sensi
 - Todos hablan I2C estándar (excepto SHTC3 que está @ 0x70, los demás @ 0x44)
 - SHT4x y SHT3x tienen comandos CRC-8 obligatorios para validar lecturas
 - Filtro PTFE (sufijo `F` en SHT45-AD1F-R2) es **no-negociable** en ambientes con condensación / nebulización
-- Sensirion documenta deriva típica < 0.5 $^\circ$C / año en condiciones controladas; en campo, recalibración cruzada cada temporada es necesario
+- Sensirion documenta deriva típica < 0.5 $^\circ\text{C}$ / año en condiciones controladas; en campo, recalibración cruzada cada temporada es necesario
 

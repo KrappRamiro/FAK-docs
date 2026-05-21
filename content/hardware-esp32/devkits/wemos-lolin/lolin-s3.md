@@ -1,3 +1,13 @@
+---
+title: "LOLIN S3"
+description: "Board Wemos/LOLIN con ESP32-S3, 16 MB flash, 8 MB PSRAM y USB-C dual (OTG + UART) a precio accesible."
+tags:
+  - hardware-esp32
+  - devkit
+  - wemos-lolin
+  - esp32-s3
+---
+
 # LOLIN S3
 
 Board con [ESP32-S3](../../socs/esp32-s3.md), buen ratio specs/precio.

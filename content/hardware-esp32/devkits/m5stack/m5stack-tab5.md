@@ -1,3 +1,13 @@
+---
+title: "M5Stack Tab5"
+description: "Tablet IoT M5Stack con ESP32-P4 + ESP32-C6, pantalla IPS 5\" 1280x720, cámara 2 MP y 32 MB PSRAM."
+tags:
+  - hardware-esp32
+  - devkit
+  - m5stack
+  - esp32-p4
+---
+
 # M5Stack Tab5
 
 Tablet IoT con [ESP32-P4](../../socs/esp32-p4.md) (compute) + [ESP32-C6](../../socs/esp32-c6.md) (wireless) y pantalla 5".

@@ -1,3 +1,11 @@
+---
+title: "Migración ESP8266 → ESP32"
+description: "Guía práctica para migrar proyectos del ESP8266 a ESP32, con tabla comparativa, chips recomendados y cambios de código."
+tags:
+  - hardware-esp32
+  - guia
+---
+
 # Migración ESP8266 → ESP32
 
 Página oficial del ESP8266 (legacy): [Espressif ESP8266](https://www.espressif.com/en/products/socs/esp8266)

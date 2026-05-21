@@ -1,3 +1,13 @@
+---
+title: "LilyGo T-Display S3 AMOLED"
+description: "Board LilyGo con ESP32-S3, display AMOLED 1.91\" 536x240, 16 MB flash, 8 MB PSRAM y LiPo."
+tags:
+  - hardware-esp32
+  - devkit
+  - lilygo
+  - esp32-s3
+---
+
 # LilyGo T-Display S3 AMOLED
 
 Board con [ESP32-S3](../../socs/esp32-s3.md) + display AMOLED.

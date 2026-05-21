@@ -1,3 +1,13 @@
+---
+title: "XIAO ESP32-S3"
+description: "Mini board Seeed XIAO con ESP32-S3, 8 MB flash, 8 MB PSRAM, USB-C OTG y LiPo en 21x17.5 mm."
+tags:
+  - hardware-esp32
+  - devkit
+  - seeed-xiao
+  - esp32-s3
+---
+
 # XIAO ESP32-S3
 
 Footprint 21x17.5 mm, para [ESP32-S3](../../socs/esp32-s3.md).

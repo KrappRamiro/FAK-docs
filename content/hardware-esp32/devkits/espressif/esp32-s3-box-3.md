@@ -1,3 +1,13 @@
+---
+title: "ESP32-S3-BOX-3"
+description: "Smart speaker/display all-in-one Espressif con ESP32-S3, pantalla IPS 2.4\" touch, 16 MB flash y 16 MB PSRAM."
+tags:
+  - hardware-esp32
+  - devkit
+  - espressif
+  - esp32-s3
+---
+
 # ESP32-S3-BOX-3
 
 Smart speaker / display all-in-one basado en [ESP32-S3](../../socs/esp32-s3.md).

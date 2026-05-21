@@ -1,3 +1,13 @@
+---
+title: "SCD41 (Sensirion)"
+description: "Sensor fotoacústico NDIR de CO2 con compensación interna de temperatura y humedad vía I2C."
+tags:
+  - sensores
+  - componente
+  - i2c
+  - investigacion
+---
+
 # SCD41 (Sensirion)
 
 Sensor photoacoustic NDIR de CO2 - opción de mayor precisión con compensación interna.

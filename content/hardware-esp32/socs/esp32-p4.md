@@ -1,3 +1,12 @@
+---
+title: "ESP32-P4"
+description: "Ficha del ESP32-P4: RISC-V dual-core a 400 MHz sin wireless, con MIPI camera/display, H.264 y Ethernet MAC."
+tags:
+  - hardware-esp32
+  - soc
+  - esp32-p4
+---
+
 # ESP32-P4
 
 RISC-V, dual-core. **Sin wireless.**

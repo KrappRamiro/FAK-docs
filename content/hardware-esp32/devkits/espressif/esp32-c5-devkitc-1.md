@@ -1,3 +1,13 @@
+---
+title: "ESP32-C5-DevKitC-1"
+description: "DevKit oficial Espressif para ESP32-C5, único DevKit con WiFi 6 dual-band 2.4 + 5 GHz."
+tags:
+  - hardware-esp32
+  - devkit
+  - espressif
+  - esp32-c5
+---
+
 # ESP32-C5-DevKitC-1
 
 DevKit oficial para [ESP32-C5](../../socs/esp32-c5.md). Único DevKit con WiFi 6 dual-band (2.4 + 5 GHz).

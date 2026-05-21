@@ -1,3 +1,12 @@
+---
+title: "Arduino + arduino-esp32"
+description: "Ficha del framework Arduino para ESP32: capa C++ mantenida por Espressif sobre ESP-IDF con ecosistema masivo de librerías."
+tags:
+  - hardware-esp32
+  - framework
+  - arduino
+---
+
 # Arduino + arduino-esp32
 
 Capa Arduino para ESP32. Mantenida por Espressif.

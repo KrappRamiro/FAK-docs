@@ -1,3 +1,11 @@
+---
+title: "DevKits - Overview y Árbol de Decisión"
+description: "Nomenclatura, árbol de decisión y tabla de recomendaciones para elegir un DevKit ESP32 según el caso de uso."
+tags:
+  - hardware-esp32
+  - indice
+---
+
 # DevKits - Overview y Árbol de Decisión
 
 > Los modelos individuales por fabricante están en [`devkits/`](./devkits/index.md). Esta página es el "cómo elijo".

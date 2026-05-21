@@ -1,3 +1,13 @@
+---
+title: "SparkFun Thing Plus ESP32-S3"
+description: "DevKit SparkFun Feather-compatible con ESP32-S3, 4 MB flash, 2 MB PSRAM, Qwiic y LiPo onboard."
+tags:
+  - hardware-esp32
+  - devkit
+  - sparkfun
+  - esp32-s3
+---
+
 # SparkFun Thing Plus ESP32-S3
 
 Feather-compatible con [ESP32-S3](../../socs/esp32-s3.md) + Qwiic onboard.

@@ -1,3 +1,11 @@
+---
+title: "Módulos MINI"
+description: "Ficha del módulo MINI: formato compacto con menor footprint y GPIO reducidos, disponible para S2, S3, C2, C3 y H2."
+tags:
+  - hardware-esp32
+  - modulo
+---
+
 # Módulos MINI
 
 Formato compacto: mismas capacidades que [WROOM](./wroom.md) pero menor footprint y menos GPIO accesibles.

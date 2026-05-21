@@ -1,3 +1,13 @@
+---
+title: "ESP32-S3-Korvo-2"
+description: "DevKit de referencia Espressif para asistente de voz con ESP32-S3, array de micrófonos y codec ES8311."
+tags:
+  - hardware-esp32
+  - devkit
+  - espressif
+  - esp32-s3
+---
+
 # ESP32-S3-Korvo-2
 
 DevKit de referencia para asistente de voz basado en [ESP32-S3](../../socs/esp32-s3.md).

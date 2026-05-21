@@ -1,3 +1,13 @@
+---
+title: "M5Stack Core S3"
+description: "Unidad encapsulada M5Stack con ESP32-S3, display IPS 2.0\" touch, cámara, 16 MB flash y 8 MB PSRAM."
+tags:
+  - hardware-esp32
+  - devkit
+  - m5stack
+  - esp32-s3
+---
+
 # M5Stack Core S3
 
 Unidad encapsulada con [ESP32-S3](../../socs/esp32-s3.md), display touch, cámara y altavoz.

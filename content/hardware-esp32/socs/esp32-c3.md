@@ -1,3 +1,12 @@
+---
+title: "ESP32-C3"
+description: "Ficha del ESP32-C3: RISC-V single-core con WiFi 4, BLE 5.0 y USB Serial/JTAG nativo; reemplazo moderno del ESP8266."
+tags:
+  - hardware-esp32
+  - soc
+  - esp32-c3
+---
+
 # ESP32-C3
 
 RISC-V, single-core.

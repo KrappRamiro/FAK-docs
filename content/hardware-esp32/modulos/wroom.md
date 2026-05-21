@@ -1,3 +1,11 @@
+---
+title: "Módulos WROOM"
+description: "Ficha del módulo WROOM: formato estándar para chips ESP32 modernos, con chips disponibles, datasheets y variantes de memoria."
+tags:
+  - hardware-esp32
+  - modulo
+---
+
 # Módulos WROOM
 
 Módulo estándar para chips dual-core o multi-radio. Es el formato más común en la línea ESP32 moderna.
@@ -31,8 +39,8 @@ Los chips modernos incluyen flash y opcionalmente PSRAM en el mismo módulo vía
 
 | Sufijo | Significado |
 |---|---|
-| `N4` / `N8` / `N16` / `N32` | Flash en MB, temperatura normal (-40 a +85 $^\circ$C) |
-| `H4` / `H8` | Flash en MB, temperatura alta (-40 a +105 $^\circ$C) |
+| `N4` / `N8` / `N16` / `N32` | Flash en MB, temperatura normal (-40 a +85 $^\circ\text{C}$) |
+| `H4` / `H8` | Flash en MB, temperatura alta (-40 a +105 $^\circ\text{C}$) |
 | `R2` / `R8` | PSRAM en MB |
 
 Ejemplo: `ESP32-S3-WROOM-1-N16R8` = 16 MB flash + 8 MB PSRAM.

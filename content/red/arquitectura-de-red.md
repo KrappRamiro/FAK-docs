@@ -1,3 +1,12 @@
+---
+title: "Arquitectura de Red del Invernadero"
+description: "Descripción de la topología de red y los desafíos de RF en el entorno del invernadero."
+tags:
+  - red
+  - referencia
+  - wifi
+---
+
 # Arquitectura de Red del Invernadero
 
 ## Por qué el invernadero es hostil para WiFi
@@ -55,6 +64,6 @@ Detalle en [LoRa](./lora.md).
 | Problema | Mitigación |
 |---|---|
 | Humedad sobre PCB | Gabinete IP54+, conformal coating en zonas críticas |
-| Temperatura > 50 $^\circ$C en techo | Ubicar nodos a 1-1.5 m del suelo, no en el techo |
+| Temperatura > 50 $^\circ\text{C}$ en techo | Ubicar nodos a 1-1.5 m del suelo, no en el techo |
 | Electrólisis por humedad + corriente DC en suelo | Sensores capacitivos (no resistivos), y considerar aislamiento galvánico para la electrónica de potencia |
 | Roedores comiendo cables | Conduit metálico para las líneas principales |

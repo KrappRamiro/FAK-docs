@@ -1,3 +1,11 @@
+---
+title: "LEDs"
+description: "Cálculo de resistencia en serie para LEDs indicadores, tabla de valores por color y tensión, e identificación de patas."
+tags:
+  - electronica
+  - componente
+---
+
 # LEDs
 
 Diodos emisores de luz. Siempre requieren resistencia en serie, sin excepciones.

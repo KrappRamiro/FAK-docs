@@ -1,3 +1,13 @@
+---
+title: "M5StickS3"
+description: "Stick portátil M5Stack con ESP32-S3, display LCD 1.14\", 8 MB flash, 8 MB PSRAM y conector Grove."
+tags:
+  - hardware-esp32
+  - devkit
+  - m5stack
+  - esp32-s3
+---
+
 # M5StickS3
 
 Stick portátil con [ESP32-S3](../../socs/esp32-s3.md) y display LCD pequeño.

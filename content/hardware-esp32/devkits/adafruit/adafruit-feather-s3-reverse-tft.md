@@ -1,3 +1,13 @@
+---
+title: "Adafruit ESP32-S3 Reverse TFT Feather"
+description: "Feather Adafruit con ESP32-S3 y display IPS 1.14\" orientado al lado de los headers, 4 MB flash, 2 MB PSRAM."
+tags:
+  - hardware-esp32
+  - devkit
+  - adafruit
+  - esp32-s3
+---
+
 # Adafruit ESP32-S3 Reverse TFT Feather
 
 Feather con [ESP32-S3](../../socs/esp32-s3.md) y display TFT en el lado opuesto al USB.

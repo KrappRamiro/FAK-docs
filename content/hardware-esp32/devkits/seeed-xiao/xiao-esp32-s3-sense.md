@@ -1,3 +1,13 @@
+---
+title: "XIAO ESP32-S3 Sense"
+description: "Mini board Seeed XIAO con ESP32-S3, cámara OV2640 2MP, micrófono PDM, SD card y LiPo en 21x17.5 mm."
+tags:
+  - hardware-esp32
+  - devkit
+  - seeed-xiao
+  - esp32-s3
+---
+
 # XIAO ESP32-S3 Sense
 
 XIAO con [ESP32-S3](../../socs/esp32-s3.md) + cámara OV2640 + micrófono PDM + SD card en formato tiny.

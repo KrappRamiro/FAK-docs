@@ -1,3 +1,13 @@
+---
+title: "ESP32-S3-DevKitC-1"
+description: "DevKit oficial de referencia Espressif para ESP32-S3 con 45 GPIO, módulo WROOM y USB dual (OTG + bridge)."
+tags:
+  - hardware-esp32
+  - devkit
+  - espressif
+  - esp32-s3
+---
+
 # ESP32-S3-DevKitC-1
 
 DevKit oficial de referencia para [ESP32-S3](../../socs/esp32-s3.md).

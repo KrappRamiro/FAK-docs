@@ -1,3 +1,13 @@
+---
+title: "SparkFun ESP32-C6 Qwiic Pocket"
+description: "Board ultra-compacta SparkFun con ESP32-C6, WiFi 6 + 802.15.4, 4 MB flash, Qwiic y LiPo onboard."
+tags:
+  - hardware-esp32
+  - devkit
+  - sparkfun
+  - esp32-c6
+---
+
 # SparkFun ESP32-C6 Qwiic Pocket
 
 Board ultra-compacta con [ESP32-C6](../../socs/esp32-c6.md) y Qwiic onboard.

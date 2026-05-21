@@ -1,3 +1,13 @@
+---
+title: "ESP32-P4-DevKitM-2"
+description: "DevKit oficial Espressif para ESP32-P4 con 16 MB flash, 32 MB PSRAM, H.264 hw, MIPI y módulo C6 para wireless."
+tags:
+  - hardware-esp32
+  - devkit
+  - espressif
+  - esp32-p4
+---
+
 # ESP32-P4-DevKitM-2
 
 > **Nota:** el nombre oficial de Espressif es **ESP32-P4-Function-EV-Board** (no hay un producto llamado "DevKitM-2" en el catálogo).

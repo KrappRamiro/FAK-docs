@@ -1,3 +1,12 @@
+---
+title: "ESP-IDF"
+description: "Ficha del SDK oficial de Espressif en C/C++ con FreeRTOS, HAL completo, JTAG/GDB y Component Registry."
+tags:
+  - hardware-esp32
+  - framework
+  - esp-idf
+---
+
 # ESP-IDF
 
 SDK oficial de Espressif para programar ESP32 en C/C++.

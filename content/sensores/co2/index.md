@@ -1,3 +1,12 @@
+---
+title: "CO2"
+description: "Comparativa de sensores NDIR de CO2 y advertencias críticas sobre ABC/ASC en invernaderos cerrados."
+tags:
+  - sensores
+  - indice
+  - investigacion
+---
+
 # CO2
 
 Sensores NDIR (Non-Dispersive Infrared) para concentración de CO2 atmosférico.

@@ -1,3 +1,11 @@
+---
+title: "Frameworks de Firmware"
+description: "Catálogo y tabla comparativa de frameworks para programar ESP32: ESP-IDF, Arduino, PlatformIO, Rust y ESPHome."
+tags:
+  - hardware-esp32
+  - indice
+---
+
 # Frameworks de Firmware
 
 Catálogo de opciones para programar un ESP32. Cada framework tiene su propia página con docs, casos de uso y trade-offs.

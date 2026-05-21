@@ -1,5 +1,9 @@
 ---
 title: Investigación
+description: "Índice de documentos para preparar el sistema de monitoreo con estándares de publicación académica."
+tags:
+  - investigacion
+  - indice
 ---
 
 # Investigación / Paper

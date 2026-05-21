@@ -1,3 +1,11 @@
+---
+title: "Cables - AWG"
+description: "Tabla de calibres AWG con corriente máxima y guía de selección por destino para señales, alimentación y cargas del proyecto."
+tags:
+  - electronica
+  - referencia
+---
+
 # Cables - AWG
 
 AWG = American Wire Gauge. **Escala inversa: número más alto = cable más fino.**

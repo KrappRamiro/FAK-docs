@@ -1,3 +1,11 @@
+---
+title: "Módulos (Box) - Catálogo"
+description: "Catálogo de formatos de módulo ESP32 (WROOM, MINI, SOLO, WROVER) con guía de sufijos de antena y decodificación de part numbers."
+tags:
+  - hardware-esp32
+  - indice
+---
+
 # Módulos (Box) - Catálogo
 
 El módulo es el chip empaquetado con flash, PSRAM (opcional) y antena (o conector para antena), en un package metálico solderable. Es lo que va adentro del [DevKit](../devkits/index.md).
@@ -22,8 +30,8 @@ El módulo es el chip empaquetado con flash, PSRAM (opcional) y antena (o conect
 
 | Código                          | Significado                                              |
 | ------------------------------- | -------------------------------------------------------- |
-| `N4` / `N8` / `N16` / `N32`     | Flash en MB, temperatura normal (-40 a +85 $^\circ$C) |
-| `H4` / `H8`                     | Flash en MB, temperatura alta (-40 a +105 $^\circ$C)  |
+| `N4` / `N8` / `N16` / `N32`     | Flash en MB, temperatura normal (-40 a +85 $^\circ\text{C}$) |
+| `H4` / `H8`                     | Flash en MB, temperatura alta (-40 a +105 $^\circ\text{C}$)  |
 | `R2` / `R8`                     | PSRAM en MB                                              |
 | `U` antes del código de memoria | Conector U.FL para antena externa                        |
 | `MINI`                          | Módulo en formato compacto en vez de WROOM               |

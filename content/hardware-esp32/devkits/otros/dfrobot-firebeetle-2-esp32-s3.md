@@ -1,3 +1,12 @@
+---
+title: "DFRobot FireBeetle 2 ESP32-S3"
+description: "Board low-power DFRobot con ESP32-S3, 16 MB flash, 8 MB PSRAM, LiPo, conector GDI y ecosistema Gravity."
+tags:
+  - hardware-esp32
+  - devkit
+  - esp32-s3
+---
+
 # DFRobot FireBeetle 2 ESP32-S3
 
 Board low-power con [ESP32-S3](../../socs/esp32-s3.md), ecosistema Gravity de sensores.

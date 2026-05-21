@@ -1,3 +1,11 @@
+---
+title: "Módulos WROVER"
+description: "Ficha del módulo WROVER: formato con PSRAM integrada para el ESP32 clásico y S2; deprecado en chips modernos a favor de WROOM con sufijo R."
+tags:
+  - hardware-esp32
+  - modulo
+---
+
 # Módulos WROVER
 
 Formato del ESP32 clásico (Xtensa LX6) que incluye PSRAM en el módulo. Para el clásico, los WROVER-E / WROVER-IE traen 8 MB PSRAM (variantes EOL trajeron 2 MB). También existe **ESP32-S2-WROVER** / **WROVER-I** con 2 MB PSRAM.

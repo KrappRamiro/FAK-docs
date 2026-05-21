@@ -1,3 +1,12 @@
+---
+title: "Breadboards (Protoboards)"
+description: "Buenas prácticas de uso de breadboards para prototipado, incluyendo masa común y desacople cerca del ESP32."
+tags:
+  - electronica
+  - componente
+  - esp32
+---
+
 # Breadboards (Protoboards)
 
 Placas perforadas con tiras conductoras internas para prototipar sin soldar.

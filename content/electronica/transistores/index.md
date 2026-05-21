@@ -1,3 +1,12 @@
+---
+title: "Transistores"
+description: "Índice de transistores BJT (NPN/PNP), MOSFETs y Darlington para manejar cargas que superan los 20 mA del GPIO del ESP32."
+tags:
+  - electronica
+  - indice
+  - esp32
+---
+
 # Transistores
 
 Conmutadores/amplificadores para manejar cargas que superan los **~20 mA** del GPIO de un ESP32 (default drive strength; 40 mA absolute max per [datasheet Tabla 5-3](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)). Ejemplos típicos: relays mecánicos, LEDs de potencia, bobinas inductivas.

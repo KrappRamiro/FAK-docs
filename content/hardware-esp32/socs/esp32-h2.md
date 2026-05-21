@@ -1,3 +1,12 @@
+---
+title: "ESP32-H2"
+description: "Ficha del ESP32-H2: RISC-V sin WiFi, con BLE 5.0 y 802.15.4; optimizado para end-nodes Thread/Zigbee a batería."
+tags:
+  - hardware-esp32
+  - soc
+  - esp32-h2
+---
+
 # ESP32-H2
 
 RISC-V, single-core. **Sin WiFi.**

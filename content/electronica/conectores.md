@@ -1,3 +1,12 @@
+---
+title: "Conectores Plug-and-Play (Qwiic, STEMMA QT, Grove, Gravity)"
+description: "Comparativa de ecosistemas de conectores I2C sin soldadura (Qwiic, STEMMA QT, Grove, Gravity) con tabla de compatibilidad cruzada."
+tags:
+  - electronica
+  - referencia
+  - i2c
+---
+
 # Conectores Plug-and-Play (Qwiic, STEMMA QT, Grove, Gravity)
 
 Sistemas para conectar sensores I2C (y otros) sin soldar

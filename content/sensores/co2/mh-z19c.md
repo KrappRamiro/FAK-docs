@@ -1,3 +1,12 @@
+---
+title: "MH-Z19C (Winsen)"
+description: "Versión mejorada del MH-Z19B con rango 400–2000 ppm y mejor resolución para concentraciones típicas de invernadero."
+tags:
+  - sensores
+  - componente
+  - esp32
+---
+
 # MH-Z19C (Winsen)
 
 Versión actualizada del [MH-Z19B](mh-z19b.md) con rango más acotado.

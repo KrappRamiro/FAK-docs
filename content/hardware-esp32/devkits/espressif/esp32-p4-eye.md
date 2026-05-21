@@ -1,3 +1,13 @@
+---
+title: "ESP32-P4-EYE"
+description: "Cámara AI todo-en-uno Espressif con ESP32-P4, 2 MP, display 1.54\", 16 MB flash, 32 MB PSRAM y módulo C6."
+tags:
+  - hardware-esp32
+  - devkit
+  - espressif
+  - esp32-p4
+---
+
 # ESP32-P4-EYE
 
 Cámara AI self-contained basada en [ESP32-P4](../../socs/esp32-p4.md), con display y batería integrados.

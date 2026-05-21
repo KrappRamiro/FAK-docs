@@ -1,3 +1,13 @@
+---
+title: "ESP32-S2-Kaluga-1"
+description: "DevKit avanzado Espressif para ESP32-S2 con codec audio ES8311, cámara DVP, LCD y daughterboards opcionales."
+tags:
+  - hardware-esp32
+  - devkit
+  - espressif
+  - esp32-s2
+---
+
 # ESP32-S2-Kaluga-1
 
 DevKit avanzado para [ESP32-S2](../../socs/esp32-s2.md), orientado a evaluación de audio + cámara + display.

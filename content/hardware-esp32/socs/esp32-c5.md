@@ -1,3 +1,12 @@
+---
+title: "ESP32-C5"
+description: "Ficha del ESP32-C5: único ESP32 con WiFi 6 dual-band (2.4 + 5 GHz), BLE 5.0 y 802.15.4 en RISC-V."
+tags:
+  - hardware-esp32
+  - soc
+  - esp32-c5
+---
+
 # ESP32-C5
 
 RISC-V, single-core + LP co-processor.

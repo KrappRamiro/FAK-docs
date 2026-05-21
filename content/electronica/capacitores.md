@@ -1,3 +1,12 @@
+---
+title: "Capacitores"
+description: "Tipos de capacitores (electrolíticos y cerámicos), cuándo usar cada uno y valores recomendados para desacoplar el ESP32."
+tags:
+  - electronica
+  - componente
+  - esp32
+---
+
 # Capacitores
 
 Almacenan carga eléctrica. Capacidad en Farads (F), típicamente en pF, nF o $\mu\text{F}$.

@@ -1,3 +1,13 @@
+---
+title: "ESP32-S2-DevKitC-1"
+description: "DevKit oficial Espressif para ESP32-S2 con USB OTG nativo, 4 MB flash y módulos SOLO (sin Bluetooth)."
+tags:
+  - hardware-esp32
+  - devkit
+  - espressif
+  - esp32-s2
+---
+
 # ESP32-S2-DevKitC-1
 
 DevKit oficial para [ESP32-S2](../../socs/esp32-s2.md).

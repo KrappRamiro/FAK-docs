@@ -69,9 +69,12 @@ const config: QuartzConfig = {
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
+      // Latex debe ir ANTES de CrawlLinks: si CrawlLinks corre primero, agrega
+      // class="internal" a los links, y KaTeX falla con "Got group of unknown type: 'internal'"
+      // en cualquier tabla que mezcle links y math en la misma fila.
+      Plugin.Latex({ renderEngine: "katex" }),
       Plugin.CrawlLinks({ markdownLinkResolution: "relative" }),
       Plugin.Description(),
-      Plugin.Latex({ renderEngine: "katex" }),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [

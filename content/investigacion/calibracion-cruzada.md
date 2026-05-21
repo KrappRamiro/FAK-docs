@@ -1,3 +1,11 @@
+---
+title: "Calibración Cruzada"
+description: "Protocolo de validación de sensores baratos contra referencia para demostrar R² > 0.95."
+tags:
+  - investigacion
+  - guia
+---
+
 # Calibración Cruzada
 
 ## Qué es
@@ -72,7 +80,7 @@ Drift típico por sensor:
 
 | Sensor                                                                 | Drift esperado                                                                                                                              |
 | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| [SHT45](../sensores/temperatura-humedad/sht45.md) (con filtro PTFE) | < 0.03 $^\circ$C / año (típ.), máx. < 0.04 $^\circ$C / año [^sht45drift]                                                                  |
+| [SHT45](../sensores/temperatura-humedad/sht45.md) (con filtro PTFE) | < 0.03 $^\circ\text{C}$ / año (típ.), máx. < 0.04 $^\circ\text{C}$ / año [^sht45drift]                                                                  |
 | [SHT40](../sensores/temperatura-humedad/sht40.md)                   | < 0.2 %RH / año (típ.) [^sht40drift]                                                                                                       |
 | [MH-Z19B](../sensores/co2/mh-z19b.md) (ABC off)                     | No especificado. Precisión declarada: ±(50 ppm + 3% lectura). [^mhz19b]                                                                    |
 | [SCD41](../sensores/co2/scd41.md)                                   | ±(5 ppm + 0.5% lectura) / año — solo a partir del año 5 de operación [^scd41drift]                                                         |

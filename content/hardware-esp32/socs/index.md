@@ -1,3 +1,11 @@
+---
+title: "SoCs ESP32 - Catálogo de Chips"
+description: "Catálogo completo de chips ESP32 modernos con tabla de specs comparativas y links a cada ficha."
+tags:
+  - hardware-esp32
+  - indice
+---
+
 # SoCs ESP32 - Catálogo de Chips
 
 Cada chip de la línea ESP32 tiene su propia página con specs, casos de uso y links a fabricante.

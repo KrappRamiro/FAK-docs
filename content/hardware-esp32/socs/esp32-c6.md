@@ -1,3 +1,12 @@
+---
+title: "ESP32-C6"
+description: "Ficha del ESP32-C6: RISC-V con WiFi 6, BLE 5.0 y 802.15.4; chip principal para dispositivos Matter/Thread/Zigbee."
+tags:
+  - hardware-esp32
+  - soc
+  - esp32-c6
+---
+
 # ESP32-C6
 
 RISC-V, single-core + LP co-processor.

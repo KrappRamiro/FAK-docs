@@ -1,5 +1,9 @@
 ---
-title: Hardware ESP32
+title: "Hardware ESP32"
+description: "Índice y árbol de decisión rápido para elegir chip y DevKit en la línea ESP32 de Espressif."
+tags:
+  - hardware-esp32
+  - indice
 ---
 
 ## Árbol de decisión rápido

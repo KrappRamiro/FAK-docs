@@ -1,3 +1,12 @@
+---
+title: "SHTC3 (Sensirion)"
+description: "Sensor digital de temperatura y humedad relativa en formato ultra-compacto DFN 2×2 mm con interfaz I2C."
+tags:
+  - sensores
+  - componente
+  - i2c
+---
+
 # SHTC3 (Sensirion)
 
 Sensor digital de temperatura + humedad relativa, formato ultra-compacto.
@@ -8,9 +17,9 @@ Página del fabricante: [Sensirion SHTC3](https://sensirion.com/products/catalog
 
 | Spec | Valor |
 |---|---|
-| Precisión temperatura | $\pm 0.2^\circ$C típica |
+| Precisión temperatura | $\pm 0.2\,^\circ\text{C}$ típica |
 | Precisión HR | $\pm 2\%$ RH típica (20-80% RH) |
-| Rango operativo | -40 a +125 $^\circ$C (datasheet §2.2 Table 4) |
+| Rango operativo | -40 a +125 $^\circ\text{C}$ (datasheet §2.2 Table 4) |
 | Heater | No integrado |
 | Modos de bajo consumo | Normal / Low-Power / Sleep (datasheet §2.1 Table 3) |
 | Voltaje | 1.62-3.6V (típ 3.3V) |

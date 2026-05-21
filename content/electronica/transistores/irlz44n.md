@@ -1,3 +1,12 @@
+---
+title: "IRLZ44N"
+description: "MOSFET N-channel logic-level de 47A en TO-220 para conmutar grandes corrientes directamente desde GPIO de 3.3V."
+tags:
+  - electronica
+  - componente
+  - esp32
+---
+
 # IRLZ44N
 
 MOSFET N-channel logic-level - apto para conmutar grandes corrientes con señal de 3.3V o 5V.

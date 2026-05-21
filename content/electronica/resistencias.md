@@ -1,3 +1,11 @@
+---
+title: "Resistencias"
+description: "Cálculo de resistencias con la Ley de Ohm, código de colores, valores serie E12 y configuraciones pull-up/pull-down."
+tags:
+  - electronica
+  - componente
+---
+
 # Resistencias
 
 Limitan corriente en el circuito. Valor en Ohms ($\Omega$).

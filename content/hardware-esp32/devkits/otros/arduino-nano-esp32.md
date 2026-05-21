@@ -1,3 +1,12 @@
+---
+title: "Arduino Nano ESP32"
+description: "Placa Arduino con pinout Nano clásico y ESP32-S3 interno, 16 MB flash, 8 MB PSRAM y USB-C OTG."
+tags:
+  - hardware-esp32
+  - devkit
+  - esp32-s3
+---
+
 # Arduino Nano ESP32
 
 Pinout Nano clásico con [ESP32-S3](../../socs/esp32-s3.md) adentro.

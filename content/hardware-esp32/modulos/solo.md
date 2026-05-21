@@ -1,3 +1,12 @@
+---
+title: "Módulos SOLO"
+description: "Ficha del módulo SOLO: exclusivo del ESP32-S2, con variantes de antena PCB y U.FL y opciones con 2 MB PSRAM."
+tags:
+  - hardware-esp32
+  - modulo
+  - esp32-s2
+---
+
 # Módulos SOLO
 
 Específico del **[ESP32-S2](../socs/esp32-s2.md)** (single-core, sin Bluetooth). Footprint similar al [WROOM](./wroom.md). El S2 además tiene variantes [WROOM](./wroom.md) y [WROVER](./wrover.md) en el catálogo de Espressif.

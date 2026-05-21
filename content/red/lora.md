@@ -1,3 +1,12 @@
+---
+title: "LoRa / LoRaWAN"
+description: "Tecnología de radio de largo alcance para nodos remotos o múltiples estructuras separadas."
+tags:
+  - red
+  - guia
+  - lora
+---
+
 # LoRa / LoRaWAN
 
 Para distancias > 100 m o múltiples estructuras separadas donde WiFi no alcanza.
@@ -38,4 +47,4 @@ El [ESP32](../hardware-esp32/socs/index.md) no tiene LoRa integrado; se agrega c
 
 
 > ⚠️ **No mandar lecturas en texto claro por LoRa.** Aunque LoRa no sea "internet", el radio se intercepta
-> Encriptar el payload! Para producción seria, rotar clave periódicamente vía [OTA](../seguridad-iot/ota-firmado.md).
+> Encriptar el payload! Para producción seria, rotar clave periódicamente vía [OTA](../seguridad-iot/ota.md).

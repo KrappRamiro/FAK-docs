@@ -1,3 +1,13 @@
+---
+title: "Adafruit ESP32-S2 TFT Feather"
+description: "Feather Adafruit con ESP32-S2, display IPS 1.14\" 240x135, 4 MB flash, 2 MB PSRAM y STEMMA QT."
+tags:
+  - hardware-esp32
+  - devkit
+  - adafruit
+  - esp32-s2
+---
+
 # Adafruit ESP32-S2 TFT Feather
 
 Feather con [ESP32-S2](../../socs/esp32-s2.md) y display TFT integrado.

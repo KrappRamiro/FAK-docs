@@ -1,3 +1,11 @@
+---
+title: "Herramientas"
+description: "Índice de herramientas físicas y de software utilizadas en el proyecto FAK."
+tags:
+  - herramientas
+  - indice
+---
+
 # Herramientas
 
 | Archivo                                        | Para qué                                                                                     |

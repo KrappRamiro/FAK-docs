@@ -1,3 +1,13 @@
+---
+title: "ESP32-S3-DevKitM-1"
+description: "DevKit oficial compacto Espressif para ESP32-S3 con módulo MINI, 36 GPIO y footprint reducido."
+tags:
+  - hardware-esp32
+  - devkit
+  - espressif
+  - esp32-s3
+---
+
 # ESP32-S3-DevKitM-1
 
 DevKit oficial compacto para [ESP32-S3](../../socs/esp32-s3.md). Footprint reducido con módulo MINI.

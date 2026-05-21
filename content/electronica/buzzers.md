@@ -1,3 +1,12 @@
+---
+title: "Buzzers"
+description: "Comparativa entre buzzers activos y pasivos, circuito típico de control con GPIO del ESP32 y patrones de alarma por contexto."
+tags:
+  - electronica
+  - componente
+  - esp32
+---
+
 # Buzzers
 
 Generadores de sonido. Útiles para alarmas locales en el nodo.

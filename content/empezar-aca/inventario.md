@@ -1,3 +1,11 @@
+---
+title: "Inventario de Hardware"
+description: "Lista de boards, módulos y componentes disponibles actualmente en el proyecto."
+tags:
+  - conceptos
+  - referencia
+---
+
 # Inventario de Hardware
 
 Lista de hardware que tenemos disponibles.

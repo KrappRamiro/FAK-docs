@@ -1,3 +1,12 @@
+---
+title: "Módulo Relay 5V con Optoacoplador"
+description: "Módulo relay con aislamiento óptico para conmutar cargas AC o DC desde GPIO del ESP32 con protección galvánica."
+tags:
+  - electronica
+  - componente
+  - esp32
+---
+
 # Módulo Relay 5V con Optoacoplador
 
 Módulo genérico común en kits - sin fabricante único. Disponibles en AliExpress / Amazon en presentaciones de 1, 2, 4, 8 canales.

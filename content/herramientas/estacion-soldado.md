@@ -1,3 +1,11 @@
+---
+title: "Estacion de Soldado - Guia de Compra"
+description: "Guía de compra de estaciones de soldado: qué evitar, recomendaciones por presupuesto."
+tags:
+  - herramientas
+  - guia
+---
+
 # Estacion de Soldado - Guia de Compra
 
 Lee: [r/soldering - "Soldering Station Buying Mega Guide" (bigrealaccount, 2024)](https://www.reddit.com/r/soldering/comments/1n1f2hi/soldering_station_buying_mega_guide/)

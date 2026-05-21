@@ -1,54 +1,55 @@
+---
+title: "MQTT con TLS y Autenticación"
+description: "Cómo configurar Mosquitto con TLS y ACLs para proteger el tráfico MQTT en la red local."
+tags:
+  - seguridad-iot
+  - guia
+  - mqtt
+  - tls
+---
+
 # MQTT con TLS y Autenticación
 
-> El default de la mayoría de tutoriales (`allow_anonymous true`, puerto 1883 sin TLS) deja tu broker **completamente abierto en LAN**. Cualquier dispositivo en la red puede leer todos los topics y mandar comandos a tus actuadores.
+MQTT fue diseñado para redes industriales donde los dispositivos se asumen confiables entre sí. El resultado es que el protocolo en sí no tiene seguridad: cualquier cliente puede conectarse, suscribirse a `#`, y ver todo el tráfico del broker. Agregar seguridad real requiere configurarla explícitamente en Mosquitto.
 
-## Lo que NO tener
+Hay dos problemas independientes que resolver: **confidencialidad del transporte** (TLS) y **control de acceso** (autenticación + ACLs). Resolver solo uno deja el otro abierto.
 
-- Puerto 1883 plano sin TLS
-- `allow_anonymous true` — cualquier dispositivo en LAN puede subscribirse a `#` y ver todas las lecturas, o publicar a topics de actuadores
-- Un solo usuario "admin" para todos los clientes — si se compromete uno, comprometés todo
-- Puerto 1883 expuesto al WAN por una mala config del router — Shodan lo indexa en horas
+## TLS en puerto 8883
 
-## Lo que tenés que lograr
+Sin TLS, todo el tráfico MQTT viaja en texto plano por la red. Eso incluye las credenciales de login de cada nodo, las lecturas de sensores, y los comandos a los actuadores. Cualquier dispositivo en la misma LAN puede interceptarlo con un simple sniffer.
 
-### TLS en puerto 8883
+La solución es que el broker escuche únicamente en el puerto 8883 con TLS, y nunca en el 1883 plano. Para eso se necesita una CA (Certificate Authority), aunque sea autofirmada: el broker tiene un certificado firmado por esa CA, y cada cliente —ESP32, Telegraf, Grafana— lo valida contra la `ca.crt` al conectarse. Esto garantiza que el cliente está hablando con el broker real y no con un interceptor.
 
-El broker tiene que escuchar **solo en 8883 con TLS**, nunca en 1883 plano. Requiere:
-- Un certificado de CA (autofirmado alcanza para LAN)
-- Certificado de servidor firmado por esa CA
-- Cada cliente (ESP32, Telegraf, Grafana) valida el certificado del servidor con la `ca.crt`
+La documentación de referencia es [Mosquitto TLS](https://mosquitto.org/man/mosquitto-tls-7.html) y [ESP-IDF MQTT con TLS](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/api-reference/protocols/mqtt.html).
 
-Documentación: [Mosquitto TLS](https://mosquitto.org/man/mosquitto-tls-7.html), [ESP-IDF MQTT con TLS](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/api-reference/protocols/mqtt.html)
+## Autenticación por cliente
 
-### Un usuario por tipo de cliente
+`allow_anonymous true` —el default de la mayoría de tutoriales— permite que cualquier dispositivo en la red se conecte sin credenciales. Con eso, un nodo comprometido o un dispositivo desconocido en la LAN tiene acceso total al broker.
 
-No compartir credenciales entre nodos. La razón: si las creds de un nodo se filtran, podés revocar solo ese usuario sin afectar el resto.
+Lo correcto es un usuario separado por tipo de cliente: un usuario para los nodos de medición, otro para los actuadores, otro para Telegraf. La razón no es burocrática: si las credenciales de un nodo se filtran, podés revocar solo ese usuario sin interrumpir el resto del sistema. Con un solo usuario compartido, una filtración requiere rotar todo.
 
+## ACLs
 
-### ACL (Access Control List)
+La autenticación verifica identidad; las ACLs determinan qué puede hacer cada identidad. El objetivo es que un nodo comprometido tenga el menor radio de daño posible.
 
-Limitar qué puede hacer cada usuario en qué topics. El objetivo: que un nodo de medición comprometido **no pueda mandar comandos a los actuadores**.
+Un esquema sensato: los nodos de medición solo pueden publicar a sus propios topics de datos, nunca a topics de comandos. Los actuadores solo se suscriben a sus topics de comandos y publican confirmaciones. Ningún nodo puede publicar a los topics de otro nodo. Así, si un nodo de medición queda bajo control de un atacante, no puede enviar comandos a las bombas o válvulas.
 
-Esquema típico:
-- Nodos de medición: solo pueden publicar a sus propios topics de datos
-- Actuadores: solo pueden subscribirse a sus propios topics de comandos y publicar confirmaciones
-- Ningún nodo puede publicar a topics de otros nodos
-
-Documentación: [Mosquitto ACL](https://mosquitto.org/man/mosquitto-conf-5.html) (sección `acl_file`)
+La configuración se hace en Mosquitto via el campo `acl_file` en `mosquitto.conf`. Documentación: [Mosquitto ACL](https://mosquitto.org/man/mosquitto-conf-5.html).
 
 ## Verificación post-deploy
 
-- [ ] Puerto 1883 cerrado / no respondiendo (`nmap -p 1883 <ip-broker>`)
-- [ ] Puerto 8883 abierto y requiere TLS (`openssl s_client -connect <ip-broker>:8883`)
+Estos checks confirman que la configuración está activa y no solo en los archivos de config:
+
+- [ ] Puerto 1883 no responde (`nmap -p 1883 <ip-broker>`)
+- [ ] Puerto 8883 requiere TLS (`openssl s_client -connect <ip-broker>:8883`)
 - [ ] `mosquitto_sub` sin credenciales falla con "Connection Refused"
-- [ ] Un usuario con ACL restringida no puede publicar/subscribirse fuera de sus topics
-- [ ] Verificar que los logs muestren rechazos de auth luego de hacer un tests de auths fallidas
-- [ ] Backup de `/etc/mosquitto/passwd`, `/etc/mosquitto/acl`, y certificados fuera del servidor
+- [ ] Un usuario con ACL restringida no puede publicar/suscribirse fuera de sus topics
+- [ ] Los logs muestran rechazos de auth ante intentos sin credenciales
+- [ ] Backup de `/etc/mosquitto/passwd`, `/etc/mosquitto/acl`, y los certificados fuera del servidor
 
-## Si las creds de un nodo se comprometen
+## Si las credenciales de un nodo se comprometen
 
-1. Eliminar el usuario del archivo de passwords de Mosquitto
-2. Reiniciar Mosquitto
-3. Reprogramar el [NVS](secrets-en-firmware.md) del nodo con nuevas creds
-4. Crear el usuario de nuevo con nueva password
-5. Revisar logs por publicaciones sospechosas durante la ventana de compromiso
+1. Eliminar el usuario del archivo de passwords de Mosquitto y reiniciar el servicio — el nodo queda sin acceso de inmediato
+2. Revisar los logs del broker por publicaciones a topics fuera de los ACL del nodo durante la ventana de compromiso
+3. Reprogramar el [NVS](secrets-en-firmware.md) del nodo con las nuevas credenciales
+4. Recrear el usuario en Mosquitto con la nueva password

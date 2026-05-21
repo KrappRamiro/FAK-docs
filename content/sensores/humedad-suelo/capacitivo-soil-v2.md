@@ -1,3 +1,12 @@
+---
+title: "Capacitivo de Suelo v2.0"
+description: "Sensor capacitivo genérico de humedad de sustrato con salida analógica que requiere calibración gravimétrica por sustrato."
+tags:
+  - sensores
+  - componente
+  - esp32
+---
+
 # Capacitivo de Suelo v2.0
 
 Sensor capacitivo genérico para humedad de sustrato.
@@ -30,7 +39,7 @@ Cada sustrato necesita su **curva de calibración** (gravimétrica). Procedimien
 
 | Factor | Efecto | Mitigación |
 |---|---|---|
-| Temperatura del suelo | $\pm 0.1\%$ VWC por $^\circ$C | Compensar con lectura simultánea de temp. suelo |
+| Temperatura del suelo | $\pm 0.1\%$ VWC por $^\circ\text{C}$ | Compensar con lectura simultánea de temp. suelo |
 | Salinidad (EC alto) | Sobreestima VWC | Calibrar con sustrato + fertilizante a EC típico |
 | Variabilidad entre unidades | Hasta $\pm 5\%$ entre sensores del mismo lote | Calibrar cada sensor individualmente |
 | Deriva temporal | ~1-2% VWC por año | Recalibrar cada temporada |

@@ -1,3 +1,12 @@
+---
+title: "SHT41 (Sensirion)"
+description: "Sensor digital de temperatura y humedad relativa generación 4, mismo silicio que SHT40 con calibración de fábrica más rigurosa."
+tags:
+  - sensores
+  - componente
+  - i2c
+---
+
 # SHT41 (Sensirion)
 
 Sensor digital de temperatura + humedad relativa, generación 4. **Mismo chip base que [SHT40](sht40.md) pero con calibración de fábrica más rigurosa.**
@@ -8,7 +17,7 @@ Página del fabricante: [Sensirion SHT41](https://sensirion.com/products/catalog
 
 | Spec | Valor |
 |---|---|
-| Precisión temperatura | $\pm 0.2^\circ$C |
+| Precisión temperatura | $\pm 0.2\,^\circ\text{C}$ |
 | Precisión HR | $\pm 1.8\%$ RH |
 | Heater | 3 niveles (20 / 110 / 200 mW) |
 | Voltaje | 1.08-3.6V |

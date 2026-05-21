@@ -1,3 +1,12 @@
+---
+title: "Rust en ESP32"
+description: "Guía de Rust para ESP32: toolchain Xtensa vs RISC-V, std con esp-idf-svc, no_std con esp-hal y Embassy async."
+tags:
+  - hardware-esp32
+  - framework
+  - rust
+---
+
 # Rust en ESP32
 
 Catálogo de opciones para programar un ESP32 en Rust. Es una alternativa a [ESP-IDF en C](index.md) con buen tooling oficial de Espressif.

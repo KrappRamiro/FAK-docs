@@ -1,3 +1,12 @@
+---
+title: "ESP32-S2"
+description: "Ficha del ESP32-S2: Xtensa LX7 single-core sin Bluetooth, con USB OTG FS nativo y soporte de hasta 128 MB de flash."
+tags:
+  - hardware-esp32
+  - soc
+  - esp32-s2
+---
+
 # ESP32-S2
 
 Xtensa LX7, single-core.

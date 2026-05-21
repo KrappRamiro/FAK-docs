@@ -1,3 +1,12 @@
+---
+title: "Sensores"
+description: "Índice de sensores para monitoreo de invernadero: temperatura, CO2, luz, humedad de suelo y pH."
+tags:
+  - sensores
+  - indice
+  - investigacion
+---
+
 # Sensores
 
 Cada sensor tiene su propia página con specs, link a fabricante y notas de implementación.

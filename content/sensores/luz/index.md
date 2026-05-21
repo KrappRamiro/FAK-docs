@@ -1,3 +1,12 @@
+---
+title: "Luz / PAR / Espectro"
+description: "Comparativa de sensores de luz visible, radiación PAR y espectro completo para horticultura e investigación."
+tags:
+  - sensores
+  - indice
+  - investigacion
+---
+
 # Luz / PAR / Espectro
 
 Sensores para medir luz visible, radiación PAR (fotosíntesis), y espectro completo.

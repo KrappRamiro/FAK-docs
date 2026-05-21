@@ -1,3 +1,13 @@
+---
+title: "ESP32-C3-DevKit-RUST-1"
+description: "DevKit Espressif para ESP32-C3 con USB-C JTAG nativo, sensor SHTC3 e IMU ICM-42670 integrados."
+tags:
+  - hardware-esp32
+  - devkit
+  - espressif
+  - esp32-c3
+---
+
 # ESP32-C3-DevKit-RUST-1
 
 DevKit del proyecto Rust on ESP. Aunque está orientado a Rust, el hardware funciona con cualquier framework.

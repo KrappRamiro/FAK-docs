@@ -1,3 +1,12 @@
+---
+title: "Apogee SQ-500 (Apogee Instruments)"
+description: "Quantum sensor gold standard para medición directa de PAR trazable a NIST, usado como referencia para calibrar el AS7341."
+tags:
+  - sensores
+  - componente
+  - investigacion
+---
+
 # Apogee SQ-500 (Apogee Instruments)
 
 CARISIMO

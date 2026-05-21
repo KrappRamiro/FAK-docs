@@ -1,3 +1,13 @@
+---
+title: "ESP32-H2-DevKitM-1"
+description: "DevKit oficial Espressif para ESP32-H2 con BLE 5.0 y 802.15.4 (Thread/Zigbee), sin WiFi."
+tags:
+  - hardware-esp32
+  - devkit
+  - espressif
+  - esp32-h2
+---
+
 # ESP32-H2-DevKitM-1
 
 DevKit oficial para [ESP32-H2](../../socs/esp32-h2.md). Sin WiFi - solo BLE 5.0 + 802.15.4.

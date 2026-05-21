@@ -1,3 +1,13 @@
+---
+title: "LilyGo T-Deck"
+description: "Board portátil LilyGo con ESP32-S3, teclado QWERTY, trackball, display IPS 2.8\" touch y LiPo."
+tags:
+  - hardware-esp32
+  - devkit
+  - lilygo
+  - esp32-s3
+---
+
 # LilyGo T-Deck
 
 Board portátil con [ESP32-S3](../../socs/esp32-s3.md), QWERTY keyboard, trackball y display touch.

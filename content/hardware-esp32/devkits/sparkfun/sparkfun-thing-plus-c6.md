@@ -1,3 +1,13 @@
+---
+title: "SparkFun Thing Plus ESP32-C6"
+description: "DevKit SparkFun Feather-compatible con ESP32-C6, WiFi 6 + 802.15.4, 16 MB flash, Qwiic y LiPo."
+tags:
+  - hardware-esp32
+  - devkit
+  - sparkfun
+  - esp32-c6
+---
+
 # SparkFun Thing Plus ESP32-C6
 
 Feather-compatible con [ESP32-C6](../../socs/esp32-c6.md).
