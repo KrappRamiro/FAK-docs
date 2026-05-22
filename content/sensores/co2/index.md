@@ -48,7 +48,7 @@ Los NDIR miden CO2 viendo cuánta luz infrarroja se absorbe a 4.26 µm. El probl
 - **Humedad**: el vapor de agua también absorbe IR (en bandas que se solapan parcialmente con la del CO2) $\rightarrow$ suma "ruido" al cálculo.
 - **Presión**: la densidad del gas depende de la presión (PV = nRT). En altura o con frente de baja presión, hay menos moléculas por volumen $\rightarrow$ lectura baja sin compensar.
 
-Sin compensar, un aire con 1000 ppm reales puede leerse como 950-1050 ppm según T/HR. Para una serie temporal de paper, ese ruido contamina las correlaciones.
+Sin compensar, un aire con 1000 ppm reales puede leerse como 950-1050 ppm según T/HR. Si se publica formalmente, ese ruido en la serie temporal contamina las correlaciones.
 
 ### Cómo lo resuelve cada sensor
 

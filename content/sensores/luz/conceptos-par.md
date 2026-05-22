@@ -58,5 +58,5 @@ Las hojas sanas absorben fuertemente el rojo (~660 nm) para fotosíntesis y refl
 | Necesidad                                   | Sensor típico                                                     |
 | ------------------------------------------- | ----------------------------------------------------------------- |
 | Detectar día/noche, trigger de cámara       | [BH1750](bh1750.md) o [TSL2591](tsl2591.md) - solo lux            |
-| Calcular PAR real para horticultura / paper | [AS7341](as7341.md) - espectral 11 canales                        |
+| Calcular PAR real para horticultura / publicación formal | [AS7341](as7341.md) - espectral 11 canales                        |
 | Referencia gold standard (calibrar AS7341)  | [Apogee SQ-500](apogee-sq-500.md) - quantum sensor NIST-traceable |

@@ -6,6 +6,9 @@ tags:
   - referencia
 ---
 
+> [!warning] Work In Progress
+> Esta sección está en construcción y pendiente de revisión y cambios.
+
 # Trazabilidad - Qué Pide un Reviewer
 
 ## La pregunta de fondo
@@ -17,7 +20,7 @@ Un reviewer no puede ir físicamente al sitio de medición a verificar. Tiene qu
 1. **El sensor es lo que decís que es** (no un clon mal calibrado)
 2. **Está calibrado contra algo trazable** (no contra "lo que indica mi otro sensor barato")
 3. **El procedimiento es reproducible** (otro grupo podría repetir tu experimento)
-4. **Los datos no fueron manipulados** (cadena de custodia desde el sensor hasta la tabla del paper)
+4. **Los datos no fueron manipulados** (cadena de custodia desde el sensor hasta la tabla de resultados)
 
 ---
 
@@ -29,9 +32,7 @@ Un reviewer no puede ir físicamente al sitio de medición a verificar. Tiene qu
 |---|---|
 | [SHT45-AD1F-R2](../sensores/temperatura-humedad/sht45.md) (Sensirion) | NIST + DKD (German Calibration Service) - datasheet documenta proceso |
 | [SCD41](../sensores/co2/scd41.md) (Sensirion) | NIST CO2 reference standards |
-| [METER TEROS 11](../sensores/humedad-suelo/teros-11.md) | METER's lab, calibración factory documentada |
 | [Atlas Scientific EZO-pH](../sensores/ph-suelo/ezo-ph.md) | NIST-traceable buffer solutions (pH 4.01, 7.00, 10.00) |
-| [Apogee SQ-500](../sensores/luz/apogee-sq-500.md) | NIST-traceable [PAR](../sensores/luz/conceptos-par.md) calibration |
 
 Para estos sensores, citar el **datasheet del fabricante** + número de modelo exacto es suficiente.
 
@@ -41,10 +42,10 @@ Para estos sensores, citar el **datasheet del fabricante** + número de modelo e
 |---|---|
 | [SHT40](../sensores/temperatura-humedad/sht40.md) (sin filtro) | Cross-calibración contra [SHT45](../sensores/temperatura-humedad/sht45.md) |
 | [MH-Z19B](../sensores/co2/mh-z19b.md) | Cross-calibración contra [SCD41](../sensores/co2/scd41.md) + ABC off documented |
-| [BH1750](../sensores/luz/bh1750.md) | Cross-calibración contra [AS7341](../sensores/luz/as7341.md), declarar limitaciones con LED de cultivo |
-| Capacitivo soil v2.0 | Calibración gravimétrica + cross contra [TEROS 11](../sensores/humedad-suelo/teros-11.md) |
+| [BH1750](../sensores/luz/bh1750.md) | [Inter-sensor validation](./conceptos/inter-sensor-validation.md) contra [AS7341](../sensores/luz/as7341.md), declarar limitaciones con LED de cultivo |
+| Capacitivo soil v2.0 | Calibración [gravimétrica](https://es.wikipedia.org/wiki/An%C3%A1lisis_gravim%C3%A9trico) únicamente — sin referencia de campo disponible |
 
-Para estos, el paper documenta el procedimiento de validación, no se asume precisión nominal.
+Para estos, si se publica formalmente, se documenta el procedimiento de validación en lugar de asumir precisión nominal.
 
 ---
 
@@ -57,7 +58,7 @@ graph TD
     C -->|publicación MQTT| D[Broker Mosquitto<br/>TLS + auth]
     D -->|subscripción| E[Telegraf<br/>parseo JSON]
     E -->|escritura| F[InfluxDB<br/>storage]
-    F -->|query| G[Tabla en el paper]
+    F -->|query| G[Tabla de resultados]
 ```
 
 En cada paso puede haber pérdida o transformación. Documentar:
@@ -69,7 +70,7 @@ En cada paso puede haber pérdida o transformación. Documentar:
 | Broker | Versión Mosquitto, config relevante (persistencia, retención) |
 | Telegraf | Versión, config de parseo, transformaciones aplicadas |
 | InfluxDB | Versión, bucket retention policy, downsampling si lo hay |
-| Análisis | Scripts versionados en git, commit hash citado en el paper |
+| Análisis | Scripts versionados en git, commit hash citado en caso de publicación formal |
 
 ---
 
@@ -94,18 +95,18 @@ Para que otro grupo pueda repetir tu experimento, **publicar como suplemento**:
 | Reloj del nodo no sincronizado | Timestamps inconsistentes entre nodos | SNTP a NTP confiable, validar drift en heartbeat |
 | Datos manuales mezclados con sensorizados | No se sabe si una lectura es del sensor o "anotada a ojo" | Tag explícito en InfluxDB: `source = "auto" / "manual"` |
 | Recalibraciones no registradas | Cambio de comportamiento del sensor sin explicación | Tag en log de intervenciones, ID del sensor + slope antes/después |
-| Backup de InfluxDB perdido o no verificado | Datos del paper se pierden por crash de disco | Backup diario + verificación de restauración mensual |
+| Backup de InfluxDB perdido o no verificado | Datos del experimento se pierden por crash de disco | Backup diario + verificación de restauración mensual |
 
 ---
 
 ## Plantilla del "Materials and Methods" - checklist
 
-Antes de submit del paper, verificar:
+Si algún día se publica formalmente, verificar antes de submitear:
 
 - [ ] Modelo exacto y fabricante de cada sensor (part number completo)
 - [ ] Referencia al datasheet (URL + fecha de acceso)
 - [ ] Procedimiento de calibración descrito para cada sensor barato
-- [ ] $R^2$ de validación cruzada reportado con n, ventana de tiempo, RMSE
+- [ ] [$R^2$](./conceptos/r-cuadrado.md) de validación cruzada reportado con n, ventana de tiempo, RMSE
 - [ ] Versión del firmware y disponibilidad del código
 - [ ] Versión del stack (Mosquitto, InfluxDB, Telegraf, Grafana)
 - [ ] Período del experimento con timestamps absolutos
