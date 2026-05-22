@@ -6,6 +6,8 @@ tags:
   - devkit
   - sparkfun
   - esp32-s3
+  - feather
+  - qwiic
 ---
 
 # SparkFun Thing Plus ESP32-S3

@@ -6,6 +6,7 @@ tags:
   - devkit
   - sparkfun
   - esp32-c6
+  - qwiic
 ---
 
 # SparkFun ESP32-C6 Qwiic Pocket

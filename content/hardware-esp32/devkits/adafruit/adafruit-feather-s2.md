@@ -6,6 +6,8 @@ tags:
   - devkit
   - adafruit
   - esp32-s2
+  - feather
+  - stemma-qt
 ---
 
 # Adafruit ESP32-S2 Feather

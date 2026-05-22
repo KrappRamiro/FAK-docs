@@ -5,6 +5,8 @@ tags:
   - hardware-esp32
   - soc
   - esp32-s2
+  - xtensa
+  - wifi
 ---
 
 # ESP32-S2

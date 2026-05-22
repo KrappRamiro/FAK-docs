@@ -5,6 +5,7 @@ tags:
   - electronica
   - componente
   - esp32
+  - relay
 ---
 
 # Módulo Relay 5V con Optoacoplador

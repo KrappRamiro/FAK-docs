@@ -5,6 +5,8 @@ tags:
   - sensores
   - componente
   - i2c
+  - temperatura
+  - humedad
 ---
 
 # SHT41 (Sensirion)

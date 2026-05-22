@@ -5,6 +5,7 @@ tags:
   - sensores
   - componente
   - esp32
+  - humedad-suelo
 ---
 
 # Capacitivo de Suelo v2.0

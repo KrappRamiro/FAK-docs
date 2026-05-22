@@ -6,6 +6,7 @@ tags:
   - devkit
   - seeed-xiao
   - esp32-c3
+  - stemma-qt
 ---
 
 # XIAO ESP32-C3

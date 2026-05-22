@@ -6,6 +6,7 @@ tags:
   - componente
   - i2c
   - investigacion
+  - co2
 ---
 
 # SCD41 (Sensirion)

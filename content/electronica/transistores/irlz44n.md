@@ -5,6 +5,8 @@ tags:
   - electronica
   - componente
   - esp32
+  - mosfet
+  - n-channel
 ---
 
 # IRLZ44N

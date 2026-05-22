@@ -5,6 +5,9 @@ tags:
   - hardware-esp32
   - soc
   - esp32-s3
+  - xtensa
+  - wifi
+  - bluetooth
 ---
 
 # ESP32-S3

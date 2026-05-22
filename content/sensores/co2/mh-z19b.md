@@ -5,6 +5,7 @@ tags:
   - sensores
   - componente
   - esp32
+  - co2
 ---
 
 # MH-Z19B (Winsen)

@@ -16,7 +16,7 @@ tags:
 | 2 | **Box** (Módulo) | Chip + flash + antena en package metálico solderable | `ESP32-S3-WROOM-1-N16R8` |
 | 3 | **Board** (DevKit) | Módulo montado en PCB con USB, pines, regulador | `ESP32-S3-DevKitC-1` |
 
-Cuando alguien dice "estoy usando un [ESP32](../hardware-esp32/socs/index.md)" casi siempre se refiere al Board pero nombra el Brain. Esa ambigüedad es la fuente de casi toda la confusión inicial.
+Cuando alguien dice "estoy usando un [ESP32](./socs/index.md)" casi siempre se refiere al Board pero nombra el Brain. Esa ambigüedad es la fuente de casi toda la confusión inicial.
 
 **Para el día a día solo importa la capa 3.** Las 1 y 2 explican _por qué_ cada board tiene las features que tiene.
 
@@ -30,7 +30,7 @@ Cuando alguien dice "estoy usando un [ESP32](../hardware-esp32/socs/index.md)" c
 | ISA | Instruction Set Architecture | Xtensa vs RISC-V |
 | GPIO | General Purpose Input/Output | Pines configurables del chip |
 | ADC | Analog-to-Digital Converter | Leer sensores analógicos (capacitivo de suelo, LDR) |
-| DAC | Digital-to-Analog Converter | Generar audio analógico - solo [ESP32](../hardware-esp32/socs/index.md) clásico y S2 lo tienen |
+| DAC | Digital-to-Analog Converter | Generar audio analógico - solo [ESP32](./socs/index.md) clásico y S2 lo tienen |
 | I2C | Inter-Integrated Circuit | Bus serie de 2 hilos para sensores ([SHT45](../sensores/temperatura-humedad/sht45.md), [SCD41](../sensores/co2/scd41.md), [AS7341](../sensores/luz/as7341.md)) |
 | UART | Universal Async Receiver-Transmitter | Bus serie típico ([MH-Z19B](../sensores/co2/mh-z19b.md) usa UART) |
 | SPI | Serial Peripheral Interface | Bus serie más rápido que I2C (displays, SD) |
@@ -53,13 +53,13 @@ Cuando alguien dice "estoy usando un [ESP32](../hardware-esp32/socs/index.md)" c
 
 ## Arquitecturas de CPU
 
-| ISA | Chips [ESP32](../hardware-esp32/socs/index.md) | Notas |
+| ISA | Chips [ESP32](./socs/index.md) | Notas |
 |---|---|---|
-| Xtensa LX6 | [ESP32](../hardware-esp32/socs/index.md) clásico | ISA propietaria de Cadence/Tensilica |
+| Xtensa LX6 | [ESP32](./socs/index.md) clásico | ISA propietaria de Cadence/Tensilica |
 | Xtensa LX7 | S2, S3 | Igual que LX6 + instrucciones SIMD en S3 |
 | RISC-V | C2, C3, C5, C6, H2, P4 | ISA abierta, toolchain limpio, debug predecible |
 
-Detalle completo en [`../hardware-esp32/arquitecturas-cpu.md`](../hardware-esp32/arquitecturas-cpu.md).
+Detalle completo en [`arquitecturas-cpu.md`](./arquitecturas-cpu.md).
 
 ---
 
@@ -71,8 +71,8 @@ Detalle completo en [`../hardware-esp32/arquitecturas-cpu.md`](../hardware-esp32
 | H4 / H8 | Flash en MB, temp. alta (-40 a +105 $^\circ\text{C}$) |
 | R2 / R8 | PSRAM en MB |
 | `…U-N8` | La `U` antes del código de memoria = conector U.FL para antena externa |
-| MINI | Módulo compacto (menos GPIO) en vez de [WROOM](../hardware-esp32/modulos/wroom.md) |
-| DevKitC | Lleva módulo [WROOM](../hardware-esp32/modulos/wroom.md) adentro |
+| MINI | Módulo compacto (menos GPIO) en vez de [WROOM](./modulos/wroom.md) |
+| DevKitC | Lleva módulo [WROOM](./modulos/wroom.md) adentro |
 | DevKitM | Lleva módulo MINI adentro |
 
 ---

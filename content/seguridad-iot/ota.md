@@ -20,7 +20,7 @@ La forma segura de hacer OTA requiere al menos dos particiones de aplicación en
 
 Mientras el chip corre desde `ota_0`, el nuevo firmware se escribe en `ota_1` (que primero se borra). Solo cuando la escritura termina completa y se verifica, `otadata` se actualiza para indicar que el próximo boot tiene que usar `ota_1`. Si hay un corte de luz en cualquier punto antes de eso, `ota_0` no fue tocado y el chip sigue arrancando normalmente.
 
-`otadata` es una partición pequeña de 8KB que el bootloader lee en cada boot para saber cuál slot es el activo. Si está vacía o corrupta, el bootloader cae a la partición `factory`. La [tabla de particiones](../conceptos/tabla-de-particiones.md) tiene que incluir `ota_0`, `ota_1`, y `otadata` para que todo esto funcione.[^1]
+`otadata` es una partición pequeña de 8KB que el bootloader lee en cada boot para saber cuál slot es el activo. Si está vacía o corrupta, el bootloader cae a la partición `factory`. La [tabla de particiones](../hardware-esp32/tabla-de-particiones.md) tiene que incluir `ota_0`, `ota_1`, y `otadata` para que todo esto funcione.[^1]
 
 ## Rollback de aplicación
 

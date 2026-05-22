@@ -42,7 +42,7 @@ graph TD
     NVSKEYS -->|"protege con XTS-AES"| NVS
 ```
 
-La partición `nvs_keys` es de tipo `data`, subtipo `nvs_keys`, marcada como `encrypted` en el CSV de la [tabla de particiones](../conceptos/tabla-de-particiones.md), con un tamaño mínimo de 4KB.[^nvs-enc-3] Al estar marcada como `encrypted`, el bootloader la cifra con la clave de Flash Encryption en el primer boot.[^nvs-enc-4]
+La partición `nvs_keys` es de tipo `data`, subtipo `nvs_keys`, marcada como `encrypted` en el CSV de la [tabla de particiones](../hardware-esp32/tabla-de-particiones.md), con un tamaño mínimo de 4KB.[^nvs-enc-3] Al estar marcada como `encrypted`, el bootloader la cifra con la clave de Flash Encryption en el primer boot.[^nvs-enc-4]
 
 Este esquema requiere que Flash Encryption esté habilitado en el chip. De hecho, cuando Flash Encryption está activo, NVS Encryption se habilita automáticamente para la partición NVS por defecto —porque el driver de WiFi guarda las credenciales ahí.[^nvs-enc-2]
 

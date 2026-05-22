@@ -5,6 +5,11 @@ tags:
   - hardware-esp32
   - soc
   - esp32-c6
+  - risc-v
+  - wifi
+  - bluetooth
+  - zigbee
+  - thread
 ---
 
 # ESP32-C6

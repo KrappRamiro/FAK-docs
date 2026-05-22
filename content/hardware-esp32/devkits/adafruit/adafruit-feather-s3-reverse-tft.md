@@ -6,6 +6,8 @@ tags:
   - devkit
   - adafruit
   - esp32-s3
+  - feather
+  - stemma-qt
 ---
 
 # Adafruit ESP32-S3 Reverse TFT Feather

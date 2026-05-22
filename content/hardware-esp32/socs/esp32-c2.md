@@ -5,6 +5,9 @@ tags:
   - hardware-esp32
   - soc
   - esp32-c2
+  - risc-v
+  - wifi
+  - bluetooth
 ---
 
 # ESP32-C2 (a.k.a. ESP8684)

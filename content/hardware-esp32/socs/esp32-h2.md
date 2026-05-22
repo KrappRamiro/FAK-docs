@@ -5,6 +5,10 @@ tags:
   - hardware-esp32
   - soc
   - esp32-h2
+  - risc-v
+  - bluetooth
+  - zigbee
+  - thread
 ---
 
 # ESP32-H2

@@ -5,6 +5,7 @@ tags:
   - sensores
   - componente
   - investigacion
+  - humedad-suelo
 ---
 
 # METER TEROS 11

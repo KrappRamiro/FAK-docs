@@ -5,6 +5,8 @@ tags:
   - sensores
   - componente
   - i2c
+  - temperatura
+  - humedad
 ---
 
 # SHTC3 (Sensirion)

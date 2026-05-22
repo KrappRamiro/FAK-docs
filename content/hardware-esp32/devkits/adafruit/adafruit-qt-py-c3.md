@@ -6,6 +6,7 @@ tags:
   - devkit
   - adafruit
   - esp32-c3
+  - stemma-qt
 ---
 
 # Adafruit QT Py ESP32-C3

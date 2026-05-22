@@ -5,6 +5,9 @@ tags:
   - hardware-esp32
   - soc
   - esp32-c5
+  - risc-v
+  - wifi
+  - bluetooth
 ---
 
 # ESP32-C5

@@ -6,6 +6,8 @@ tags:
   - componente
   - i2c
   - investigacion
+  - temperatura
+  - humedad
 ---
 
 # SHT45 (Sensirion)

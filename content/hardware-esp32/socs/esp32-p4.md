@@ -5,6 +5,7 @@ tags:
   - hardware-esp32
   - soc
   - esp32-p4
+  - risc-v
 ---
 
 # ESP32-P4

@@ -5,6 +5,7 @@ tags:
   - sensores
   - componente
   - investigacion
+  - par
 ---
 
 # Apogee SQ-500 (Apogee Instruments)
