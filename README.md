@@ -1,17 +1,23 @@
-# Quartz v4
+# FAK-docs — Base de conocimiento del invernadero ESP32
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+Documentación técnica del proyecto FAK: un sistema de automatización y monitoreo de invernadero basado en microcontroladores ESP32.
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+Publicada como sitio web con [Quartz v4](https://quartz.jzhao.xyz/) y desplegada en Cloudflare Workers.
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+---
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
 
-## Sponsors
+## Desarrollo local
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+```bash
+npm install
+npx quartz build --serve
+```
+
+## Estructura
+
+```
+content/          # Documentación en Markdown
+quartz/           # Código fuente de Quartz
+quartz.config.ts  # Configuración del sitio
+```
